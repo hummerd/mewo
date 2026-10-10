@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MEWO</string>
+    <string name="reminder_channel">Hebrew word reminders</string>
+    <string name="reminder_channel_description">Practice Hebrew words throughout the day</string>
+    <string name="reminder_title">Time for a little Hebrew</string>
+</resources>

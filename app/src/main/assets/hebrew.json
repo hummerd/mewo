@@ -1,0 +1,242 @@
+[
+  {
+    "id": "shalom",
+    "hebrew": "שלום",
+    "english": "Hello / peace",
+    "transliteration": "shalom"
+  },
+  {
+    "id": "toda",
+    "hebrew": "תודה",
+    "english": "Thank you",
+    "transliteration": "toda"
+  },
+  {
+    "id": "ken",
+    "hebrew": "כן",
+    "english": "Yes",
+    "transliteration": "ken"
+  },
+  {
+    "id": "lo",
+    "hebrew": "לא",
+    "english": "No",
+    "transliteration": "lo"
+  },
+  {
+    "id": "bevakasha",
+    "hebrew": "בבקשה",
+    "english": "Please / you are welcome",
+    "transliteration": "bevakasha"
+  },
+  {
+    "id": "slikha",
+    "hebrew": "סליחה",
+    "english": "Excuse me / sorry",
+    "transliteration": "slikha"
+  },
+  {
+    "id": "boker-tov",
+    "hebrew": "בוקר טוב",
+    "english": "Good morning",
+    "transliteration": "boker tov"
+  },
+  {
+    "id": "laila-tov",
+    "hebrew": "לילה טוב",
+    "english": "Good night",
+    "transliteration": "laila tov"
+  },
+  {
+    "id": "lehitraot",
+    "hebrew": "להתראות",
+    "english": "Goodbye / see you",
+    "transliteration": "lehitraot"
+  },
+  {
+    "id": "ma-nishma",
+    "hebrew": "מה נשמע",
+    "english": "How are you?",
+    "transliteration": "ma nishma"
+  },
+  {
+    "id": "mayim",
+    "hebrew": "מים",
+    "english": "Water",
+    "transliteration": "mayim"
+  },
+  {
+    "id": "lekhem",
+    "hebrew": "לחם",
+    "english": "Bread",
+    "transliteration": "lekhem"
+  },
+  {
+    "id": "kafe",
+    "hebrew": "קפה",
+    "english": "Coffee",
+    "transliteration": "kafe"
+  },
+  {
+    "id": "te",
+    "hebrew": "תה",
+    "english": "Tea",
+    "transliteration": "te"
+  },
+  {
+    "id": "khalav",
+    "hebrew": "חלב",
+    "english": "Milk",
+    "transliteration": "khalav"
+  },
+  {
+    "id": "bayit",
+    "hebrew": "בית",
+    "english": "House / home",
+    "transliteration": "bayit"
+  },
+  {
+    "id": "sefer",
+    "hebrew": "ספר",
+    "english": "Book",
+    "transliteration": "sefer"
+  },
+  {
+    "id": "yom",
+    "hebrew": "יום",
+    "english": "Day",
+    "transliteration": "yom"
+  },
+  {
+    "id": "laila",
+    "hebrew": "לילה",
+    "english": "Night",
+    "transliteration": "laila"
+  },
+  {
+    "id": "zman",
+    "hebrew": "זמן",
+    "english": "Time",
+    "transliteration": "zman"
+  },
+  {
+    "id": "kesef",
+    "hebrew": "כסף",
+    "english": "Money",
+    "transliteration": "kesef"
+  },
+  {
+    "id": "avoda",
+    "hebrew": "עבודה",
+    "english": "Work",
+    "transliteration": "avoda"
+  },
+  {
+    "id": "mishpakha",
+    "hebrew": "משפחה",
+    "english": "Family",
+    "transliteration": "mishpakha"
+  },
+  {
+    "id": "khaver",
+    "hebrew": "חבר",
+    "english": "Friend (male)",
+    "transliteration": "khaver"
+  },
+  {
+    "id": "khavera",
+    "hebrew": "חברה",
+    "english": "Friend (female)",
+    "transliteration": "khavera"
+  },
+  {
+    "id": "tov",
+    "hebrew": "טוב",
+    "english": "Good (masculine)",
+    "transliteration": "tov"
+  },
+  {
+    "id": "tova",
+    "hebrew": "טובה",
+    "english": "Good (feminine)",
+    "transliteration": "tova"
+  },
+  {
+    "id": "gadol",
+    "hebrew": "גדול",
+    "english": "Big (masculine)",
+    "transliteration": "gadol"
+  },
+  {
+    "id": "katan",
+    "hebrew": "קטן",
+    "english": "Small (masculine)",
+    "transliteration": "katan"
+  },
+  {
+    "id": "hayom",
+    "hebrew": "היום",
+    "english": "Today",
+    "transliteration": "hayom"
+  },
+  {
+    "id": "makhar",
+    "hebrew": "מחר",
+    "english": "Tomorrow",
+    "transliteration": "makhar"
+  },
+  {
+    "id": "etmol",
+    "hebrew": "אתמול",
+    "english": "Yesterday",
+    "transliteration": "etmol"
+  },
+  {
+    "id": "akhshav",
+    "hebrew": "עכשיו",
+    "english": "Now",
+    "transliteration": "akhshav"
+  },
+  {
+    "id": "po",
+    "hebrew": "פה",
+    "english": "Here",
+    "transliteration": "po"
+  },
+  {
+    "id": "sham",
+    "hebrew": "שם",
+    "english": "There",
+    "transliteration": "sham"
+  },
+  {
+    "id": "eifo",
+    "hebrew": "איפה",
+    "english": "Where",
+    "transliteration": "eifo"
+  },
+  {
+    "id": "ma",
+    "hebrew": "מה",
+    "english": "What",
+    "transliteration": "ma"
+  },
+  {
+    "id": "mi",
+    "hebrew": "מי",
+    "english": "Who",
+    "transliteration": "mi"
+  },
+  {
+    "id": "kama",
+    "hebrew": "כמה",
+    "english": "How much / how many",
+    "transliteration": "kama"
+  },
+  {
+    "id": "lama",
+    "hebrew": "למה",
+    "english": "Why",
+    "transliteration": "lama"
+  }
+]
