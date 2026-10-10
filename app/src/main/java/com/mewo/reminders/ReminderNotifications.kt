@@ -10,6 +10,9 @@ import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
+import androidx.core.text.bold
+import androidx.core.text.buildSpannedString
+import androidx.core.text.italic
 import com.mewo.MainActivity
 import com.mewo.R
 import com.mewo.data.WordEntity
@@ -37,12 +40,26 @@ class ReminderNotifications(private val context: Context) {
         val openApp = PendingIntent.getActivity(context, 0,
             Intent(context, MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP),
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
-        val lines = words.map { "\u200f${it.hebrew}\u200e — ${it.english} (${it.transliteration})" }
+        val preview = buildSpannedString {
+            val word = words.first()
+            bold { append("\u200f${word.hebrew}\u200e") }
+            append(" — ${word.english} (")
+            italic { append(word.transliteration) }
+            append(")")
+        }
+        val expandedText = buildSpannedString {
+            words.forEachIndexed { index, word ->
+                if (index > 0) append("\n\n")
+                bold { append("\u200f${word.hebrew}\u200e") }
+                append(" — ${word.english}\n")
+                italic { append("\u200e${word.transliteration}") }
+            }
+        }
         val notification = NotificationCompat.Builder(context, CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_notification)
             .setContentTitle(context.getString(R.string.reminder_title))
-            .setContentText(lines.first())
-            .setStyle(NotificationCompat.BigTextStyle().bigText(lines.joinToString("\n")))
+            .setContentText(preview)
+            .setStyle(NotificationCompat.BigTextStyle().bigText(expandedText))
             .setContentIntent(openApp)
             .setAutoCancel(true)
             .build()
