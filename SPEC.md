@@ -55,6 +55,13 @@ Reminder text uses bold Hebrew, regular English meaning, and italic transliterat
 In the expanded view, each word's transliteration appears on the next line, with
 a blank line between words. Preserve Hebrew right-to-left text direction.
 
+We have 3 priorities for words - 100, 300 and 1000. These are 100 most common words,
+next 300 most common words and then 600  most common words and phrases. Algorithm
+should show first words with lowest priority moving to higher priorities.
+
+Male and female forms for words should be treated as one record, showing male form
+and modification to make it female form.
+
 ## UI
 
 ### Main activity
