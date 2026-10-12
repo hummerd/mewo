@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/reminder_text"
+    style="@style/TextAppearance.Compat.Notification"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ellipsize="end"
+    android:gravity="start"
+    android:layoutDirection="ltr"
+    android:maxLines="2"
+    android:textDirection="ltr"
+    android:textStyle="normal" />

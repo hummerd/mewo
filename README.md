@@ -96,6 +96,12 @@ Changes take effect after **Save settings**. Notification appearance counts do
 not measure whether a word has been read or learned. Notifications replace the
 previous reminder; expand one to see every included word.
 
+Notifications use a custom layout: **Hebrew** *[transliteration]* English meaning,
+with spaces between the three fields. The collapsed view previews the first
+word; the expanded view separates word entries with blank lines and includes
+feminine forms and their modifications. Long entries wrap, and content exceeding
+Android's notification space is ellipsized; tap the notification to open MEWO.
+
 ## Structure
 
 - `domain/ReminderEngine.kt`: pure word selection and increasing review intervals.

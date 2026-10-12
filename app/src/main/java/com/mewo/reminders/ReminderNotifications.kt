@@ -10,14 +10,10 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.media.AudioAttributes
 import android.os.Build
-import android.text.SpannableStringBuilder
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
-import androidx.core.text.bold
-import androidx.core.text.buildSpannedString
-import androidx.core.text.italic
 import com.mewo.MainActivity
 import com.mewo.R
 import com.mewo.data.WordEntity
@@ -76,36 +72,17 @@ class ReminderNotifications(
                 Intent(context, MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP),
                 PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
             )
-        val preview =
-            buildSpannedString {
-                val word = words.first()
-                appendHebrew(word)
-                append(" — ${word.english} (")
-                italic { append(word.transliteration) }
-                append(")")
-            }
-        val expandedText =
-            buildSpannedString {
-                words.forEachIndexed { index, word ->
-                    if (index > 0) append("\n\n")
-                    bold { append("\u200f${word.hebrew}\u200e") }
-                    append(" — ${word.english}\n")
-                    italic { append("\u200e${word.transliteration}") }
-                    word.feminineHebrew?.let {
-                        append("\nFeminine: ")
-                        bold { append("\u200f$it\u200e") }
-                        append(" (${word.feminineModification})\n")
-                        italic { append("\u200e${word.feminineTransliteration}") }
-                    }
-                }
-            }
+        val layout = ReminderNotificationLayout(context)
         val notification =
             NotificationCompat
                 .Builder(context, CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_notification)
                 .setContentTitle(context.getString(R.string.reminder_title))
-                .setContentText(preview)
-                .setStyle(NotificationCompat.BigTextStyle().bigText(expandedText))
+                .setContentText(layout.line(words.first()))
+                .setStyle(NotificationCompat.DecoratedCustomViewStyle())
+                .setCustomContentView(layout.compact(words))
+                .setCustomBigContentView(layout.expanded(words))
+                .setCustomHeadsUpContentView(layout.compact(words))
                 .setContentIntent(openApp)
                 .setAutoCancel(true)
                 .build()
@@ -114,14 +91,6 @@ class ReminderNotifications(
             true
         } catch (_: SecurityException) {
             false
-        }
-    }
-
-    private fun SpannableStringBuilder.appendHebrew(word: WordEntity) {
-        bold { append("\u200f${word.hebrew}\u200e") }
-        word.feminineHebrew?.let {
-            append(" / ")
-            bold { append("\u200f$it\u200e") }
         }
     }
 }
