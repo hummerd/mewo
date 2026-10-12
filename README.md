@@ -25,6 +25,19 @@ Install it on an Android 8.0+ device or emulator:
 adb install -r app/build/outputs/apk/debug/app-debug.apk
 ```
 
+To build an APK you can send to a friend:
+
+```sh
+make apk
+```
+
+Send the resulting `build/mewo.apk` file. This is a debug APK, automatically
+signed with your local debug key, suitable for sharing and testing. Your friend
+needs Android 8.0 or newer and must allow installation from the app used to open
+the APK (for example, their browser or file manager). Wireless debugging is not
+needed. Build subsequent updates on the same computer with the same debug key
+so they can install over the existing app and keep their progress.
+
 For wireless installation on Android 11+, put your phone and computer on the same
 Wi-Fi network. Enable **Developer options → Wireless debugging** on the phone,
 then choose **Pair device with pairing code**. Use the IP address and pairing port
