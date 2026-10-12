@@ -18,9 +18,15 @@ class ReminderWorker(
         val app = applicationContext as MewoApplication
         return try {
             val settings = app.settings.settings.first()
-            if (!settings.enabled || !app.notifications.allowed()) return Result.success()
-            app.repository.initialize()
-            app.repository.remind(settings, System.currentTimeMillis(), app.notifications::publish)
+            if (!settings.enabled) return Result.success()
+            if (settings.schedule.allows(System.currentTimeMillis()) && app.notifications.allowed()) {
+                app.repository.initialize()
+                app.repository.remind(settings, System.currentTimeMillis()) { words ->
+                    settings.schedule.allows(System.currentTimeMillis()) && app.notifications.publish(words)
+                }
+            }
+            // Read again so an edit made during this run is respected by the next request.
+            app.scheduler.apply(app.settings.settings.first())
             Result.success()
         } catch (error: CancellationException) {
             throw error

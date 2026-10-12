@@ -1,11 +1,14 @@
 package com.mewo.domain
 
+import java.time.ZoneId
+
 /** Values validated both at the UI boundary and before background execution. */
 data class ReminderSettings(
     val rotationSize: Int = 10,
     val intervalMinutes: Int = 60,
     val wordsPerNotification: Int = 1,
     val enabled: Boolean = true,
+    val schedule: LearningSchedule = LearningSchedule(),
 ) {
     companion object {
         const val MIN_INTERVAL_MINUTES = 15
@@ -13,6 +16,7 @@ data class ReminderSettings(
     }
 
     fun validate(dictionarySize: Int) {
+        schedule.validate()
         require(rotationSize in 1..dictionarySize) { "Rotation must be between 1 and $dictionarySize." }
         require(intervalMinutes in MIN_INTERVAL_MINUTES..MAX_INTERVAL_MINUTES) {
             "Interval must be between 15 and 1440 minutes."
@@ -78,9 +82,10 @@ object ReminderEngine {
         words: List<WordProgress>,
         settings: ReminderSettings,
         now: Long,
+        zone: ZoneId = ZoneId.systemDefault(),
     ): ReminderPlan {
         settings.validate(words.size)
-        if (!settings.enabled) return ReminderPlan(words, emptyList())
+        if (!settings.enabled || !settings.schedule.allows(now, zone)) return ReminderPlan(words, emptyList())
         val missing = settings.rotationSize - activeIds(words, settings.rotationSize).size
         val newIds =
             words

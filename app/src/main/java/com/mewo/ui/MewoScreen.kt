@@ -113,7 +113,7 @@ private fun WordList(
             Text("${state.words.size} words and phrases · ${state.words.sumOf { it.shownCount.toLong() }} appearances")
             Text(
                 if (state.settings.enabled) {
-                    "Reminders about every ${state.settings.intervalMinutes} minutes"
+                    "Reminders about every ${state.settings.intervalMinutes} minutes during your learning schedule"
                 } else {
                     "Reminders paused"
                 },
@@ -210,6 +210,9 @@ private fun SettingsScreen(
     var interval by rememberSaveable { mutableStateOf(state.settings.intervalMinutes.toString()) }
     var batch by rememberSaveable { mutableStateOf(state.settings.wordsPerNotification.toString()) }
     var enabled by rememberSaveable { mutableStateOf(state.settings.enabled) }
+    var schedule by rememberSaveable(stateSaver = ScheduleDraft.saver) {
+        mutableStateOf(ScheduleDraft(state.settings.schedule))
+    }
     var error by rememberSaveable { mutableStateOf<String?>(null) }
     var saving by remember { mutableStateOf(false) }
     Column(
@@ -220,14 +223,7 @@ private fun SettingsScreen(
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
-        Row(
-            Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = androidx.compose.ui.Alignment.CenterVertically,
-        ) {
-            Text("Reminders enabled", style = MaterialTheme.typography.titleMedium)
-            Switch(checked = enabled, onCheckedChange = { enabled = it }, enabled = !saving)
-        }
+        RemindersSwitch(enabled, !saving) { enabled = it }
         NumberSetting("Words in rotation", rotation, "1–${state.words.size}", !saving) {
             rotation = it
             error = null
@@ -240,30 +236,69 @@ private fun SettingsScreen(
             batch = it
             error = null
         }
+        ScheduleSettings(schedule, !saving) {
+            schedule = it
+            error = null
+        }
         SettingsHelp(onNotificationSound, !saving)
         error?.let { Text(it, color = MaterialTheme.colorScheme.error) }
-        Button(enabled = !saving, modifier = Modifier.fillMaxWidth(), onClick = {
-            val rotationValue = rotation.toIntOrNull()
-            val intervalValue = interval.toIntOrNull()
-            val batchValue = batch.toIntOrNull()
-            if (rotationValue == null || intervalValue == null || batchValue == null) {
-                error = "Enter a whole number in each field."
-            } else {
-                val settings = ReminderSettings(rotationValue, intervalValue, batchValue, enabled)
-                val validation = runCatching { settings.validate(state.words.size) }.exceptionOrNull()
-                if (validation != null) {
-                    error = validation.message
-                } else {
-                    saving = true
-                    onSave(settings) { saveError ->
-                        saving = false
-                        error = saveError
-                        if (saveError == null) onSaved()
-                    }
-                }
-            }
-        }) { Text(if (saving) "Saving…" else "Save settings") }
+        SettingsSaveButton(
+            saving = saving,
+            buildSettings = {
+                ReminderSettings(
+                    rotation.settingNumber(),
+                    interval.settingNumber(),
+                    batch.settingNumber(),
+                    enabled,
+                    schedule.toSchedule(),
+                ).also { it.validate(state.words.size) }
+            },
+            onSaving = { saving = true },
+            onSave = onSave,
+            onResult = {
+                saving = false
+                error = it
+                if (it == null) onSaved()
+            },
+        )
     }
+}
+
+private fun String.settingNumber(): Int = requireNotNull(toIntOrNull()) { "Enter a whole number in each number field." }
+
+@Composable
+private fun RemindersSwitch(
+    checked: Boolean,
+    enabled: Boolean,
+    onChange: (Boolean) -> Unit,
+) {
+    Row(
+        Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = androidx.compose.ui.Alignment.CenterVertically,
+    ) {
+        Text("Reminders enabled", style = MaterialTheme.typography.titleMedium)
+        Switch(checked = checked, onCheckedChange = onChange, enabled = enabled)
+    }
+}
+
+@Composable
+private fun SettingsSaveButton(
+    saving: Boolean,
+    buildSettings: () -> ReminderSettings,
+    onSaving: () -> Unit,
+    onSave: (ReminderSettings, (String?) -> Unit) -> Unit,
+    onResult: (String?) -> Unit,
+) {
+    Button(enabled = !saving, modifier = Modifier.fillMaxWidth(), onClick = {
+        val validated = runCatching(buildSettings)
+        if (validated.isFailure) {
+            onResult(validated.exceptionOrNull()?.message)
+        } else {
+            onSaving()
+            onSave(validated.getOrThrow(), onResult)
+        }
+    }) { Text(if (saving) "Saving…" else "Save settings") }
 }
 
 @Composable

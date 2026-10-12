@@ -60,7 +60,25 @@ prompt. If notification permission or the reminder channel is blocked, the butto
 opens the appropriate system settings. Reminders default to hourly; the first
 notification is scheduled after one interval and Android may delay it.
 
-Settings control rotation size, interval, words per notification, and pausing.
+Settings control rotation size, interval, words per notification, pausing, and the
+learning schedule. Working days default to Monday–Friday 08:00–20:00; weekend
+defaults to Saturday–Sunday 09:00–18:00, including when upgrading from an older
+version. Choose weekdays and a time window separately for each group. A weekday
+can belong to only one group; unselected days have no reminders. Clear a group's
+days to disable it, or use the reminder switch to pause all reminders.
+
+Times use the phone's current local timezone and 24-hour `HH:mm` format. Start
+times are included and end times are excluded. Use `00:00–24:00` for a whole day.
+Overnight windows such as `22:00–06:00` begin on the selected weekday and continue
+into the following morning. At least one day must be selected overall.
+
+New notifications are posted only inside a learning window, including when
+Android delays a background check beyond the end time. Checks outside the
+schedule leave word progress and due times unchanged. The next check moves to
+the next permitted window after the configured interval; overdue words resume
+normally, without catch-up bursts. Notifications already delivered remain until
+dismissed. Delivery remains approximate.
+
 Changes take effect after **Save settings**. Notification appearance counts do
 not measure whether a word has been read or learned. Notifications replace the
 previous reminder; expand one to see every included word.
@@ -114,6 +132,9 @@ Android Lint reports are in `app/build/reports/`, detekt reports in
 The JVM suite covers initial selection, doubling/capping intervals, replacement
 words, review after dictionary exhaustion, overdue ordering, rotation changes,
 paused reminders, frequency changes, and input validation.
+Schedule tests cover local timezones, working/weekend boundaries, unselected days,
+overnight windows, all-day windows, daylight-saving gaps and repeated hours, and
+quiet-hour progress preservation.
 
 Database integration tests require a running emulator/device:
 
@@ -131,9 +152,14 @@ Before release, also check on a device:
    preserve counts. Rotate the device while editing settings.
 4. Reopen the app and reboot the device; progress/settings should remain saved
    and enabled reminders should continue. Check light/dark mode and large fonts.
+5. Set a learning window ending soon. Verify new notifications stop at its end
+   and resume in the next allowed window without resetting progress.
 
-The 20 JVM tests, static checks, and debug APK build have been verified. All six
-database integration tests passed on the Android 17 (API 37) Pixel emulator,
+The 36 JVM tests, static checks, and debug APK build have been verified. All twelve
+Android integration tests passed on the Android 17 (API 37) Pixel emulator,
 including the version-1 upgrade, gender-record progress merge, and repeated
-imports. Notification delivery and the runtime checks above should also be
+imports, schedule persistence and upgrade defaults, quiet-hour progress
+preservation, and WorkManager rescheduling/cancellation. The schedule settings
+screen and its save/validation behavior were also checked on the emulator.
+Notification delivery and the runtime checks above should also be
 verified on a physical device.

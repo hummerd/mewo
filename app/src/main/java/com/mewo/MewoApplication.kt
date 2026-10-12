@@ -32,7 +32,7 @@ class MewoApplication : Application() {
         applicationScope.launch {
             try {
                 settings.settings
-                    .distinctUntilChangedBy { it.enabled to it.intervalMinutes }
+                    .distinctUntilChangedBy { Triple(it.enabled, it.intervalMinutes, it.schedule) }
                     .collect { scheduler.apply(it) }
             } catch (error: CancellationException) {
                 throw error

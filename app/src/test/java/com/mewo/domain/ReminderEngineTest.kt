@@ -5,9 +5,20 @@ import org.junit.Assert.assertFalse
 import org.junit.Assert.assertThrows
 import org.junit.Assert.assertTrue
 import org.junit.Test
+import java.time.DayOfWeek
 
 class ReminderEngineTest {
-    private val settings = ReminderSettings(rotationSize = 2, intervalMinutes = 15, wordsPerNotification = 2)
+    private val settings =
+        ReminderSettings(
+            rotationSize = 2,
+            intervalMinutes = 15,
+            wordsPerNotification = 2,
+            schedule =
+                LearningSchedule(
+                    LearningWindow(DayOfWeek.entries.toSet(), 0, 1440),
+                    LearningWindow(emptySet(), 0, 1440),
+                ),
+        )
 
     private fun dictionary(size: Int = 5) = (0 until size).map { WordProgress("word-$it", it) }
 
