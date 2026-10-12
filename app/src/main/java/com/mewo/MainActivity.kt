@@ -19,6 +19,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.mewo.ui.MewoScreen
+import com.mewo.reminders.ReminderNotifications
 import com.mewo.ui.MewoTheme
 import com.mewo.ui.MewoViewModel
 
@@ -56,6 +57,11 @@ class MainActivity : ComponentActivity() {
                         } else { openNotificationSettings() }
                     },
                     onSave = model::save,
+                    onNotificationSound = {
+                        startActivity(Intent(Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS)
+                            .putExtra(Settings.EXTRA_APP_PACKAGE, packageName)
+                            .putExtra(Settings.EXTRA_CHANNEL_ID, ReminderNotifications.CHANNEL_ID))
+                    },
                     onRetry = model::load)
             }
         }

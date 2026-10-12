@@ -71,4 +71,5 @@ Settings must have:
  - How frequently we show words in notifications
  - How many words we show in notification
  - Enable/pause reminders
+ - Notification sound (opens Android's reminder channel settings)
 Validate all settings before saving and explain that delivery may be delayed.

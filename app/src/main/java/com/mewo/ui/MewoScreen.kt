@@ -24,6 +24,7 @@ fun MewoScreen(
     state: MewoState,
     notificationsAllowed: Boolean,
     onEnableNotifications: () -> Unit,
+    onNotificationSound: () -> Unit,
     onSave: (ReminderSettings, (String?) -> Unit) -> Unit,
     onRetry: () -> Unit,
 ) {
@@ -50,7 +51,7 @@ fun MewoScreen(
                 Text(state.error, color = MaterialTheme.colorScheme.error)
                 Button(onClick = onRetry) { Text("Retry") }
             }
-            settingsOpen -> SettingsScreen(state, Modifier.padding(padding), onSave) { settingsOpen = false }
+            settingsOpen -> SettingsScreen(state, Modifier.padding(padding), onSave, onNotificationSound) { settingsOpen = false }
             else -> WordList(state, notificationsAllowed, onEnableNotifications, Modifier.padding(padding))
         }
     }
@@ -110,6 +111,7 @@ private fun SettingsScreen(
     state: MewoState,
     modifier: Modifier,
     onSave: (ReminderSettings, (String?) -> Unit) -> Unit,
+    onNotificationSound: () -> Unit,
     onSaved: () -> Unit,
 ) {
     var rotation by rememberSaveable { mutableStateOf(state.settings.rotationSize.toString()) }
@@ -126,6 +128,9 @@ private fun SettingsScreen(
         NumberSetting("Words in rotation", rotation, "1–${state.words.size}", !saving) { rotation = it; error = null }
         NumberSetting("Notification interval (minutes)", interval, "15–1440 minutes", !saving) { interval = it; error = null }
         NumberSetting("Words per notification", batch, "1–rotation size", !saving) { batch = it; error = null }
+        OutlinedButton(onClick = onNotificationSound, enabled = !saving) { Text("Notification sound") }
+        Text("Choose a reminder sound or silence reminders in Android settings. Sound changes apply immediately.",
+            style = MaterialTheme.typography.bodySmall)
         Text("Delivery times are approximate and Android may delay reminders. Review intervals grow as words appear; new words gradually enter your rotation.",
             color = MaterialTheme.colorScheme.onSurfaceVariant)
         Text("Changing settings preserves your progress and existing review times.", style = MaterialTheme.typography.bodySmall)

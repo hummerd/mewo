@@ -6,6 +6,8 @@ import android.app.*
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.media.AudioAttributes
+import android.net.Uri
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
@@ -23,6 +25,15 @@ class ReminderNotifications(private val context: Context) {
     fun createChannel() {
         val channel = NotificationChannel(CHANNEL_ID, context.getString(R.string.reminder_channel), NotificationManager.IMPORTANCE_DEFAULT)
         channel.description = context.getString(R.string.reminder_channel_description)
+        // Use the resource name so the stored URI survives resource ID changes on upgrades.
+        // Android preserves sound/importance choices on channels that already exist.
+        channel.setSound(
+            Uri.parse("android.resource://${context.packageName}/raw/ding_don"),
+            AudioAttributes.Builder()
+                .setUsage(AudioAttributes.USAGE_NOTIFICATION)
+                .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                .build(),
+        )
         context.getSystemService(NotificationManager::class.java).createNotificationChannel(channel)
     }
 
