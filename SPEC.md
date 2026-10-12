@@ -62,6 +62,10 @@ should show first words with lowest priority moving to higher priorities.
 Male and female forms for words should be treated as one record, showing male form
 and modification to make it female form.
 
+Notification should be shown only during learning schedule. User should choose
+weekdays and hours during which notifications should appear. We should have 2
+schedules for working days and weekend.
+
 ## UI
 
 ### Main activity
