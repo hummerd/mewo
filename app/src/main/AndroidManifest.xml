@@ -6,7 +6,8 @@
         android:allowBackup="false"
         android:fullBackupContent="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
-        android:icon="@drawable/ic_mewo"
+        android:icon="@mipmap/ic_mewo"
+        android:roundIcon="@mipmap/ic_mewo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Mewo">
