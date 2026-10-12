@@ -7,10 +7,19 @@ data class ReminderSettings(
     val wordsPerNotification: Int = 1,
     val enabled: Boolean = true,
 ) {
+    companion object {
+        const val MIN_INTERVAL_MINUTES = 15
+        const val MAX_INTERVAL_MINUTES = 1440
+    }
+
     fun validate(dictionarySize: Int) {
         require(rotationSize in 1..dictionarySize) { "Rotation must be between 1 and $dictionarySize." }
-        require(intervalMinutes in 15..1440) { "Interval must be between 15 and 1440 minutes." }
-        require(wordsPerNotification in 1..rotationSize) { "Words per notification must be between 1 and $rotationSize." }
+        require(intervalMinutes in MIN_INTERVAL_MINUTES..MAX_INTERVAL_MINUTES) {
+            "Interval must be between 15 and 1440 minutes."
+        }
+        require(
+            wordsPerNotification in 1..rotationSize,
+        ) { "Words per notification must be between 1 and $rotationSize." }
     }
 }
 
@@ -22,7 +31,10 @@ data class WordProgress(
     val nextDueAt: Long = 0,
 )
 
-data class ReminderPlan(val progress: List<WordProgress>, val selected: List<WordProgress>)
+data class ReminderPlan(
+    val progress: List<WordProgress>,
+    val selected: List<WordProgress>,
+)
 
 enum class LearningStatus { NEW, LEARNING, PAUSED, REVIEW }
 
@@ -31,37 +43,62 @@ object ReminderEngine {
     const val REVIEW_THRESHOLD = 4
     private const val MAX_INTERVAL_MS = 7L * 24 * 60 * 60 * 1000
 
-    fun activeIds(words: List<WordProgress>, rotationSize: Int): Set<String> = words
-        .filter { it.introduced && it.shownCount < REVIEW_THRESHOLD }
-        .sortedBy { it.position }
-        .take(rotationSize)
-        .map { it.id }.toSet()
+    fun activeIds(
+        words: List<WordProgress>,
+        rotationSize: Int,
+    ): Set<String> =
+        words
+            .filter { it.introduced && it.shownCount < REVIEW_THRESHOLD }
+            .sortedBy { it.position }
+            .take(rotationSize)
+            .map { it.id }
+            .toSet()
 
-    fun status(word: WordProgress, activeIds: Set<String>): LearningStatus = when {
-        !word.introduced -> LearningStatus.NEW
-        word.shownCount >= REVIEW_THRESHOLD -> LearningStatus.REVIEW
-        word.id in activeIds -> LearningStatus.LEARNING
-        else -> LearningStatus.PAUSED
-    }
+    fun status(
+        word: WordProgress,
+        activeIds: Set<String>,
+    ): LearningStatus =
+        when {
+            !word.introduced -> LearningStatus.NEW
+            word.shownCount >= REVIEW_THRESHOLD -> LearningStatus.REVIEW
+            word.id in activeIds -> LearningStatus.LEARNING
+            else -> LearningStatus.PAUSED
+        }
 
-    fun plan(words: List<WordProgress>, settings: ReminderSettings, now: Long): ReminderPlan {
+    fun plan(
+        words: List<WordProgress>,
+        settings: ReminderSettings,
+        now: Long,
+    ): ReminderPlan {
         settings.validate(words.size)
         if (!settings.enabled) return ReminderPlan(words, emptyList())
         val missing = settings.rotationSize - activeIds(words, settings.rotationSize).size
-        val newIds = words.filter { !it.introduced }.sortedBy { it.position }
-            .take(missing).map { it.id }.toSet()
-        val progress = words.map {
-            if (it.id in newIds) it.copy(introduced = true, nextDueAt = now) else it
-        }
+        val newIds =
+            words
+                .filter { !it.introduced }
+                .sortedBy { it.position }
+                .take(missing)
+                .map { it.id }
+                .toSet()
+        val progress =
+            words.map {
+                if (it.id in newIds) it.copy(introduced = true, nextDueAt = now) else it
+            }
         val active = activeIds(progress, settings.rotationSize)
-        val selected = progress.filter {
-            it.introduced && (it.id in active || it.shownCount >= REVIEW_THRESHOLD) && it.nextDueAt <= now
-        }.sortedWith(compareBy<WordProgress> { it.nextDueAt }.thenBy { it.position })
-            .take(settings.wordsPerNotification)
+        val selected =
+            progress
+                .filter {
+                    it.introduced && (it.id in active || it.shownCount >= REVIEW_THRESHOLD) && it.nextDueAt <= now
+                }.sortedWith(compareBy<WordProgress> { it.nextDueAt }.thenBy { it.position })
+                .take(settings.wordsPerNotification)
         return ReminderPlan(progress, selected)
     }
 
-    fun recordShown(word: WordProgress, settings: ReminderSettings, now: Long): WordProgress {
+    fun recordShown(
+        word: WordProgress,
+        settings: ReminderSettings,
+        now: Long,
+    ): WordProgress {
         require(word.introduced)
         val count = if (word.shownCount == Int.MAX_VALUE) Int.MAX_VALUE else word.shownCount + 1
         val multiplier = 1L shl (count - 1).coerceIn(0, 20)

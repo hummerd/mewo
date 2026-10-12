@@ -1,10 +1,14 @@
 package com.mewo.domain
 
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertThrows
+import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class ReminderEngineTest {
     private val settings = ReminderSettings(rotationSize = 2, intervalMinutes = 15, wordsPerNotification = 2)
+
     private fun dictionary(size: Int = 5) = (0 until size).map { WordProgress("word-$it", it) }
 
     @Test fun startsWithConfiguredRotationInDictionaryOrder() {
@@ -25,10 +29,16 @@ class ReminderEngineTest {
     }
 
     @Test fun graduatesWordAndIntroducesReplacement() {
-        val first = dictionary().mapIndexed { i, word ->
-            if (i == 0) word.copy(introduced = true, shownCount = 3)
-            else if (i == 1) word.copy(introduced = true) else word
-        }
+        val first =
+            dictionary().mapIndexed { i, word ->
+                if (i == 0) {
+                    word.copy(introduced = true, shownCount = 3)
+                } else if (i == 1) {
+                    word.copy(introduced = true)
+                } else {
+                    word
+                }
+            }
         val graduate = ReminderEngine.recordShown(first[0], settings, 100)
         val updated = first.toMutableList().also { it[0] = graduate }
         val plan = ReminderEngine.plan(updated, settings, 101)
@@ -46,10 +56,30 @@ class ReminderEngineTest {
     }
 
     @Test fun selectsEarliestDueThenDictionaryOrderWithoutDuplicates() {
-        val words = dictionary().map { it.copy(introduced = true, shownCount = 4, nextDueAt = if (it.position == 3) 5 else 10) }
+        val words =
+            dictionary().map {
+                it.copy(
+                    introduced = true,
+                    shownCount = 4,
+                    nextDueAt =
+                        if (it.position ==
+                            3
+                        ) {
+                            5
+                        } else {
+                            10
+                        },
+                )
+            }
         val plan = ReminderEngine.plan(words.reversed(), settings, 50)
         assertEquals(listOf("word-3", "word-0"), plan.selected.map { it.id })
-        assertEquals(plan.selected.size, plan.selected.map { it.id }.distinct().size)
+        assertEquals(
+            plan.selected.size,
+            plan.selected
+                .map { it.id }
+                .distinct()
+                .size,
+        )
     }
 
     @Test fun skipsNotYetDueWordsAndNeverReturnsEmptyRemindersAsWords() {
@@ -65,7 +95,16 @@ class ReminderEngineTest {
     }
 
     @Test fun shrinkingRotationPausesExcessAndGrowingResumesThemBeforeNewWords() {
-        val words = dictionary().mapIndexed { i, word -> if (i < 3) word.copy(introduced = true, shownCount = 1) else word }
+        val words =
+            dictionary().mapIndexed { i, word ->
+                if (i <
+                    3
+                ) {
+                    word.copy(introduced = true, shownCount = 1)
+                } else {
+                    word
+                }
+            }
         val small = settings.copy(rotationSize = 1, wordsPerNotification = 1)
         val shrunk = ReminderEngine.plan(words, small, 100)
         assertEquals(listOf("word-0"), shrunk.selected.map { it.id })
@@ -84,16 +123,30 @@ class ReminderEngineTest {
     }
 
     @Test fun settingsChangesPreserveExistingDueTimes() {
-        val words = dictionary().mapIndexed { i, word -> if (i < 2) word.copy(introduced = true, nextDueAt = 1000) else word }
+        val words =
+            dictionary().mapIndexed { i, word ->
+                if (i <
+                    2
+                ) {
+                    word.copy(introduced = true, nextDueAt = 1000)
+                } else {
+                    word
+                }
+            }
         val plan = ReminderEngine.plan(words, settings.copy(intervalMinutes = 30), 100)
         assertEquals(words, plan.progress)
         assertTrue(plan.selected.isEmpty())
     }
 
     @Test fun rejectsInvalidSettings() {
-        listOf(settings.copy(rotationSize = 0), settings.copy(rotationSize = 6),
-            settings.copy(intervalMinutes = 14), settings.copy(intervalMinutes = 1441),
-            settings.copy(wordsPerNotification = 0), settings.copy(wordsPerNotification = 3)).forEach { invalid ->
+        listOf(
+            settings.copy(rotationSize = 0),
+            settings.copy(rotationSize = 6),
+            settings.copy(intervalMinutes = 14),
+            settings.copy(intervalMinutes = 1441),
+            settings.copy(wordsPerNotification = 0),
+            settings.copy(wordsPerNotification = 3),
+        ).forEach { invalid ->
             assertThrows(IllegalArgumentException::class.java) { ReminderEngine.plan(dictionary(), invalid, 100) }
         }
     }

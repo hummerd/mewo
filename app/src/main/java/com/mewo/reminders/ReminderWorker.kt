@@ -8,7 +8,12 @@ import com.mewo.MewoApplication
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.first
 
-class ReminderWorker(context: Context, parameters: WorkerParameters) : CoroutineWorker(context, parameters) {
+class ReminderWorker(
+    context: Context,
+    parameters: WorkerParameters,
+) : CoroutineWorker(context, parameters) {
+    // Retry failures at the worker boundary without advancing progress; cancellation is rethrown.
+    @Suppress("TooGenericExceptionCaught")
     override suspend fun doWork(): Result {
         val app = applicationContext as MewoApplication
         return try {

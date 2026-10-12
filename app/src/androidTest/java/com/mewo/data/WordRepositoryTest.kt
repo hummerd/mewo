@@ -6,8 +6,13 @@ import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.mewo.domain.ReminderSettings
 import kotlinx.coroutines.runBlocking
-import org.junit.*
-import org.junit.Assert.*
+import org.junit.After
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
+import org.junit.Assert.fail
+import org.junit.Before
+import org.junit.Test
 import org.junit.runner.RunWith
 import java.util.UUID
 
@@ -23,61 +28,85 @@ class WordRepositoryTest {
         repository = WordRepository(context, database)
     }
 
-    @After fun tearDown() { database.close() }
-
-    @Test fun unsuccessfulPostLeavesAllProgressUntouched() = runBlocking {
-        repository.initialize()
-        val before = database.words().getAll()
-        assertFalse(repository.remind(settings, 100) { false })
-        assertEquals(before, database.words().getAll())
+    @After fun tearDown() {
+        database.close()
     }
 
-    @Test fun successfulPostPersistsCountsAndReimportPreservesProgress() = runBlocking {
-        repository.initialize()
-        val selected = mutableListOf<WordEntity>()
-        assertTrue(repository.remind(settings, 100) { selected.addAll(it); true })
-        assertEquals(2, selected.size)
-        val saved = database.words().getAll()
-        assertTrue(saved.take(2).all { it.shownCount == 1 && it.nextDueAt == 900_100L })
-        assertTrue(saved.drop(2).all { it.shownCount == 0 && !it.introduced })
-        repository.initialize()
-        assertEquals(saved, database.words().getAll())
-        assertFalse(repository.remind(settings, 101) { fail("No words are due"); true })
-    }
-
-    @Test fun pausedRemindersNeverPublishOrMutateProgress() = runBlocking {
-        repository.initialize()
-        val before = database.words().getAll()
-        assertFalse(repository.remind(settings.copy(enabled = false), 100) { fail("Reminders are paused"); true })
-        assertEquals(before, database.words().getAll())
-    }
-
-    @Test fun publisherExceptionRollsBackAllProgress() = runBlocking {
-        repository.initialize()
-        val before = database.words().getAll()
-        try {
-            repository.remind(settings, 100) { throw IllegalStateException("Post failed") }
-            fail("Expected publisher failure")
-        } catch (_: IllegalStateException) { /* Worker retries without advancing words. */ }
-        assertEquals(before, database.words().getAll())
-    }
-
-    @Test fun progressSurvivesClosingAndReopeningDatabase() = runBlocking {
-        val context = ApplicationProvider.getApplicationContext<Context>()
-        val name = "mewo-test-${UUID.randomUUID()}.db"
-        var persistent = Room.databaseBuilder(context, WordDatabase::class.java, name).build()
-        try {
-            val first = WordRepository(context, persistent)
-            first.initialize()
-            assertTrue(first.remind(settings, 100) { true })
-            val saved = persistent.words().getAll()
-            persistent.close()
-            persistent = Room.databaseBuilder(context, WordDatabase::class.java, name).build()
-            WordRepository(context, persistent).initialize()
-            assertEquals(saved, persistent.words().getAll())
-        } finally {
-            persistent.close()
-            context.deleteDatabase(name)
+    @Test fun unsuccessfulPostLeavesAllProgressUntouched() =
+        runBlocking {
+            repository.initialize()
+            val before = database.words().getAll()
+            assertFalse(repository.remind(settings, 100) { false })
+            assertEquals(before, database.words().getAll())
         }
-    }
+
+    @Test fun successfulPostPersistsCountsAndReimportPreservesProgress() =
+        runBlocking {
+            repository.initialize()
+            val selected = mutableListOf<WordEntity>()
+            assertTrue(
+                repository.remind(settings, 100) {
+                    selected.addAll(it)
+                    true
+                },
+            )
+            assertEquals(2, selected.size)
+            val saved = database.words().getAll()
+            assertTrue(saved.take(2).all { it.shownCount == 1 && it.nextDueAt == 900_100L })
+            assertTrue(saved.drop(2).all { it.shownCount == 0 && !it.introduced })
+            repository.initialize()
+            assertEquals(saved, database.words().getAll())
+            assertFalse(
+                repository.remind(settings, 101) {
+                    fail("No words are due")
+                    true
+                },
+            )
+        }
+
+    @Test fun pausedRemindersNeverPublishOrMutateProgress() =
+        runBlocking {
+            repository.initialize()
+            val before = database.words().getAll()
+            assertFalse(
+                repository.remind(settings.copy(enabled = false), 100) {
+                    fail("Reminders are paused")
+                    true
+                },
+            )
+            assertEquals(before, database.words().getAll())
+        }
+
+    @Test fun publisherExceptionRollsBackAllProgress() =
+        runBlocking {
+            repository.initialize()
+            val before = database.words().getAll()
+            try {
+                repository.remind(settings, 100) { throw IllegalStateException("Post failed") }
+                fail("Expected publisher failure")
+            } catch (_: IllegalStateException) {
+                // Worker retries without advancing words.
+            }
+            assertEquals(before, database.words().getAll())
+        }
+
+    @Test fun progressSurvivesClosingAndReopeningDatabase() =
+        runBlocking {
+            val context = ApplicationProvider.getApplicationContext<Context>()
+            val name = "mewo-test-${UUID.randomUUID()}.db"
+            var persistent = Room.databaseBuilder(context, WordDatabase::class.java, name).build()
+            try {
+                val first = WordRepository(context, persistent)
+                first.initialize()
+                assertTrue(first.remind(settings, 100) { true })
+                val saved = persistent.words().getAll()
+                persistent.close()
+                persistent = Room.databaseBuilder(context, WordDatabase::class.java, name).build()
+                WordRepository(context, persistent).initialize()
+                assertEquals(saved, persistent.words().getAll())
+            } finally {
+                persistent.close()
+                context.deleteDatabase(name)
+            }
+        }
 }

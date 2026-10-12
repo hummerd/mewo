@@ -5,9 +5,9 @@ The source of product requirements is [SPEC.md](SPEC.md).
 
 ## Run
 
-Open this directory in Android Studio and install Android SDK Platform 36 and
-Build Tools 35.0.0. Use JDK 17 or 21 for Gradle (the system default JDK 25 is not
-supported by this project's Gradle 8.13). Android Studio can configure the SDK;
+Open this directory in Android Studio and install Android SDK Platform 37.
+The Gradle wrapper uses the JDK 21 toolchain configured in
+`gradle/gradle-daemon-jvm.properties`. Android Studio can configure the SDK;
 command-line builds need `ANDROID_HOME` pointing to your SDK or an untracked
 `local.properties` containing `sdk.dir=/absolute/path/to/sdk`.
 
@@ -95,9 +95,6 @@ Before release, also check on a device:
 4. Reopen the app and reboot the device; progress/settings should remain saved
    and enabled reminders should continue. Check light/dark mode and large fonts.
 
-In the implementation environment, the 12 JVM tests passed using the locally
-cached Kotlin compiler and JUnit. APK build, Android lint, and device integration
-checks could not run: Gradle/dependency downloads and daemon sockets are blocked,
-and only SDK Platform 33 is installed. Run the commands above in Android Studio
-or a build environment with SDK 36 and network access before treating the app as
-validated for deployment.
+The 12 JVM tests, static checks, debug APK build, and device-test APK build have
+been verified. Device integration tests and the runtime checks above still need
+a running emulator or device, including verification on Android 17 (API 37).
