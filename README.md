@@ -25,6 +25,36 @@ Install it on an Android 8.0+ device or emulator:
 adb install -r app/build/outputs/apk/debug/app-debug.apk
 ```
 
+For wireless installation on Android 11+, put your phone and computer on the same
+Wi-Fi network. Enable **Developer options → Wireless debugging** on the phone,
+then choose **Pair device with pairing code**. Use the IP address and pairing port
+from that dialog; the command prompts for the pairing code:
+
+```sh
+make pair ADDRESS=192.168.1.42:37123
+```
+
+Pairing is usually needed only once. If the phone does not connect automatically,
+use the IP address and port from the main **Wireless debugging** screen (this port
+is different from the pairing port):
+
+```sh
+make connect ADDRESS=192.168.1.42:42567
+make devices
+make install
+```
+
+Replace the example addresses with those shown on your phone. `make install`
+builds the debug APK and installs it, preserving existing app data. If several
+devices or emulators are connected, select the phone using its serial from
+`make devices`, for example `make install DEVICE=192.168.1.42:42567`.
+`ANDROID_SERIAL` is also supported when `DEVICE` is omitted.
+
+These commands find ADB through `ANDROID_HOME`, `ANDROID_SDK_ROOT`, or
+`local.properties`, falling back to `adb` on `PATH`. Override it if needed with
+`make install ADB=/path/to/adb`. See the
+[Android wireless debugging documentation](https://developer.android.com/tools/adb#wireless-android11-command-line).
+
 Open MEWO and tap **Enable notifications**. On Android 13+, approve the permission
 prompt. If notification permission or the reminder channel is blocked, the button
 opens the appropriate system settings. Reminders default to hourly; the first
