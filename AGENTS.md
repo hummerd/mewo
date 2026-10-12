@@ -13,4 +13,5 @@ helps memorising words by sending user notifications with reminders.
 ## Spec driven
 
 This project is spec driven. Always check SPEC.md for understanding what we are doing.
-For new features spec-change comes first, followed by implementation.
+All major changes should first be described by human in SPEC.md. AI agents should not
+modify it, until asked explicitly.
