@@ -1,4 +1,4 @@
-# MEWO (momora) project
+# MEWO (MEmorizing WOrds) project
 
 ## Essential Info
 

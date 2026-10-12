@@ -58,6 +58,22 @@ server, or runtime network connection is needed.
 
 ## Verification
 
+Run all static checks with GNU Make and the Gradle wrapper:
+
+```sh
+make lint
+```
+
+This runs Android Lint for the debug variant, detekt on all app source sets
+(including tests), and ktlint on Kotlin sources and Gradle Kotlin scripts.
+Gradle continues running the other checks when one reports violations, and the
+command exits with a failure if any check fails. The first run downloads the
+pinned lint tools. This command checks code without automatically changing it.
+
+Android Lint reports are in `app/build/reports/`, detekt reports in
+`build/reports/detekt/`, and ktlint reports in `build/reports/ktlint/` and
+`app/build/reports/ktlint/`.
+
 The JVM suite covers initial selection, doubling/capping intervals, replacement
 words, review after dictionary exhaustion, overdue ordering, rotation changes,
 paused reminders, frequency changes, and input validation.
