@@ -6,16 +6,6 @@ import com.mewo.domain.ReminderEngine
 import com.mewo.domain.ReminderSettings
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import kotlinx.serialization.Serializable
-import kotlinx.serialization.json.Json
-
-@Serializable
-private data class DictionaryWord(
-    val id: String,
-    val hebrew: String,
-    val english: String,
-    val transliteration: String,
-)
 
 class WordRepository(
     private val context: Context,
@@ -30,21 +20,14 @@ class WordRepository(
                     .open("hebrew.json")
                     .bufferedReader()
                     .use { it.readText() }
-            val dictionary = Json.decodeFromString<List<DictionaryWord>>(json)
-            require(dictionary.isNotEmpty() && dictionary.map { it.id }.distinct().size == dictionary.size)
-            require(
-                dictionary.all {
-                    it.id.isNotBlank() &&
-                        it.hebrew.isNotBlank() &&
-                        it.english.isNotBlank() &&
-                        it.transliteration.isNotBlank()
-                },
-            )
-            database.words().insert(
-                dictionary.mapIndexed { index, word ->
-                    WordEntity(word.id, index, word.hebrew, word.english, word.transliteration)
-                },
-            )
+            val dictionary = Dictionary.decode(json)
+            database.withTransaction {
+                val existing = database.words().getAll().associateBy { it.id }
+                val entities = dictionary.mapIndexed { index, word -> word.entity(index, existing) }
+                database.words().insert(entities)
+                database.words().update(entities)
+                database.words().deleteMerged(dictionary.flatMap { it.mergedIds })
+            }
         }
 
     /** Record appearances only if the notification publisher reports success. */

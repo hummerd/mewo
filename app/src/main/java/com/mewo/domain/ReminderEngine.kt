@@ -29,7 +29,15 @@ data class WordProgress(
     val shownCount: Int = 0,
     val introduced: Boolean = false,
     val nextDueAt: Long = 0,
+    val priority: Int = WordPriority.COMMON,
 )
+
+object WordPriority {
+    const val COMMON = 100
+    const val EVERYDAY = 300
+    const val EXTENDED = 1000
+    val values = setOf(COMMON, EVERYDAY, EXTENDED)
+}
 
 data class ReminderPlan(
     val progress: List<WordProgress>,
@@ -42,6 +50,7 @@ enum class LearningStatus { NEW, LEARNING, PAUSED, REVIEW }
 object ReminderEngine {
     const val REVIEW_THRESHOLD = 4
     private const val MAX_INTERVAL_MS = 7L * 24 * 60 * 60 * 1000
+    private val dictionaryOrder = compareBy<WordProgress> { it.priority }.thenBy { it.position }
 
     fun activeIds(
         words: List<WordProgress>,
@@ -49,7 +58,7 @@ object ReminderEngine {
     ): Set<String> =
         words
             .filter { it.introduced && it.shownCount < REVIEW_THRESHOLD }
-            .sortedBy { it.position }
+            .sortedWith(dictionaryOrder)
             .take(rotationSize)
             .map { it.id }
             .toSet()
@@ -76,7 +85,7 @@ object ReminderEngine {
         val newIds =
             words
                 .filter { !it.introduced }
-                .sortedBy { it.position }
+                .sortedWith(dictionaryOrder)
                 .take(missing)
                 .map { it.id }
                 .toSet()
@@ -89,7 +98,7 @@ object ReminderEngine {
             progress
                 .filter {
                     it.introduced && (it.id in active || it.shownCount >= REVIEW_THRESHOLD) && it.nextDueAt <= now
-                }.sortedWith(compareBy<WordProgress> { it.nextDueAt }.thenBy { it.position })
+                }.sortedWith(compareBy<WordProgress> { it.nextDueAt }.then(dictionaryOrder))
                 .take(settings.wordsPerNotification)
         return ReminderPlan(progress, selected)
     }

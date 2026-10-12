@@ -3,240 +3,7846 @@
     "id": "shalom",
     "hebrew": "שלום",
     "english": "Hello / peace",
-    "transliteration": "shalom"
+    "transliteration": "shalom",
+    "priority": 100
   },
   {
     "id": "toda",
     "hebrew": "תודה",
     "english": "Thank you",
-    "transliteration": "toda"
+    "transliteration": "toda",
+    "priority": 100
   },
   {
     "id": "ken",
     "hebrew": "כן",
     "english": "Yes",
-    "transliteration": "ken"
+    "transliteration": "ken",
+    "priority": 100
   },
   {
     "id": "lo",
     "hebrew": "לא",
     "english": "No",
-    "transliteration": "lo"
+    "transliteration": "lo",
+    "priority": 100
   },
   {
     "id": "bevakasha",
     "hebrew": "בבקשה",
     "english": "Please / you are welcome",
-    "transliteration": "bevakasha"
+    "transliteration": "bevakasha",
+    "priority": 100
   },
   {
     "id": "slikha",
     "hebrew": "סליחה",
     "english": "Excuse me / sorry",
-    "transliteration": "slikha"
+    "transliteration": "slikha",
+    "priority": 100
   },
   {
     "id": "boker-tov",
     "hebrew": "בוקר טוב",
     "english": "Good morning",
-    "transliteration": "boker tov"
+    "transliteration": "boker tov",
+    "priority": 100
   },
   {
     "id": "laila-tov",
     "hebrew": "לילה טוב",
     "english": "Good night",
-    "transliteration": "laila tov"
+    "transliteration": "laila tov",
+    "priority": 100
   },
   {
     "id": "lehitraot",
     "hebrew": "להתראות",
     "english": "Goodbye / see you",
-    "transliteration": "lehitraot"
+    "transliteration": "lehitraot",
+    "priority": 100
   },
   {
     "id": "ma-nishma",
     "hebrew": "מה נשמע",
     "english": "How are you?",
-    "transliteration": "ma nishma"
+    "transliteration": "ma nishma",
+    "priority": 100
   },
   {
     "id": "mayim",
     "hebrew": "מים",
     "english": "Water",
-    "transliteration": "mayim"
+    "transliteration": "mayim",
+    "priority": 100
   },
   {
     "id": "lekhem",
     "hebrew": "לחם",
     "english": "Bread",
-    "transliteration": "lekhem"
+    "transliteration": "lekhem",
+    "priority": 100
   },
   {
     "id": "kafe",
     "hebrew": "קפה",
     "english": "Coffee",
-    "transliteration": "kafe"
+    "transliteration": "kafe",
+    "priority": 100
   },
   {
     "id": "te",
     "hebrew": "תה",
     "english": "Tea",
-    "transliteration": "te"
+    "transliteration": "te",
+    "priority": 100
   },
   {
     "id": "khalav",
     "hebrew": "חלב",
     "english": "Milk",
-    "transliteration": "khalav"
+    "transliteration": "khalav",
+    "priority": 100
   },
   {
     "id": "bayit",
     "hebrew": "בית",
     "english": "House / home",
-    "transliteration": "bayit"
+    "transliteration": "bayit",
+    "priority": 100
   },
   {
     "id": "sefer",
     "hebrew": "ספר",
     "english": "Book",
-    "transliteration": "sefer"
+    "transliteration": "sefer",
+    "priority": 100
   },
   {
     "id": "yom",
     "hebrew": "יום",
     "english": "Day",
-    "transliteration": "yom"
+    "transliteration": "yom",
+    "priority": 100
   },
   {
     "id": "laila",
     "hebrew": "לילה",
     "english": "Night",
-    "transliteration": "laila"
+    "transliteration": "laila",
+    "priority": 100
   },
   {
     "id": "zman",
     "hebrew": "זמן",
     "english": "Time",
-    "transliteration": "zman"
+    "transliteration": "zman",
+    "priority": 100
   },
   {
     "id": "kesef",
     "hebrew": "כסף",
     "english": "Money",
-    "transliteration": "kesef"
+    "transliteration": "kesef",
+    "priority": 100
   },
   {
     "id": "avoda",
     "hebrew": "עבודה",
     "english": "Work",
-    "transliteration": "avoda"
+    "transliteration": "avoda",
+    "priority": 100
   },
   {
     "id": "mishpakha",
     "hebrew": "משפחה",
     "english": "Family",
-    "transliteration": "mishpakha"
+    "transliteration": "mishpakha",
+    "priority": 100
   },
   {
     "id": "khaver",
     "hebrew": "חבר",
-    "english": "Friend (male)",
-    "transliteration": "khaver"
-  },
-  {
-    "id": "khavera",
-    "hebrew": "חברה",
-    "english": "Friend (female)",
-    "transliteration": "khavera"
+    "english": "Friend",
+    "transliteration": "khaver",
+    "feminine": {
+      "hebrew": "חברה",
+      "transliteration": "khavera",
+      "modification": "Add ה"
+    },
+    "mergedIds": [
+      "khavera"
+    ],
+    "priority": 100
   },
   {
     "id": "tov",
     "hebrew": "טוב",
-    "english": "Good (masculine)",
-    "transliteration": "tov"
-  },
-  {
-    "id": "tova",
-    "hebrew": "טובה",
-    "english": "Good (feminine)",
-    "transliteration": "tova"
+    "english": "Good",
+    "transliteration": "tov",
+    "feminine": {
+      "hebrew": "טובה",
+      "transliteration": "tova",
+      "modification": "Add ה"
+    },
+    "mergedIds": [
+      "tova"
+    ],
+    "priority": 100
   },
   {
     "id": "gadol",
     "hebrew": "גדול",
-    "english": "Big (masculine)",
-    "transliteration": "gadol"
+    "english": "Big",
+    "transliteration": "gadol",
+    "feminine": {
+      "hebrew": "גדולה",
+      "transliteration": "gdola",
+      "modification": "Add ה"
+    },
+    "priority": 100
   },
   {
     "id": "katan",
     "hebrew": "קטן",
-    "english": "Small (masculine)",
-    "transliteration": "katan"
+    "english": "Small",
+    "transliteration": "katan",
+    "feminine": {
+      "hebrew": "קטנה",
+      "transliteration": "ktana",
+      "modification": "Replace ן with נה"
+    },
+    "priority": 100
   },
   {
     "id": "hayom",
     "hebrew": "היום",
     "english": "Today",
-    "transliteration": "hayom"
+    "transliteration": "hayom",
+    "priority": 100
   },
   {
     "id": "makhar",
     "hebrew": "מחר",
     "english": "Tomorrow",
-    "transliteration": "makhar"
+    "transliteration": "makhar",
+    "priority": 100
   },
   {
     "id": "etmol",
     "hebrew": "אתמול",
     "english": "Yesterday",
-    "transliteration": "etmol"
+    "transliteration": "etmol",
+    "priority": 100
   },
   {
     "id": "akhshav",
     "hebrew": "עכשיו",
     "english": "Now",
-    "transliteration": "akhshav"
+    "transliteration": "akhshav",
+    "priority": 100
   },
   {
     "id": "po",
     "hebrew": "פה",
     "english": "Here",
-    "transliteration": "po"
+    "transliteration": "po",
+    "priority": 100
   },
   {
     "id": "sham",
     "hebrew": "שם",
     "english": "There",
-    "transliteration": "sham"
+    "transliteration": "sham",
+    "priority": 100
   },
   {
     "id": "eifo",
     "hebrew": "איפה",
     "english": "Where",
-    "transliteration": "eifo"
+    "transliteration": "eifo",
+    "priority": 100
   },
   {
     "id": "ma",
     "hebrew": "מה",
     "english": "What",
-    "transliteration": "ma"
+    "transliteration": "ma",
+    "priority": 100
   },
   {
     "id": "mi",
     "hebrew": "מי",
     "english": "Who",
-    "transliteration": "mi"
+    "transliteration": "mi",
+    "priority": 100
   },
   {
     "id": "kama",
     "hebrew": "כמה",
     "english": "How much / how many",
-    "transliteration": "kama"
+    "transliteration": "kama",
+    "priority": 100
   },
   {
     "id": "lama",
     "hebrew": "למה",
     "english": "Why",
-    "transliteration": "lama"
+    "transliteration": "lama",
+    "priority": 100
+  },
+  {
+    "id": "vocab-i",
+    "hebrew": "אני",
+    "english": "I",
+    "transliteration": "ani",
+    "priority": 100
+  },
+  {
+    "id": "vocab-you-singular",
+    "hebrew": "אתה",
+    "english": "You (singular)",
+    "transliteration": "ata",
+    "feminine": {
+      "hebrew": "את",
+      "transliteration": "at",
+      "modification": "Remove ה"
+    },
+    "priority": 100
+  },
+  {
+    "id": "vocab-he-she",
+    "hebrew": "הוא",
+    "english": "He / she",
+    "transliteration": "hu",
+    "feminine": {
+      "hebrew": "היא",
+      "transliteration": "hi",
+      "modification": "Replace וא with יא"
+    },
+    "priority": 100
+  },
+  {
+    "id": "vocab-we",
+    "hebrew": "אנחנו",
+    "english": "We",
+    "transliteration": "anakhnu",
+    "priority": 100
+  },
+  {
+    "id": "vocab-you-plural",
+    "hebrew": "אתם",
+    "english": "You (plural)",
+    "transliteration": "atem",
+    "feminine": {
+      "hebrew": "אתן",
+      "transliteration": "aten",
+      "modification": "Replace ם with ן"
+    },
+    "priority": 100
+  },
+  {
+    "id": "vocab-they",
+    "hebrew": "הם",
+    "english": "They",
+    "transliteration": "hem",
+    "feminine": {
+      "hebrew": "הן",
+      "transliteration": "hen",
+      "modification": "Replace ם with ן"
+    },
+    "priority": 100
+  },
+  {
+    "id": "vocab-this-that",
+    "hebrew": "זה",
+    "english": "This / that",
+    "transliteration": "ze",
+    "feminine": {
+      "hebrew": "זאת",
+      "transliteration": "zot",
+      "modification": "Replace ה with את"
+    },
+    "priority": 100
+  },
+  {
+    "id": "vocab-these",
+    "hebrew": "אלה",
+    "english": "These",
+    "transliteration": "ele",
+    "priority": 100
+  },
+  {
+    "id": "vocab-of-belonging-to",
+    "hebrew": "של",
+    "english": "Of / belonging to",
+    "transliteration": "shel",
+    "priority": 100
+  },
+  {
+    "id": "vocab-with",
+    "hebrew": "עם",
+    "english": "With",
+    "transliteration": "im",
+    "priority": 100
+  },
+  {
+    "id": "vocab-without",
+    "hebrew": "בלי",
+    "english": "Without",
+    "transliteration": "bli",
+    "priority": 100
+  },
+  {
+    "id": "vocab-on-about",
+    "hebrew": "על",
+    "english": "On / about",
+    "transliteration": "al",
+    "priority": 100
+  },
+  {
+    "id": "vocab-to-toward",
+    "hebrew": "אל",
+    "english": "To / toward",
+    "transliteration": "el",
+    "priority": 100
+  },
+  {
+    "id": "vocab-from-prefix",
+    "hebrew": "מ",
+    "english": "From (prefix)",
+    "transliteration": "mi",
+    "priority": 100
+  },
+  {
+    "id": "vocab-in-at-prefix",
+    "hebrew": "ב",
+    "english": "In / at (prefix)",
+    "transliteration": "be",
+    "priority": 100
+  },
+  {
+    "id": "vocab-to-for-prefix",
+    "hebrew": "ל",
+    "english": "To / for (prefix)",
+    "transliteration": "le",
+    "priority": 100
+  },
+  {
+    "id": "vocab-and-prefix",
+    "hebrew": "ו",
+    "english": "And (prefix)",
+    "transliteration": "ve",
+    "priority": 100
+  },
+  {
+    "id": "vocab-but",
+    "hebrew": "אבל",
+    "english": "But",
+    "transliteration": "aval",
+    "priority": 100
+  },
+  {
+    "id": "vocab-or",
+    "hebrew": "או",
+    "english": "Or",
+    "transliteration": "o",
+    "priority": 100
+  },
+  {
+    "id": "vocab-because",
+    "hebrew": "כי",
+    "english": "Because",
+    "transliteration": "ki",
+    "priority": 100
+  },
+  {
+    "id": "vocab-if",
+    "hebrew": "אם",
+    "english": "If",
+    "transliteration": "im",
+    "priority": 100
+  },
+  {
+    "id": "vocab-also",
+    "hebrew": "גם",
+    "english": "Also",
+    "transliteration": "gam",
+    "priority": 100
+  },
+  {
+    "id": "vocab-only",
+    "hebrew": "רק",
+    "english": "Only",
+    "transliteration": "rak",
+    "priority": 100
+  },
+  {
+    "id": "vocab-every-all",
+    "hebrew": "כל",
+    "english": "Every / all",
+    "transliteration": "kol",
+    "priority": 100
+  },
+  {
+    "id": "vocab-more-still",
+    "hebrew": "עוד",
+    "english": "More / still",
+    "transliteration": "od",
+    "priority": 100
+  },
+  {
+    "id": "vocab-already",
+    "hebrew": "כבר",
+    "english": "Already",
+    "transliteration": "kvar",
+    "priority": 100
+  },
+  {
+    "id": "vocab-very",
+    "hebrew": "מאוד",
+    "english": "Very",
+    "transliteration": "meod",
+    "priority": 100
+  },
+  {
+    "id": "vocab-here-at-this-place",
+    "hebrew": "כאן",
+    "english": "Here (at this place)",
+    "transliteration": "kan",
+    "priority": 100
+  },
+  {
+    "id": "vocab-surname",
+    "hebrew": "שם משפחה",
+    "english": "Surname",
+    "transliteration": "shem mishpakha",
+    "priority": 100
+  },
+  {
+    "id": "vocab-how",
+    "hebrew": "איך",
+    "english": "How",
+    "transliteration": "ekh",
+    "priority": 100
+  },
+  {
+    "id": "vocab-when",
+    "hebrew": "מתי",
+    "english": "When",
+    "transliteration": "matai",
+    "priority": 100
+  },
+  {
+    "id": "vocab-where-to",
+    "hebrew": "לאן",
+    "english": "Where to",
+    "transliteration": "lean",
+    "priority": 100
+  },
+  {
+    "id": "vocab-where-from",
+    "hebrew": "מאיפה",
+    "english": "Where from",
+    "transliteration": "me-eifo",
+    "priority": 100
+  },
+  {
+    "id": "vocab-which",
+    "hebrew": "איזה",
+    "english": "Which",
+    "transliteration": "eize",
+    "feminine": {
+      "hebrew": "איזו",
+      "transliteration": "eizo",
+      "modification": "Replace ה with ו"
+    },
+    "priority": 100
+  },
+  {
+    "id": "vocab-how-long",
+    "hebrew": "כמה זמן",
+    "english": "How long",
+    "transliteration": "kama zman",
+    "priority": 100
+  },
+  {
+    "id": "vocab-one",
+    "hebrew": "אחד",
+    "english": "One",
+    "transliteration": "ekhad",
+    "feminine": {
+      "hebrew": "אחת",
+      "transliteration": "akhat",
+      "modification": "Replace ד with ת"
+    },
+    "priority": 100
+  },
+  {
+    "id": "vocab-two",
+    "hebrew": "שניים",
+    "english": "Two",
+    "transliteration": "shnayim",
+    "feminine": {
+      "hebrew": "שתיים",
+      "transliteration": "shtayim",
+      "modification": "Replace ניים with תיים"
+    },
+    "priority": 100
+  },
+  {
+    "id": "vocab-three",
+    "hebrew": "שלושה",
+    "english": "Three",
+    "transliteration": "shlosha",
+    "feminine": {
+      "hebrew": "שלוש",
+      "transliteration": "shalosh",
+      "modification": "Remove ה"
+    },
+    "priority": 100
+  },
+  {
+    "id": "vocab-four",
+    "hebrew": "ארבעה",
+    "english": "Four",
+    "transliteration": "arbaa",
+    "feminine": {
+      "hebrew": "ארבע",
+      "transliteration": "arba",
+      "modification": "Remove ה"
+    },
+    "priority": 100
+  },
+  {
+    "id": "vocab-five",
+    "hebrew": "חמישה",
+    "english": "Five",
+    "transliteration": "khamisha",
+    "feminine": {
+      "hebrew": "חמש",
+      "transliteration": "khamesh",
+      "modification": "Replace ישה with ש"
+    },
+    "priority": 100
+  },
+  {
+    "id": "vocab-person-human",
+    "hebrew": "אדם",
+    "english": "Person / human",
+    "transliteration": "adam",
+    "priority": 100
+  },
+  {
+    "id": "vocab-man-woman",
+    "hebrew": "איש",
+    "english": "Man / woman",
+    "transliteration": "ish",
+    "feminine": {
+      "hebrew": "אישה",
+      "transliteration": "isha",
+      "modification": "Add ה"
+    },
+    "priority": 100
+  },
+  {
+    "id": "vocab-child-boy",
+    "hebrew": "ילד",
+    "english": "Child / boy",
+    "transliteration": "yeled",
+    "feminine": {
+      "hebrew": "ילדה",
+      "transliteration": "yalda",
+      "modification": "Add ה"
+    },
+    "priority": 100
+  },
+  {
+    "id": "vocab-have-a-good-day",
+    "hebrew": "יום טוב",
+    "english": "Have a good day",
+    "transliteration": "yom tov",
+    "priority": 100
+  },
+  {
+    "id": "vocab-good-evening",
+    "hebrew": "ערב טוב",
+    "english": "Good evening",
+    "transliteration": "erev tov",
+    "priority": 100
+  },
+  {
+    "id": "vocab-how-are-you-addressing-a-man",
+    "hebrew": "מה שלומך",
+    "english": "How are you? (addressing a man)",
+    "transliteration": "ma shlomkha",
+    "feminine": {
+      "hebrew": "מה שלומך",
+      "transliteration": "ma shlomekh",
+      "modification": "Same spelling; pronunciation changes"
+    },
+    "priority": 100
+  },
+  {
+    "id": "vocab-nice-to-meet-you",
+    "hebrew": "נעים מאוד",
+    "english": "Nice to meet you",
+    "transliteration": "naim meod",
+    "priority": 100
+  },
+  {
+    "id": "vocab-i-do-not-understand",
+    "hebrew": "אני לא מבין",
+    "english": "I do not understand",
+    "transliteration": "ani lo mevin",
+    "feminine": {
+      "hebrew": "אני לא מבינה",
+      "transliteration": "ani lo mevina",
+      "modification": "Use אני לא מבינה"
+    },
+    "priority": 100
+  },
+  {
+    "id": "vocab-do-not-know",
+    "hebrew": "לא יודע",
+    "english": "Do not know",
+    "transliteration": "lo yodea",
+    "feminine": {
+      "hebrew": "לא יודעת",
+      "transliteration": "lo yodaat",
+      "modification": "Add ת"
+    },
+    "priority": 100
+  },
+  {
+    "id": "vocab-possible-may-i",
+    "hebrew": "אפשר",
+    "english": "Possible / may I",
+    "transliteration": "efshar",
+    "priority": 100
+  },
+  {
+    "id": "vocab-need-necessary",
+    "hebrew": "צריך",
+    "english": "Need / necessary",
+    "transliteration": "tsarikh",
+    "feminine": {
+      "hebrew": "צריכה",
+      "transliteration": "tsrikha",
+      "modification": "Replace ך with כה"
+    },
+    "priority": 100
+  },
+  {
+    "id": "vocab-want-present",
+    "hebrew": "רוצה",
+    "english": "Want (present)",
+    "transliteration": "rotse",
+    "feminine": {
+      "hebrew": "רוצה",
+      "transliteration": "rotsa",
+      "modification": "Same spelling; pronunciation changes"
+    },
+    "priority": 100
+  },
+  {
+    "id": "vocab-there-is-have",
+    "hebrew": "יש",
+    "english": "There is / have",
+    "transliteration": "yesh",
+    "priority": 100
+  },
+  {
+    "id": "vocab-there-is-not-do-not-have",
+    "hebrew": "אין",
+    "english": "There is not / do not have",
+    "transliteration": "ein",
+    "priority": 100
+  },
+  {
+    "id": "vocab-to-be",
+    "hebrew": "להיות",
+    "english": "To be",
+    "transliteration": "lihyot",
+    "priority": 100
+  },
+  {
+    "id": "vocab-to-do-make",
+    "hebrew": "לעשות",
+    "english": "To do / make",
+    "transliteration": "laasot",
+    "priority": 100
+  },
+  {
+    "id": "vocab-to-go-walk",
+    "hebrew": "ללכת",
+    "english": "To go / walk",
+    "transliteration": "lalekhet",
+    "priority": 100
+  },
+  {
+    "id": "vocab-to-come",
+    "hebrew": "לבוא",
+    "english": "To come",
+    "transliteration": "lavo",
+    "priority": 100
+  },
+  {
+    "id": "vocab-to-see",
+    "hebrew": "לראות",
+    "english": "To see",
+    "transliteration": "lirot",
+    "priority": 100
+  },
+  {
+    "id": "vocab-to-hear",
+    "hebrew": "לשמוע",
+    "english": "To hear",
+    "transliteration": "lishmoa",
+    "priority": 100
+  },
+  {
+    "id": "vocab-to-say",
+    "hebrew": "לומר",
+    "english": "To say",
+    "transliteration": "lomar",
+    "priority": 100
+  },
+  {
+    "id": "vocab-to-eat",
+    "hebrew": "לאכול",
+    "english": "To eat",
+    "transliteration": "leekhol",
+    "priority": 100
+  },
+  {
+    "id": "vocab-to-drink",
+    "hebrew": "לשתות",
+    "english": "To drink",
+    "transliteration": "lishtot",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-sleep",
+    "hebrew": "לישון",
+    "english": "To sleep",
+    "transliteration": "lishon",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-get-up",
+    "hebrew": "לקום",
+    "english": "To get up",
+    "transliteration": "lakum",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-sit",
+    "hebrew": "לשבת",
+    "english": "To sit",
+    "transliteration": "lashevet",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-stand",
+    "hebrew": "לעמוד",
+    "english": "To stand",
+    "transliteration": "laamod",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-run",
+    "hebrew": "לרוץ",
+    "english": "To run",
+    "transliteration": "laruts",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-speak",
+    "hebrew": "לדבר",
+    "english": "To speak",
+    "transliteration": "ledaber",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-read-call",
+    "hebrew": "לקרוא",
+    "english": "To read / call",
+    "transliteration": "likro",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-write",
+    "hebrew": "לכתוב",
+    "english": "To write",
+    "transliteration": "likhtov",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-learn-study",
+    "hebrew": "ללמוד",
+    "english": "To learn / study",
+    "transliteration": "lilmod",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-teach",
+    "hebrew": "ללמד",
+    "english": "To teach",
+    "transliteration": "lelamed",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-work",
+    "hebrew": "לעבוד",
+    "english": "To work",
+    "transliteration": "laavod",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-buy",
+    "hebrew": "לקנות",
+    "english": "To buy",
+    "transliteration": "liknot",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-sell",
+    "hebrew": "למכור",
+    "english": "To sell",
+    "transliteration": "limkor",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-pay",
+    "hebrew": "לשלם",
+    "english": "To pay",
+    "transliteration": "leshalem",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-give",
+    "hebrew": "לתת",
+    "english": "To give",
+    "transliteration": "latet",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-take",
+    "hebrew": "לקחת",
+    "english": "To take",
+    "transliteration": "lakakhat",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-bring",
+    "hebrew": "להביא",
+    "english": "To bring",
+    "transliteration": "lehavi",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-send",
+    "hebrew": "לשלוח",
+    "english": "To send",
+    "transliteration": "lishloakh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-receive",
+    "hebrew": "לקבל",
+    "english": "To receive",
+    "transliteration": "lekabel",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-open",
+    "hebrew": "לפתוח",
+    "english": "To open",
+    "transliteration": "liftoakh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-close",
+    "hebrew": "לסגור",
+    "english": "To close",
+    "transliteration": "lisgor",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-enter",
+    "hebrew": "להיכנס",
+    "english": "To enter",
+    "transliteration": "lehikanes",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-leave-go-out",
+    "hebrew": "לצאת",
+    "english": "To leave / go out",
+    "transliteration": "latset",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-return",
+    "hebrew": "לחזור",
+    "english": "To return",
+    "transliteration": "lakhzor",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-wait",
+    "hebrew": "לחכות",
+    "english": "To wait",
+    "transliteration": "lekhakot",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-find",
+    "hebrew": "למצוא",
+    "english": "To find",
+    "transliteration": "limtso",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-look-for",
+    "hebrew": "לחפש",
+    "english": "To look for",
+    "transliteration": "lekhapes",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-lose",
+    "hebrew": "לאבד",
+    "english": "To lose",
+    "transliteration": "leabed",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-ask",
+    "hebrew": "לשאול",
+    "english": "To ask",
+    "transliteration": "lishol",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-answer",
+    "hebrew": "לענות",
+    "english": "To answer",
+    "transliteration": "laanot",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-understand",
+    "hebrew": "להבין",
+    "english": "To understand",
+    "transliteration": "lehavin",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-know",
+    "hebrew": "לדעת",
+    "english": "To know",
+    "transliteration": "ladaat",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-think",
+    "hebrew": "לחשוב",
+    "english": "To think",
+    "transliteration": "lakhshov",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-remember",
+    "hebrew": "לזכור",
+    "english": "To remember",
+    "transliteration": "lizkor",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-forget",
+    "hebrew": "לשכוח",
+    "english": "To forget",
+    "transliteration": "lishkoakh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-be-acquainted-with",
+    "hebrew": "להכיר",
+    "english": "To be acquainted with",
+    "transliteration": "lehakir",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-love-like",
+    "hebrew": "לאהוב",
+    "english": "To love / like",
+    "transliteration": "leehov",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-feel",
+    "hebrew": "להרגיש",
+    "english": "To feel",
+    "transliteration": "lehargish",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-help",
+    "hebrew": "לעזור",
+    "english": "To help",
+    "transliteration": "laazor",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-try",
+    "hebrew": "לנסות",
+    "english": "To try",
+    "transliteration": "lenasot",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-start",
+    "hebrew": "להתחיל",
+    "english": "To start",
+    "transliteration": "lehatkhil",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-finish",
+    "hebrew": "לסיים",
+    "english": "To finish",
+    "transliteration": "lesayem",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-continue",
+    "hebrew": "להמשיך",
+    "english": "To continue",
+    "transliteration": "lehamshikh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-stop",
+    "hebrew": "להפסיק",
+    "english": "To stop",
+    "transliteration": "lehafsik",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-decide",
+    "hebrew": "להחליט",
+    "english": "To decide",
+    "transliteration": "lehakhlit",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-choose",
+    "hebrew": "לבחור",
+    "english": "To choose",
+    "transliteration": "livkhor",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-agree",
+    "hebrew": "להסכים",
+    "english": "To agree",
+    "transliteration": "lehaskim",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-explain",
+    "hebrew": "להסביר",
+    "english": "To explain",
+    "transliteration": "lehasbir",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-show",
+    "hebrew": "להראות",
+    "english": "To show",
+    "transliteration": "leharot",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-listen",
+    "hebrew": "להקשיב",
+    "english": "To listen",
+    "transliteration": "lehakshiv",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-play",
+    "hebrew": "לשחק",
+    "english": "To play",
+    "transliteration": "lesakhek",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-sing",
+    "hebrew": "לשיר",
+    "english": "To sing",
+    "transliteration": "lashir",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-dance",
+    "hebrew": "לרקוד",
+    "english": "To dance",
+    "transliteration": "lirkod",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-laugh",
+    "hebrew": "לצחוק",
+    "english": "To laugh",
+    "transliteration": "litskhok",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-cry",
+    "hebrew": "לבכות",
+    "english": "To cry",
+    "transliteration": "livkot",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-drive",
+    "hebrew": "לנהוג",
+    "english": "To drive",
+    "transliteration": "linhog",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-travel-ride",
+    "hebrew": "לנסוע",
+    "english": "To travel / ride",
+    "transliteration": "linsoa",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-fly",
+    "hebrew": "לטוס",
+    "english": "To fly",
+    "transliteration": "latus",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-arrive",
+    "hebrew": "להגיע",
+    "english": "To arrive",
+    "transliteration": "lehagia",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-order-invite",
+    "hebrew": "להזמין",
+    "english": "To order / invite",
+    "transliteration": "lehazmin",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-cook",
+    "hebrew": "לבשל",
+    "english": "To cook",
+    "transliteration": "levashel",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-clean",
+    "hebrew": "לנקות",
+    "english": "To clean",
+    "transliteration": "lenakot",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-wash-rinse",
+    "hebrew": "לשטוף",
+    "english": "To wash / rinse",
+    "transliteration": "lishtof",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-shower",
+    "hebrew": "להתקלח",
+    "english": "To shower",
+    "transliteration": "lehitkaleakh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-get-dressed",
+    "hebrew": "להתלבש",
+    "english": "To get dressed",
+    "transliteration": "lehitlabesh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-wear-clothes",
+    "hebrew": "ללבוש",
+    "english": "To wear (clothes)",
+    "transliteration": "lilbosh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-lock-put-on-shoes",
+    "hebrew": "לנעול",
+    "english": "To lock / put on shoes",
+    "transliteration": "linol",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-turn-off",
+    "hebrew": "לכבות",
+    "english": "To turn off",
+    "transliteration": "lekhabot",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-turn-on-light",
+    "hebrew": "להדליק",
+    "english": "To turn on / light",
+    "transliteration": "lehadlik",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-repair",
+    "hebrew": "לתקן",
+    "english": "To repair",
+    "transliteration": "letaken",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-break",
+    "hebrew": "לשבור",
+    "english": "To break",
+    "transliteration": "lishbor",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-build",
+    "hebrew": "לבנות",
+    "english": "To build",
+    "transliteration": "livnot",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-cut",
+    "hebrew": "לחתוך",
+    "english": "To cut",
+    "transliteration": "lakhtokh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-put",
+    "hebrew": "לשים",
+    "english": "To put",
+    "transliteration": "lasim",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-lower-take-down",
+    "hebrew": "להוריד",
+    "english": "To lower / take down",
+    "transliteration": "lehorid",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-raise-upload",
+    "hebrew": "להעלות",
+    "english": "To raise / upload",
+    "transliteration": "lehaalot",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-go-up-cost",
+    "hebrew": "לעלות",
+    "english": "To go up / cost",
+    "transliteration": "laalot",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-go-down",
+    "hebrew": "לרדת",
+    "english": "To go down",
+    "transliteration": "laredet",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-touch",
+    "hebrew": "לגעת",
+    "english": "To touch",
+    "transliteration": "lagaat",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-hold",
+    "hebrew": "להחזיק",
+    "english": "To hold",
+    "transliteration": "lehakhzik",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-use",
+    "hebrew": "להשתמש",
+    "english": "To use",
+    "transliteration": "lehishtamesh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-live",
+    "hebrew": "לחיות",
+    "english": "To live",
+    "transliteration": "likhyot",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-reside",
+    "hebrew": "לגור",
+    "english": "To reside",
+    "transliteration": "lagur",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-meet",
+    "hebrew": "לפגוש",
+    "english": "To meet",
+    "transliteration": "lifgosh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-call-by-phone",
+    "hebrew": "להתקשר",
+    "english": "To call by phone",
+    "transliteration": "lehitkasher",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-wake-up",
+    "hebrew": "להתעורר",
+    "english": "To wake up",
+    "transliteration": "lehit-orer",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-rest",
+    "hebrew": "לנוח",
+    "english": "To rest",
+    "transliteration": "lanuakh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-take-a-walk-tour",
+    "hebrew": "לטייל",
+    "english": "To take a walk / tour",
+    "transliteration": "letayel",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-control",
+    "hebrew": "לשלוט",
+    "english": "To control",
+    "transliteration": "lishlot",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-check",
+    "hebrew": "לבדוק",
+    "english": "To check",
+    "transliteration": "livdok",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-count",
+    "hebrew": "לספור",
+    "english": "To count",
+    "transliteration": "lispor",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-practice-train",
+    "hebrew": "להתאמן",
+    "english": "To practice / train",
+    "transliteration": "lehit-amen",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-keep-guard",
+    "hebrew": "לשמור",
+    "english": "To keep / guard",
+    "transliteration": "lishmor",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-give-back",
+    "hebrew": "להחזיר",
+    "english": "To give back",
+    "transliteration": "lehakhzir",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-replace-exchange",
+    "hebrew": "להחליף",
+    "english": "To replace / exchange",
+    "transliteration": "lehakhlif",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-succeed",
+    "hebrew": "להצליח",
+    "english": "To succeed",
+    "transliteration": "lehatsliakh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-fail",
+    "hebrew": "להיכשל",
+    "english": "To fail",
+    "transliteration": "lehikashel",
+    "priority": 300
+  },
+  {
+    "id": "vocab-to-prefer",
+    "hebrew": "להעדיף",
+    "english": "To prefer",
+    "transliteration": "lehaadif",
+    "priority": 300
+  },
+  {
+    "id": "vocab-food",
+    "hebrew": "אוכל",
+    "english": "Food",
+    "transliteration": "okhel",
+    "priority": 300
+  },
+  {
+    "id": "vocab-meal",
+    "hebrew": "ארוחה",
+    "english": "Meal",
+    "transliteration": "arukha",
+    "priority": 300
+  },
+  {
+    "id": "vocab-breakfast",
+    "hebrew": "ארוחת בוקר",
+    "english": "Breakfast",
+    "transliteration": "arukhat boker",
+    "priority": 300
+  },
+  {
+    "id": "vocab-lunch",
+    "hebrew": "ארוחת צהריים",
+    "english": "Lunch",
+    "transliteration": "arukhat tsohorayim",
+    "priority": 300
+  },
+  {
+    "id": "vocab-dinner",
+    "hebrew": "ארוחת ערב",
+    "english": "Dinner",
+    "transliteration": "arukhat erev",
+    "priority": 300
+  },
+  {
+    "id": "vocab-vegetable",
+    "hebrew": "ירק",
+    "english": "Vegetable",
+    "transliteration": "yerek",
+    "priority": 300
+  },
+  {
+    "id": "vocab-fruit",
+    "hebrew": "פרי",
+    "english": "Fruit",
+    "transliteration": "pri",
+    "priority": 300
+  },
+  {
+    "id": "vocab-apple",
+    "hebrew": "תפוח",
+    "english": "Apple",
+    "transliteration": "tapuakh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-banana",
+    "hebrew": "בננה",
+    "english": "Banana",
+    "transliteration": "banana",
+    "priority": 300
+  },
+  {
+    "id": "vocab-orange-fruit",
+    "hebrew": "תפוז",
+    "english": "Orange (fruit)",
+    "transliteration": "tapuz",
+    "priority": 300
+  },
+  {
+    "id": "vocab-lemon",
+    "hebrew": "לימון",
+    "english": "Lemon",
+    "transliteration": "limon",
+    "priority": 300
+  },
+  {
+    "id": "vocab-tomato",
+    "hebrew": "עגבנייה",
+    "english": "Tomato",
+    "transliteration": "agvaniya",
+    "priority": 300
+  },
+  {
+    "id": "vocab-cucumber",
+    "hebrew": "מלפפון",
+    "english": "Cucumber",
+    "transliteration": "melafefon",
+    "priority": 300
+  },
+  {
+    "id": "vocab-potato",
+    "hebrew": "תפוח אדמה",
+    "english": "Potato",
+    "transliteration": "tapuakh adama",
+    "priority": 300
+  },
+  {
+    "id": "vocab-onion",
+    "hebrew": "בצל",
+    "english": "Onion",
+    "transliteration": "batsal",
+    "priority": 300
+  },
+  {
+    "id": "vocab-garlic",
+    "hebrew": "שום",
+    "english": "Garlic",
+    "transliteration": "shum",
+    "priority": 300
+  },
+  {
+    "id": "vocab-carrot",
+    "hebrew": "גזר",
+    "english": "Carrot",
+    "transliteration": "gezer",
+    "priority": 300
+  },
+  {
+    "id": "vocab-lettuce",
+    "hebrew": "חסה",
+    "english": "Lettuce",
+    "transliteration": "khasa",
+    "priority": 300
+  },
+  {
+    "id": "vocab-rice",
+    "hebrew": "אורז",
+    "english": "Rice",
+    "transliteration": "orez",
+    "priority": 300
+  },
+  {
+    "id": "vocab-pasta",
+    "hebrew": "פסטה",
+    "english": "Pasta",
+    "transliteration": "pasta",
+    "priority": 300
+  },
+  {
+    "id": "vocab-egg",
+    "hebrew": "ביצה",
+    "english": "Egg",
+    "transliteration": "beitsa",
+    "priority": 300
+  },
+  {
+    "id": "vocab-cheese",
+    "hebrew": "גבינה",
+    "english": "Cheese",
+    "transliteration": "gvina",
+    "priority": 300
+  },
+  {
+    "id": "vocab-yogurt",
+    "hebrew": "יוגורט",
+    "english": "Yogurt",
+    "transliteration": "yogurt",
+    "priority": 300
+  },
+  {
+    "id": "vocab-butter",
+    "hebrew": "חמאה",
+    "english": "Butter",
+    "transliteration": "khema",
+    "priority": 300
+  },
+  {
+    "id": "vocab-meat",
+    "hebrew": "בשר",
+    "english": "Meat",
+    "transliteration": "basar",
+    "priority": 300
+  },
+  {
+    "id": "vocab-chicken-poultry",
+    "hebrew": "עוף",
+    "english": "Chicken / poultry",
+    "transliteration": "of",
+    "priority": 300
+  },
+  {
+    "id": "vocab-fish",
+    "hebrew": "דג",
+    "english": "Fish",
+    "transliteration": "dag",
+    "priority": 300
+  },
+  {
+    "id": "vocab-soup",
+    "hebrew": "מרק",
+    "english": "Soup",
+    "transliteration": "marak",
+    "priority": 300
+  },
+  {
+    "id": "vocab-salad",
+    "hebrew": "סלט",
+    "english": "Salad",
+    "transliteration": "salat",
+    "priority": 300
+  },
+  {
+    "id": "vocab-sandwich",
+    "hebrew": "כריך",
+    "english": "Sandwich",
+    "transliteration": "karikh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-salt",
+    "hebrew": "מלח",
+    "english": "Salt",
+    "transliteration": "melakh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-pepper",
+    "hebrew": "פלפל",
+    "english": "Pepper",
+    "transliteration": "pilpel",
+    "priority": 300
+  },
+  {
+    "id": "vocab-sugar",
+    "hebrew": "סוכר",
+    "english": "Sugar",
+    "transliteration": "sukar",
+    "priority": 300
+  },
+  {
+    "id": "vocab-oil",
+    "hebrew": "שמן",
+    "english": "Oil",
+    "transliteration": "shemen",
+    "priority": 300
+  },
+  {
+    "id": "vocab-juice",
+    "hebrew": "מיץ",
+    "english": "Juice",
+    "transliteration": "mits",
+    "priority": 300
+  },
+  {
+    "id": "vocab-bottle",
+    "hebrew": "בקבוק",
+    "english": "Bottle",
+    "transliteration": "bakbuk",
+    "priority": 300
+  },
+  {
+    "id": "vocab-cup-glass",
+    "hebrew": "כוס",
+    "english": "Cup / glass",
+    "transliteration": "kos",
+    "priority": 300
+  },
+  {
+    "id": "vocab-plate",
+    "hebrew": "צלחת",
+    "english": "Plate",
+    "transliteration": "tsalakhat",
+    "priority": 300
+  },
+  {
+    "id": "vocab-fork",
+    "hebrew": "מזלג",
+    "english": "Fork",
+    "transliteration": "mazleg",
+    "priority": 300
+  },
+  {
+    "id": "vocab-knife",
+    "hebrew": "סכין",
+    "english": "Knife",
+    "transliteration": "sakin",
+    "priority": 300
+  },
+  {
+    "id": "vocab-spoon",
+    "hebrew": "כף",
+    "english": "Spoon",
+    "transliteration": "kaf",
+    "priority": 300
+  },
+  {
+    "id": "vocab-teaspoon",
+    "hebrew": "כפית",
+    "english": "Teaspoon",
+    "transliteration": "kapit",
+    "priority": 300
+  },
+  {
+    "id": "vocab-pot",
+    "hebrew": "סיר",
+    "english": "Pot",
+    "transliteration": "sir",
+    "priority": 300
+  },
+  {
+    "id": "vocab-frying-pan",
+    "hebrew": "מחבת",
+    "english": "Frying pan",
+    "transliteration": "makhavat",
+    "priority": 300
+  },
+  {
+    "id": "vocab-oven",
+    "hebrew": "תנור",
+    "english": "Oven",
+    "transliteration": "tanur",
+    "priority": 300
+  },
+  {
+    "id": "vocab-refrigerator",
+    "hebrew": "מקרר",
+    "english": "Refrigerator",
+    "transliteration": "mekarer",
+    "priority": 300
+  },
+  {
+    "id": "vocab-kitchen",
+    "hebrew": "מטבח",
+    "english": "Kitchen",
+    "transliteration": "mitbakh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-table",
+    "hebrew": "שולחן",
+    "english": "Table",
+    "transliteration": "shulkhan",
+    "priority": 300
+  },
+  {
+    "id": "vocab-chair",
+    "hebrew": "כיסא",
+    "english": "Chair",
+    "transliteration": "kise",
+    "priority": 300
+  },
+  {
+    "id": "vocab-bed",
+    "hebrew": "מיטה",
+    "english": "Bed",
+    "transliteration": "mita",
+    "priority": 300
+  },
+  {
+    "id": "vocab-room",
+    "hebrew": "חדר",
+    "english": "Room",
+    "transliteration": "kheder",
+    "priority": 300
+  },
+  {
+    "id": "vocab-door",
+    "hebrew": "דלת",
+    "english": "Door",
+    "transliteration": "delet",
+    "priority": 300
+  },
+  {
+    "id": "vocab-window",
+    "hebrew": "חלון",
+    "english": "Window",
+    "transliteration": "khalon",
+    "priority": 300
+  },
+  {
+    "id": "vocab-wall",
+    "hebrew": "קיר",
+    "english": "Wall",
+    "transliteration": "kir",
+    "priority": 300
+  },
+  {
+    "id": "vocab-floor",
+    "hebrew": "רצפה",
+    "english": "Floor",
+    "transliteration": "ritspa",
+    "priority": 300
+  },
+  {
+    "id": "vocab-ceiling",
+    "hebrew": "תקרה",
+    "english": "Ceiling",
+    "transliteration": "tikra",
+    "priority": 300
+  },
+  {
+    "id": "vocab-key",
+    "hebrew": "מפתח",
+    "english": "Key",
+    "transliteration": "mafteakh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-lamp",
+    "hebrew": "מנורה",
+    "english": "Lamp",
+    "transliteration": "menora",
+    "priority": 300
+  },
+  {
+    "id": "vocab-light",
+    "hebrew": "אור",
+    "english": "Light",
+    "transliteration": "or",
+    "priority": 300
+  },
+  {
+    "id": "vocab-electricity",
+    "hebrew": "חשמל",
+    "english": "Electricity",
+    "transliteration": "khashmal",
+    "priority": 300
+  },
+  {
+    "id": "vocab-telephone",
+    "hebrew": "טלפון",
+    "english": "Telephone",
+    "transliteration": "telefon",
+    "priority": 300
+  },
+  {
+    "id": "vocab-computer",
+    "hebrew": "מחשב",
+    "english": "Computer",
+    "transliteration": "makhshev",
+    "priority": 300
+  },
+  {
+    "id": "vocab-screen",
+    "hebrew": "מסך",
+    "english": "Screen",
+    "transliteration": "masakh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-internet",
+    "hebrew": "אינטרנט",
+    "english": "Internet",
+    "transliteration": "internet",
+    "priority": 300
+  },
+  {
+    "id": "vocab-keyboard",
+    "hebrew": "מקלדת",
+    "english": "Keyboard",
+    "transliteration": "mikledet",
+    "priority": 300
+  },
+  {
+    "id": "vocab-mouse",
+    "hebrew": "עכבר",
+    "english": "Mouse",
+    "transliteration": "akhbar",
+    "priority": 300
+  },
+  {
+    "id": "vocab-bag",
+    "hebrew": "תיק",
+    "english": "Bag",
+    "transliteration": "tik",
+    "priority": 300
+  },
+  {
+    "id": "vocab-wallet",
+    "hebrew": "ארנק",
+    "english": "Wallet",
+    "transliteration": "arnak",
+    "priority": 300
+  },
+  {
+    "id": "vocab-clock-watch",
+    "hebrew": "שעון",
+    "english": "Clock / watch",
+    "transliteration": "shaon",
+    "priority": 300
+  },
+  {
+    "id": "vocab-garment",
+    "hebrew": "בגד",
+    "english": "Garment",
+    "transliteration": "beged",
+    "priority": 300
+  },
+  {
+    "id": "vocab-shirt",
+    "hebrew": "חולצה",
+    "english": "Shirt",
+    "transliteration": "khultsa",
+    "priority": 300
+  },
+  {
+    "id": "vocab-trousers",
+    "hebrew": "מכנסיים",
+    "english": "Trousers",
+    "transliteration": "mikhnasayim",
+    "priority": 300
+  },
+  {
+    "id": "vocab-shoes",
+    "hebrew": "נעליים",
+    "english": "Shoes",
+    "transliteration": "naalayim",
+    "priority": 300
+  },
+  {
+    "id": "vocab-socks",
+    "hebrew": "גרביים",
+    "english": "Socks",
+    "transliteration": "garbayim",
+    "priority": 300
+  },
+  {
+    "id": "vocab-coat",
+    "hebrew": "מעיל",
+    "english": "Coat",
+    "transliteration": "meil",
+    "priority": 300
+  },
+  {
+    "id": "vocab-hat",
+    "hebrew": "כובע",
+    "english": "Hat",
+    "transliteration": "kova",
+    "priority": 300
+  },
+  {
+    "id": "vocab-glasses",
+    "hebrew": "משקפיים",
+    "english": "Glasses",
+    "transliteration": "mishkafayim",
+    "priority": 300
+  },
+  {
+    "id": "vocab-street",
+    "hebrew": "רחוב",
+    "english": "Street",
+    "transliteration": "rekhov",
+    "priority": 300
+  },
+  {
+    "id": "vocab-road",
+    "hebrew": "כביש",
+    "english": "Road",
+    "transliteration": "kvish",
+    "priority": 300
+  },
+  {
+    "id": "vocab-city",
+    "hebrew": "עיר",
+    "english": "City",
+    "transliteration": "ir",
+    "priority": 300
+  },
+  {
+    "id": "vocab-village",
+    "hebrew": "כפר",
+    "english": "Village",
+    "transliteration": "kfar",
+    "priority": 300
+  },
+  {
+    "id": "vocab-country-state",
+    "hebrew": "מדינה",
+    "english": "Country / state",
+    "transliteration": "medina",
+    "priority": 300
+  },
+  {
+    "id": "vocab-land-country",
+    "hebrew": "ארץ",
+    "english": "Land / country",
+    "transliteration": "erets",
+    "priority": 300
+  },
+  {
+    "id": "vocab-place",
+    "hebrew": "מקום",
+    "english": "Place",
+    "transliteration": "makom",
+    "priority": 300
+  },
+  {
+    "id": "vocab-address",
+    "hebrew": "כתובת",
+    "english": "Address",
+    "transliteration": "ktovet",
+    "priority": 300
+  },
+  {
+    "id": "vocab-station-stop",
+    "hebrew": "תחנה",
+    "english": "Station / stop",
+    "transliteration": "takhana",
+    "priority": 300
+  },
+  {
+    "id": "vocab-bus",
+    "hebrew": "אוטובוס",
+    "english": "Bus",
+    "transliteration": "otobus",
+    "priority": 300
+  },
+  {
+    "id": "vocab-train",
+    "hebrew": "רכבת",
+    "english": "Train",
+    "transliteration": "rakevet",
+    "priority": 300
+  },
+  {
+    "id": "vocab-car",
+    "hebrew": "מכונית",
+    "english": "Car",
+    "transliteration": "mekhonit",
+    "priority": 300
+  },
+  {
+    "id": "vocab-taxi",
+    "hebrew": "מונית",
+    "english": "Taxi",
+    "transliteration": "monit",
+    "priority": 300
+  },
+  {
+    "id": "vocab-bicycle",
+    "hebrew": "אופניים",
+    "english": "Bicycle",
+    "transliteration": "ofanayim",
+    "priority": 300
+  },
+  {
+    "id": "vocab-airplane",
+    "hebrew": "מטוס",
+    "english": "Airplane",
+    "transliteration": "matos",
+    "priority": 300
+  },
+  {
+    "id": "vocab-airport",
+    "hebrew": "שדה תעופה",
+    "english": "Airport",
+    "transliteration": "sde teufa",
+    "priority": 300
+  },
+  {
+    "id": "vocab-ticket-card",
+    "hebrew": "כרטיס",
+    "english": "Ticket / card",
+    "transliteration": "kartis",
+    "priority": 300
+  },
+  {
+    "id": "vocab-journey-ride",
+    "hebrew": "נסיעה",
+    "english": "Journey / ride",
+    "transliteration": "nesia",
+    "priority": 300
+  },
+  {
+    "id": "vocab-trip-hike",
+    "hebrew": "טיול",
+    "english": "Trip / hike",
+    "transliteration": "tiyul",
+    "priority": 300
+  },
+  {
+    "id": "vocab-shop",
+    "hebrew": "חנות",
+    "english": "Shop",
+    "transliteration": "khanut",
+    "priority": 300
+  },
+  {
+    "id": "vocab-market",
+    "hebrew": "שוק",
+    "english": "Market",
+    "transliteration": "shuk",
+    "priority": 300
+  },
+  {
+    "id": "vocab-supermarket",
+    "hebrew": "סופרמרקט",
+    "english": "Supermarket",
+    "transliteration": "supermarket",
+    "priority": 300
+  },
+  {
+    "id": "vocab-restaurant",
+    "hebrew": "מסעדה",
+    "english": "Restaurant",
+    "transliteration": "misada",
+    "priority": 300
+  },
+  {
+    "id": "vocab-cafe",
+    "hebrew": "בית קפה",
+    "english": "Cafe",
+    "transliteration": "beit kafe",
+    "priority": 300
+  },
+  {
+    "id": "vocab-hotel",
+    "hebrew": "מלון",
+    "english": "Hotel",
+    "transliteration": "malon",
+    "priority": 300
+  },
+  {
+    "id": "vocab-bank",
+    "hebrew": "בנק",
+    "english": "Bank",
+    "transliteration": "bank",
+    "priority": 300
+  },
+  {
+    "id": "vocab-post-mail",
+    "hebrew": "דואר",
+    "english": "Post / mail",
+    "transliteration": "doar",
+    "priority": 300
+  },
+  {
+    "id": "vocab-school",
+    "hebrew": "בית ספר",
+    "english": "School",
+    "transliteration": "beit sefer",
+    "priority": 300
+  },
+  {
+    "id": "vocab-university",
+    "hebrew": "אוניברסיטה",
+    "english": "University",
+    "transliteration": "universita",
+    "priority": 300
+  },
+  {
+    "id": "vocab-hospital",
+    "hebrew": "בית חולים",
+    "english": "Hospital",
+    "transliteration": "beit kholim",
+    "priority": 300
+  },
+  {
+    "id": "vocab-clinic",
+    "hebrew": "מרפאה",
+    "english": "Clinic",
+    "transliteration": "mirpaa",
+    "priority": 300
+  },
+  {
+    "id": "vocab-doctor",
+    "hebrew": "רופא",
+    "english": "Doctor",
+    "transliteration": "rofe",
+    "feminine": {
+      "hebrew": "רופאה",
+      "transliteration": "rofaa",
+      "modification": "Add ה"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-teacher",
+    "hebrew": "מורה",
+    "english": "Teacher",
+    "transliteration": "more",
+    "feminine": {
+      "hebrew": "מורה",
+      "transliteration": "mora",
+      "modification": "Same spelling; pronunciation changes"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-school-pupil",
+    "hebrew": "תלמיד",
+    "english": "School pupil",
+    "transliteration": "talmid",
+    "feminine": {
+      "hebrew": "תלמידה",
+      "transliteration": "talmida",
+      "modification": "Add ה"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-university-student",
+    "hebrew": "סטודנט",
+    "english": "University student",
+    "transliteration": "student",
+    "feminine": {
+      "hebrew": "סטודנטית",
+      "transliteration": "studentit",
+      "modification": "Add ית"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-dad-father",
+    "hebrew": "אבא",
+    "english": "Dad / father",
+    "transliteration": "aba",
+    "priority": 300
+  },
+  {
+    "id": "vocab-mom-mother",
+    "hebrew": "אמא",
+    "english": "Mom / mother",
+    "transliteration": "ima",
+    "priority": 300
+  },
+  {
+    "id": "vocab-brother-sister",
+    "hebrew": "אח",
+    "english": "Brother / sister",
+    "transliteration": "akh",
+    "feminine": {
+      "hebrew": "אחות",
+      "transliteration": "akhot",
+      "modification": "Add ות"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-son-daughter",
+    "hebrew": "בן",
+    "english": "Son / daughter",
+    "transliteration": "ben",
+    "feminine": {
+      "hebrew": "בת",
+      "transliteration": "bat",
+      "modification": "Replace ן with ת"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-grandfather",
+    "hebrew": "סבא",
+    "english": "Grandfather",
+    "transliteration": "saba",
+    "feminine": {
+      "hebrew": "סבתא",
+      "transliteration": "savta",
+      "modification": "Replace א with תא"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-parent",
+    "hebrew": "הורה",
+    "english": "Parent",
+    "transliteration": "hore",
+    "priority": 300
+  },
+  {
+    "id": "vocab-couple-pair",
+    "hebrew": "זוג",
+    "english": "Couple / pair",
+    "transliteration": "zug",
+    "priority": 300
+  },
+  {
+    "id": "vocab-neighbor",
+    "hebrew": "שכן",
+    "english": "Neighbor",
+    "transliteration": "shakhen",
+    "feminine": {
+      "hebrew": "שכנה",
+      "transliteration": "shkhena",
+      "modification": "Replace ן with נה"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-guest",
+    "hebrew": "אורח",
+    "english": "Guest",
+    "transliteration": "oreakh",
+    "feminine": {
+      "hebrew": "אורחת",
+      "transliteration": "orakhat",
+      "modification": "Add ת"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-head",
+    "hebrew": "ראש",
+    "english": "Head",
+    "transliteration": "rosh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-face",
+    "hebrew": "פנים",
+    "english": "Face",
+    "transliteration": "panim",
+    "priority": 300
+  },
+  {
+    "id": "vocab-eye",
+    "hebrew": "עין",
+    "english": "Eye",
+    "transliteration": "ayin",
+    "priority": 300
+  },
+  {
+    "id": "vocab-ear",
+    "hebrew": "אוזן",
+    "english": "Ear",
+    "transliteration": "ozen",
+    "priority": 300
+  },
+  {
+    "id": "vocab-nose",
+    "hebrew": "אף",
+    "english": "Nose",
+    "transliteration": "af",
+    "priority": 300
+  },
+  {
+    "id": "vocab-mouth",
+    "hebrew": "פה",
+    "english": "Mouth",
+    "transliteration": "pe",
+    "priority": 300
+  },
+  {
+    "id": "vocab-tooth",
+    "hebrew": "שן",
+    "english": "Tooth",
+    "transliteration": "shen",
+    "priority": 300
+  },
+  {
+    "id": "vocab-tongue-language",
+    "hebrew": "לשון",
+    "english": "Tongue / language",
+    "transliteration": "lashon",
+    "priority": 300
+  },
+  {
+    "id": "vocab-hand-arm",
+    "hebrew": "יד",
+    "english": "Hand / arm",
+    "transliteration": "yad",
+    "priority": 300
+  },
+  {
+    "id": "vocab-foot-leg",
+    "hebrew": "רגל",
+    "english": "Foot / leg",
+    "transliteration": "regel",
+    "priority": 300
+  },
+  {
+    "id": "vocab-back",
+    "hebrew": "גב",
+    "english": "Back",
+    "transliteration": "gav",
+    "priority": 300
+  },
+  {
+    "id": "vocab-heart",
+    "hebrew": "לב",
+    "english": "Heart",
+    "transliteration": "lev",
+    "priority": 300
+  },
+  {
+    "id": "vocab-belly",
+    "hebrew": "בטן",
+    "english": "Belly",
+    "transliteration": "beten",
+    "priority": 300
+  },
+  {
+    "id": "vocab-hair",
+    "hebrew": "שיער",
+    "english": "Hair",
+    "transliteration": "sear",
+    "priority": 300
+  },
+  {
+    "id": "vocab-health",
+    "hebrew": "בריאות",
+    "english": "Health",
+    "transliteration": "briut",
+    "priority": 300
+  },
+  {
+    "id": "vocab-pain",
+    "hebrew": "כאב",
+    "english": "Pain",
+    "transliteration": "keev",
+    "priority": 300
+  },
+  {
+    "id": "vocab-medicine",
+    "hebrew": "תרופה",
+    "english": "Medicine",
+    "transliteration": "trufa",
+    "priority": 300
+  },
+  {
+    "id": "vocab-sun",
+    "hebrew": "שמש",
+    "english": "Sun",
+    "transliteration": "shemesh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-moon",
+    "hebrew": "ירח",
+    "english": "Moon",
+    "transliteration": "yareakh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-sky",
+    "hebrew": "שמיים",
+    "english": "Sky",
+    "transliteration": "shamayim",
+    "priority": 300
+  },
+  {
+    "id": "vocab-rain",
+    "hebrew": "גשם",
+    "english": "Rain",
+    "transliteration": "geshem",
+    "priority": 300
+  },
+  {
+    "id": "vocab-wind",
+    "hebrew": "רוח",
+    "english": "Wind",
+    "transliteration": "ruakh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-sea",
+    "hebrew": "ים",
+    "english": "Sea",
+    "transliteration": "yam",
+    "priority": 300
+  },
+  {
+    "id": "vocab-tree",
+    "hebrew": "עץ",
+    "english": "Tree",
+    "transliteration": "ets",
+    "priority": 300
+  },
+  {
+    "id": "vocab-flower",
+    "hebrew": "פרח",
+    "english": "Flower",
+    "transliteration": "perakh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-dog",
+    "hebrew": "כלב",
+    "english": "Dog",
+    "transliteration": "kelev",
+    "feminine": {
+      "hebrew": "כלבה",
+      "transliteration": "kalba",
+      "modification": "Add ה"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-cat",
+    "hebrew": "חתול",
+    "english": "Cat",
+    "transliteration": "khatul",
+    "feminine": {
+      "hebrew": "חתולה",
+      "transliteration": "khatula",
+      "modification": "Add ה"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-bird",
+    "hebrew": "ציפור",
+    "english": "Bird",
+    "transliteration": "tsipor",
+    "priority": 300
+  },
+  {
+    "id": "vocab-week",
+    "hebrew": "שבוע",
+    "english": "Week",
+    "transliteration": "shavua",
+    "priority": 300
+  },
+  {
+    "id": "vocab-month",
+    "hebrew": "חודש",
+    "english": "Month",
+    "transliteration": "khodesh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-year",
+    "hebrew": "שנה",
+    "english": "Year",
+    "transliteration": "shana",
+    "priority": 300
+  },
+  {
+    "id": "vocab-hour",
+    "hebrew": "שעה",
+    "english": "Hour",
+    "transliteration": "shaa",
+    "priority": 300
+  },
+  {
+    "id": "vocab-minute",
+    "hebrew": "דקה",
+    "english": "Minute",
+    "transliteration": "daka",
+    "priority": 300
+  },
+  {
+    "id": "vocab-second-time",
+    "hebrew": "שנייה",
+    "english": "Second (time)",
+    "transliteration": "shniya",
+    "priority": 300
+  },
+  {
+    "id": "vocab-morning",
+    "hebrew": "בוקר",
+    "english": "Morning",
+    "transliteration": "boker",
+    "priority": 300
+  },
+  {
+    "id": "vocab-noon",
+    "hebrew": "צהריים",
+    "english": "Noon",
+    "transliteration": "tsohorayim",
+    "priority": 300
+  },
+  {
+    "id": "vocab-evening",
+    "hebrew": "ערב",
+    "english": "Evening",
+    "transliteration": "erev",
+    "priority": 300
+  },
+  {
+    "id": "vocab-first",
+    "hebrew": "ראשון",
+    "english": "First",
+    "transliteration": "rishon",
+    "feminine": {
+      "hebrew": "ראשונה",
+      "transliteration": "rishona",
+      "modification": "Replace ן with נה"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-last",
+    "hebrew": "אחרון",
+    "english": "Last",
+    "transliteration": "akharon",
+    "feminine": {
+      "hebrew": "אחרונה",
+      "transliteration": "akharona",
+      "modification": "Replace ן with נה"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-new",
+    "hebrew": "חדש",
+    "english": "New",
+    "transliteration": "khadash",
+    "feminine": {
+      "hebrew": "חדשה",
+      "transliteration": "khadasha",
+      "modification": "Add ה"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-old-not-new",
+    "hebrew": "ישן",
+    "english": "Old (not new)",
+    "transliteration": "yashan",
+    "feminine": {
+      "hebrew": "ישנה",
+      "transliteration": "yeshana",
+      "modification": "Replace ן with נה"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-beautiful",
+    "hebrew": "יפה",
+    "english": "Beautiful",
+    "transliteration": "yafe",
+    "feminine": {
+      "hebrew": "יפה",
+      "transliteration": "yafa",
+      "modification": "Same spelling; pronunciation changes"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-bad",
+    "hebrew": "רע",
+    "english": "Bad",
+    "transliteration": "ra",
+    "feminine": {
+      "hebrew": "רעה",
+      "transliteration": "raa",
+      "modification": "Add ה"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-hot",
+    "hebrew": "חם",
+    "english": "Hot",
+    "transliteration": "kham",
+    "feminine": {
+      "hebrew": "חמה",
+      "transliteration": "khama",
+      "modification": "Replace ם with מה"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-cold",
+    "hebrew": "קר",
+    "english": "Cold",
+    "transliteration": "kar",
+    "feminine": {
+      "hebrew": "קרה",
+      "transliteration": "kara",
+      "modification": "Add ה"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-expensive-dear",
+    "hebrew": "יקר",
+    "english": "Expensive / dear",
+    "transliteration": "yakar",
+    "feminine": {
+      "hebrew": "יקרה",
+      "transliteration": "yekara",
+      "modification": "Add ה"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-cheap",
+    "hebrew": "זול",
+    "english": "Cheap",
+    "transliteration": "zol",
+    "feminine": {
+      "hebrew": "זולה",
+      "transliteration": "zola",
+      "modification": "Add ה"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-easy-light",
+    "hebrew": "קל",
+    "english": "Easy / light",
+    "transliteration": "kal",
+    "feminine": {
+      "hebrew": "קלה",
+      "transliteration": "kala",
+      "modification": "Add ה"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-difficult-hard",
+    "hebrew": "קשה",
+    "english": "Difficult / hard",
+    "transliteration": "kashe",
+    "feminine": {
+      "hebrew": "קשה",
+      "transliteration": "kasha",
+      "modification": "Same spelling; pronunciation changes"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-near",
+    "hebrew": "קרוב",
+    "english": "Near",
+    "transliteration": "karov",
+    "feminine": {
+      "hebrew": "קרובה",
+      "transliteration": "krova",
+      "modification": "Add ה"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-far",
+    "hebrew": "רחוק",
+    "english": "Far",
+    "transliteration": "rakhok",
+    "feminine": {
+      "hebrew": "רחוקה",
+      "transliteration": "rekhoka",
+      "modification": "Add ה"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-quickly",
+    "hebrew": "מהר",
+    "english": "Quickly",
+    "transliteration": "maher",
+    "priority": 300
+  },
+  {
+    "id": "vocab-slowly",
+    "hebrew": "לאט",
+    "english": "Slowly",
+    "transliteration": "leat",
+    "priority": 300
+  },
+  {
+    "id": "vocab-before-in-front-of",
+    "hebrew": "לפני",
+    "english": "Before / in front of",
+    "transliteration": "lifnei",
+    "priority": 300
+  },
+  {
+    "id": "vocab-after-behind",
+    "hebrew": "אחרי",
+    "english": "After / behind",
+    "transliteration": "akharei",
+    "priority": 300
+  },
+  {
+    "id": "vocab-always",
+    "hebrew": "תמיד",
+    "english": "Always",
+    "transliteration": "tamid",
+    "priority": 300
+  },
+  {
+    "id": "vocab-sometimes",
+    "hebrew": "לפעמים",
+    "english": "Sometimes",
+    "transliteration": "lifamim",
+    "priority": 300
+  },
+  {
+    "id": "vocab-never-with-negation",
+    "hebrew": "אף פעם",
+    "english": "Never (with negation)",
+    "transliteration": "af paam",
+    "priority": 300
+  },
+  {
+    "id": "vocab-together",
+    "hebrew": "ביחד",
+    "english": "Together",
+    "transliteration": "beyakhad",
+    "priority": 300
+  },
+  {
+    "id": "vocab-alone",
+    "hebrew": "לבד",
+    "english": "Alone",
+    "transliteration": "levad",
+    "priority": 300
+  },
+  {
+    "id": "vocab-outside",
+    "hebrew": "בחוץ",
+    "english": "Outside",
+    "transliteration": "bakhuts",
+    "priority": 300
+  },
+  {
+    "id": "vocab-inside",
+    "hebrew": "בפנים",
+    "english": "Inside",
+    "transliteration": "bifnim",
+    "priority": 300
+  },
+  {
+    "id": "vocab-up-above",
+    "hebrew": "למעלה",
+    "english": "Up / above",
+    "transliteration": "lemala",
+    "priority": 300
+  },
+  {
+    "id": "vocab-down-below",
+    "hebrew": "למטה",
+    "english": "Down / below",
+    "transliteration": "lemata",
+    "priority": 300
+  },
+  {
+    "id": "vocab-right-direction",
+    "hebrew": "ימין",
+    "english": "Right (direction)",
+    "transliteration": "yamin",
+    "priority": 300
+  },
+  {
+    "id": "vocab-left-direction",
+    "hebrew": "שמאל",
+    "english": "Left (direction)",
+    "transliteration": "smol",
+    "priority": 300
+  },
+  {
+    "id": "vocab-straight",
+    "hebrew": "ישר",
+    "english": "Straight",
+    "transliteration": "yashar",
+    "feminine": {
+      "hebrew": "ישרה",
+      "transliteration": "yeshara",
+      "modification": "Add ה"
+    },
+    "priority": 300
+  },
+  {
+    "id": "vocab-really-truly",
+    "hebrew": "באמת",
+    "english": "Really / truly",
+    "transliteration": "beemet",
+    "priority": 300
+  },
+  {
+    "id": "vocab-maybe",
+    "hebrew": "אולי",
+    "english": "Maybe",
+    "transliteration": "ulai",
+    "priority": 300
+  },
+  {
+    "id": "vocab-certainly-of-course",
+    "hebrew": "בטח",
+    "english": "Certainly / of course",
+    "transliteration": "betakh",
+    "priority": 300
+  },
+  {
+    "id": "vocab-okay-all-right",
+    "hebrew": "בסדר",
+    "english": "Okay / all right",
+    "transliteration": "beseder",
+    "priority": 300
+  },
+  {
+    "id": "vocab-almost",
+    "hebrew": "כמעט",
+    "english": "Almost",
+    "transliteration": "kimat",
+    "priority": 300
+  },
+  {
+    "id": "vocab-enough",
+    "hebrew": "מספיק",
+    "english": "Enough",
+    "transliteration": "maspik",
+    "priority": 300
+  },
+  {
+    "id": "vocab-problem",
+    "hebrew": "בעיה",
+    "english": "Problem",
+    "transliteration": "beaya",
+    "priority": 300
+  },
+  {
+    "id": "vocab-question",
+    "hebrew": "שאלה",
+    "english": "Question",
+    "transliteration": "sheela",
+    "priority": 300
+  },
+  {
+    "id": "vocab-answer",
+    "hebrew": "תשובה",
+    "english": "Answer",
+    "transliteration": "tshuva",
+    "priority": 300
+  },
+  {
+    "id": "vocab-reason",
+    "hebrew": "סיבה",
+    "english": "Reason",
+    "transliteration": "siba",
+    "priority": 300
+  },
+  {
+    "id": "vocab-thing-matter",
+    "hebrew": "דבר",
+    "english": "Thing / matter",
+    "transliteration": "davar",
+    "priority": 300
+  },
+  {
+    "id": "vocab-word",
+    "hebrew": "מילה",
+    "english": "Word",
+    "transliteration": "mila",
+    "priority": 300
+  },
+  {
+    "id": "vocab-sentence-trial",
+    "hebrew": "משפט",
+    "english": "Sentence / trial",
+    "transliteration": "mishpat",
+    "priority": 300
+  },
+  {
+    "id": "vocab-name",
+    "hebrew": "שם",
+    "english": "Name",
+    "transliteration": "shem",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-number",
+    "hebrew": "מספר",
+    "english": "Number",
+    "transliteration": "mispar",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-kind-type",
+    "hebrew": "סוג",
+    "english": "Kind / type",
+    "transliteration": "sug",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-way-path",
+    "hebrew": "דרך",
+    "english": "Way / path",
+    "transliteration": "derekh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-end",
+    "hebrew": "סוף",
+    "english": "End",
+    "transliteration": "sof",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-beginning",
+    "hebrew": "התחלה",
+    "english": "Beginning",
+    "transliteration": "hatkhala",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-life",
+    "hebrew": "חיים",
+    "english": "Life",
+    "transliteration": "khayim",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-love",
+    "hebrew": "אהבה",
+    "english": "Love",
+    "transliteration": "ahava",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-six",
+    "hebrew": "שישה",
+    "english": "Six",
+    "transliteration": "shisha",
+    "feminine": {
+      "hebrew": "שש",
+      "transliteration": "shesh",
+      "modification": "Replace ישה with ש"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-seven",
+    "hebrew": "שבעה",
+    "english": "Seven",
+    "transliteration": "shiva",
+    "feminine": {
+      "hebrew": "שבע",
+      "transliteration": "sheva",
+      "modification": "Remove ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-eight-masculine",
+    "hebrew": "שמונה",
+    "english": "Eight (masculine)",
+    "transliteration": "shmona",
+    "feminine": {
+      "hebrew": "שמונה",
+      "transliteration": "shmone",
+      "modification": "Same spelling; pronunciation changes"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-nine",
+    "hebrew": "תשעה",
+    "english": "Nine",
+    "transliteration": "tisha",
+    "feminine": {
+      "hebrew": "תשע",
+      "transliteration": "tesha",
+      "modification": "Remove ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-ten",
+    "hebrew": "עשרה",
+    "english": "Ten",
+    "transliteration": "asara",
+    "feminine": {
+      "hebrew": "עשר",
+      "transliteration": "eser",
+      "modification": "Remove ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-twenty",
+    "hebrew": "עשרים",
+    "english": "Twenty",
+    "transliteration": "esrim",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-thirty",
+    "hebrew": "שלושים",
+    "english": "Thirty",
+    "transliteration": "shloshim",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-forty",
+    "hebrew": "ארבעים",
+    "english": "Forty",
+    "transliteration": "arbaim",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-fifty",
+    "hebrew": "חמישים",
+    "english": "Fifty",
+    "transliteration": "khamishim",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-one-hundred",
+    "hebrew": "מאה",
+    "english": "One hundred",
+    "transliteration": "mea",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-one-thousand",
+    "hebrew": "אלף",
+    "english": "One thousand",
+    "transliteration": "elef",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-half",
+    "hebrew": "חצי",
+    "english": "Half",
+    "transliteration": "khetsi",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-quarter",
+    "hebrew": "רבע",
+    "english": "Quarter",
+    "transliteration": "reva",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-whole-complete",
+    "hebrew": "שלם",
+    "english": "Whole / complete",
+    "transliteration": "shalem",
+    "feminine": {
+      "hebrew": "שלמה",
+      "transliteration": "shlema",
+      "modification": "Replace ם with מה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-sunday",
+    "hebrew": "יום ראשון",
+    "english": "Sunday",
+    "transliteration": "yom rishon",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-monday",
+    "hebrew": "יום שני",
+    "english": "Monday",
+    "transliteration": "yom sheni",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-tuesday",
+    "hebrew": "יום שלישי",
+    "english": "Tuesday",
+    "transliteration": "yom shlishi",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-wednesday",
+    "hebrew": "יום רביעי",
+    "english": "Wednesday",
+    "transliteration": "yom revii",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-thursday",
+    "hebrew": "יום חמישי",
+    "english": "Thursday",
+    "transliteration": "yom khamishi",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-friday",
+    "hebrew": "יום שישי",
+    "english": "Friday",
+    "transliteration": "yom shishi",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-saturday-sabbath",
+    "hebrew": "שבת",
+    "english": "Saturday / Sabbath",
+    "transliteration": "shabat",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-weekend",
+    "hebrew": "סוף שבוע",
+    "english": "Weekend",
+    "transliteration": "sof shavua",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-spring",
+    "hebrew": "אביב",
+    "english": "Spring",
+    "transliteration": "aviv",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-summer",
+    "hebrew": "קיץ",
+    "english": "Summer",
+    "transliteration": "kayits",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-autumn",
+    "hebrew": "סתיו",
+    "english": "Autumn",
+    "transliteration": "stav",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-winter",
+    "hebrew": "חורף",
+    "english": "Winter",
+    "transliteration": "khoref",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-date-calendar",
+    "hebrew": "תאריך",
+    "english": "Date (calendar)",
+    "transliteration": "taarikh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-holiday-festival",
+    "hebrew": "חג",
+    "english": "Holiday / festival",
+    "transliteration": "khag",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-vacation",
+    "hebrew": "חופשה",
+    "english": "Vacation",
+    "transliteration": "khufsha",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-birthday",
+    "hebrew": "יום הולדת",
+    "english": "Birthday",
+    "transliteration": "yom huledet",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-meeting-appointment",
+    "hebrew": "פגישה",
+    "english": "Meeting / appointment",
+    "transliteration": "pgisha",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-queue-appointment",
+    "hebrew": "תור",
+    "english": "Queue / appointment",
+    "transliteration": "tor",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-calendar",
+    "hebrew": "לוח שנה",
+    "english": "Calendar",
+    "transliteration": "luakh shana",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-uncle",
+    "hebrew": "דוד",
+    "english": "Uncle",
+    "transliteration": "dod",
+    "feminine": {
+      "hebrew": "דודה",
+      "transliteration": "doda",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-cousin",
+    "hebrew": "בן דוד",
+    "english": "Cousin",
+    "transliteration": "ben dod",
+    "feminine": {
+      "hebrew": "בת דודה",
+      "transliteration": "bat doda",
+      "modification": "Use בת דודה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-grandchild",
+    "hebrew": "נכד",
+    "english": "Grandchild",
+    "transliteration": "nekhed",
+    "feminine": {
+      "hebrew": "נכדה",
+      "transliteration": "nekhda",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-husband",
+    "hebrew": "בעל",
+    "english": "Husband",
+    "transliteration": "baal",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-wife-spouse",
+    "hebrew": "רעיה",
+    "english": "Wife / spouse",
+    "transliteration": "raaya",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-groom-bride",
+    "hebrew": "חתן",
+    "english": "Groom / bride",
+    "transliteration": "khatan",
+    "feminine": {
+      "hebrew": "כלה",
+      "transliteration": "kala",
+      "modification": "Use כלה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-marriage",
+    "hebrew": "נישואים",
+    "english": "Marriage",
+    "transliteration": "nisuim",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-wedding",
+    "hebrew": "חתונה",
+    "english": "Wedding",
+    "transliteration": "khatuna",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-baby",
+    "hebrew": "תינוק",
+    "english": "Baby",
+    "transliteration": "tinok",
+    "feminine": {
+      "hebrew": "תינוקת",
+      "transliteration": "tinoket",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-adult-older",
+    "hebrew": "מבוגר",
+    "english": "Adult / older",
+    "transliteration": "mevugar",
+    "feminine": {
+      "hebrew": "מבוגרת",
+      "transliteration": "mevugeret",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-young",
+    "hebrew": "צעיר",
+    "english": "Young",
+    "transliteration": "tsair",
+    "feminine": {
+      "hebrew": "צעירה",
+      "transliteration": "tseira",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-elderly",
+    "hebrew": "זקן",
+    "english": "Elderly",
+    "transliteration": "zaken",
+    "feminine": {
+      "hebrew": "זקנה",
+      "transliteration": "zkena",
+      "modification": "Replace ן with נה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-employee-worker",
+    "hebrew": "עובד",
+    "english": "Employee / worker",
+    "transliteration": "oved",
+    "feminine": {
+      "hebrew": "עובדת",
+      "transliteration": "ovedet",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-manager",
+    "hebrew": "מנהל",
+    "english": "Manager",
+    "transliteration": "menahel",
+    "feminine": {
+      "hebrew": "מנהלת",
+      "transliteration": "menahelet",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-secretary",
+    "hebrew": "מזכיר",
+    "english": "Secretary",
+    "transliteration": "mazkir",
+    "feminine": {
+      "hebrew": "מזכירה",
+      "transliteration": "mazkira",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-driver",
+    "hebrew": "נהג",
+    "english": "Driver",
+    "transliteration": "nahag",
+    "feminine": {
+      "hebrew": "נהגת",
+      "transliteration": "naheget",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-police-officer",
+    "hebrew": "שוטר",
+    "english": "Police officer",
+    "transliteration": "shoter",
+    "feminine": {
+      "hebrew": "שוטרת",
+      "transliteration": "shoteret",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-soldier",
+    "hebrew": "חייל",
+    "english": "Soldier",
+    "transliteration": "khayal",
+    "feminine": {
+      "hebrew": "חיילת",
+      "transliteration": "khayelet",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-waiter",
+    "hebrew": "מלצר",
+    "english": "Waiter",
+    "transliteration": "meltsar",
+    "feminine": {
+      "hebrew": "מלצרית",
+      "transliteration": "meltsarit",
+      "modification": "Add ית"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-cook-chef",
+    "hebrew": "טבח",
+    "english": "Cook / chef",
+    "transliteration": "tabakh",
+    "feminine": {
+      "hebrew": "טבחית",
+      "transliteration": "tabakhit",
+      "modification": "Add ית"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-baker",
+    "hebrew": "אופה",
+    "english": "Baker",
+    "transliteration": "ofe",
+    "feminine": {
+      "hebrew": "אופה",
+      "transliteration": "ofa",
+      "modification": "Same spelling; pronunciation changes"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-hairdresser",
+    "hebrew": "ספר",
+    "english": "Hairdresser",
+    "transliteration": "sapar",
+    "feminine": {
+      "hebrew": "ספרית",
+      "transliteration": "saparit",
+      "modification": "Add ית"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-engineer",
+    "hebrew": "מהנדס",
+    "english": "Engineer",
+    "transliteration": "mehandes",
+    "feminine": {
+      "hebrew": "מהנדסת",
+      "transliteration": "mehandeset",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-lawyer",
+    "hebrew": "עורך דין",
+    "english": "Lawyer",
+    "transliteration": "orekh din",
+    "feminine": {
+      "hebrew": "עורכת דין",
+      "transliteration": "orekhet din",
+      "modification": "Use עורכת דין"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-judge",
+    "hebrew": "שופט",
+    "english": "Judge",
+    "transliteration": "shofet",
+    "feminine": {
+      "hebrew": "שופטת",
+      "transliteration": "shofetet",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-programmer",
+    "hebrew": "מתכנת",
+    "english": "Programmer",
+    "transliteration": "metakhnet",
+    "feminine": {
+      "hebrew": "מתכנתת",
+      "transliteration": "metakhnetet",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-designer",
+    "hebrew": "מעצב",
+    "english": "Designer",
+    "transliteration": "meatsev",
+    "feminine": {
+      "hebrew": "מעצבת",
+      "transliteration": "meatsevet",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-journalist",
+    "hebrew": "עיתונאי",
+    "english": "Journalist",
+    "transliteration": "itonai",
+    "feminine": {
+      "hebrew": "עיתונאית",
+      "transliteration": "itonait",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-author",
+    "hebrew": "סופר",
+    "english": "Author",
+    "transliteration": "sofer",
+    "feminine": {
+      "hebrew": "סופרת",
+      "transliteration": "soferet",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-actor-player",
+    "hebrew": "שחקן",
+    "english": "Actor / player",
+    "transliteration": "sakhkan",
+    "feminine": {
+      "hebrew": "שחקנית",
+      "transliteration": "sakhkanit",
+      "modification": "Replace ן with נית"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-singer",
+    "hebrew": "זמר",
+    "english": "Singer",
+    "transliteration": "zamar",
+    "feminine": {
+      "hebrew": "זמרת",
+      "transliteration": "zameret",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-photographer",
+    "hebrew": "צלם",
+    "english": "Photographer",
+    "transliteration": "tsalam",
+    "feminine": {
+      "hebrew": "צלמת",
+      "transliteration": "tsalemet",
+      "modification": "Replace ם with מת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-artist",
+    "hebrew": "אמן",
+    "english": "Artist",
+    "transliteration": "oman",
+    "feminine": {
+      "hebrew": "אמנית",
+      "transliteration": "omanit",
+      "modification": "Replace ן with נית"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-customer",
+    "hebrew": "לקוח",
+    "english": "Customer",
+    "transliteration": "lakoakh",
+    "feminine": {
+      "hebrew": "לקוחה",
+      "transliteration": "lekokha",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-citizen",
+    "hebrew": "אזרח",
+    "english": "Citizen",
+    "transliteration": "ezrakh",
+    "feminine": {
+      "hebrew": "אזרחית",
+      "transliteration": "ezrakhit",
+      "modification": "Add ית"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-tourist",
+    "hebrew": "תייר",
+    "english": "Tourist",
+    "transliteration": "tayar",
+    "feminine": {
+      "hebrew": "תיירת",
+      "transliteration": "tayeret",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-volunteer",
+    "hebrew": "מתנדב",
+    "english": "Volunteer",
+    "transliteration": "mitnadev",
+    "feminine": {
+      "hebrew": "מתנדבת",
+      "transliteration": "mitnadevet",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-guide-instructor",
+    "hebrew": "מדריך",
+    "english": "Guide / instructor",
+    "transliteration": "madrikh",
+    "feminine": {
+      "hebrew": "מדריכה",
+      "transliteration": "madrikha",
+      "modification": "Replace ך with כה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-team-member",
+    "hebrew": "חבר צוות",
+    "english": "Team member",
+    "transliteration": "khaver tsevet",
+    "feminine": {
+      "hebrew": "חברת צוות",
+      "transliteration": "khavrat tsevet",
+      "modification": "Use חברת צוות"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-team-crew",
+    "hebrew": "צוות",
+    "english": "Team / crew",
+    "transliteration": "tsevet",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-office",
+    "hebrew": "משרד",
+    "english": "Office",
+    "transliteration": "misrad",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-company-society",
+    "hebrew": "חברה",
+    "english": "Company / society",
+    "transliteration": "khevra",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-business",
+    "hebrew": "עסק",
+    "english": "Business",
+    "transliteration": "esek",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-factory",
+    "hebrew": "מפעל",
+    "english": "Factory",
+    "transliteration": "mifal",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-profession",
+    "hebrew": "מקצוע",
+    "english": "Profession",
+    "transliteration": "miktsoa",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-salary",
+    "hebrew": "משכורת",
+    "english": "Salary",
+    "transliteration": "maskoret",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-wages-remuneration",
+    "hebrew": "שכר",
+    "english": "Wages / remuneration",
+    "transliteration": "sakhar",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-income",
+    "hebrew": "הכנסה",
+    "english": "Income",
+    "transliteration": "hakhnasa",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-expense",
+    "hebrew": "הוצאה",
+    "english": "Expense",
+    "transliteration": "hotsaa",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-budget",
+    "hebrew": "תקציב",
+    "english": "Budget",
+    "transliteration": "taktsiv",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-bill-account",
+    "hebrew": "חשבון",
+    "english": "Bill / account",
+    "transliteration": "kheshbon",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-receipt",
+    "hebrew": "קבלה",
+    "english": "Receipt",
+    "transliteration": "kabala",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-price",
+    "hebrew": "מחיר",
+    "english": "Price",
+    "transliteration": "mekhir",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-discount",
+    "hebrew": "הנחה",
+    "english": "Discount",
+    "transliteration": "hanakha",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-cash",
+    "hebrew": "מזומן",
+    "english": "Cash",
+    "transliteration": "mezuman",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-credit",
+    "hebrew": "אשראי",
+    "english": "Credit",
+    "transliteration": "ashrai",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-credit-card",
+    "hebrew": "כרטיס אשראי",
+    "english": "Credit card",
+    "transliteration": "kartis ashrai",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-coin-currency",
+    "hebrew": "מטבע",
+    "english": "Coin / currency",
+    "transliteration": "matbea",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-shekel",
+    "hebrew": "שקל",
+    "english": "Shekel",
+    "transliteration": "shekel",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-agora-one-hundredth-of-a-shekel",
+    "hebrew": "אגורה",
+    "english": "Agora (one hundredth of a shekel)",
+    "transliteration": "agora",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-order-invitation",
+    "hebrew": "הזמנה",
+    "english": "Order / invitation",
+    "transliteration": "hazmana",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-product",
+    "hebrew": "מוצר",
+    "english": "Product",
+    "transliteration": "mutsar",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-service",
+    "hebrew": "שירות",
+    "english": "Service",
+    "transliteration": "sherut",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-quality",
+    "hebrew": "איכות",
+    "english": "Quality",
+    "transliteration": "eikhut",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-quantity",
+    "hebrew": "כמות",
+    "english": "Quantity",
+    "transliteration": "kamut",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-size",
+    "hebrew": "גודל",
+    "english": "Size",
+    "transliteration": "godel",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-color",
+    "hebrew": "צבע",
+    "english": "Color",
+    "transliteration": "tseva",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-clothing-size-measure",
+    "hebrew": "מידה",
+    "english": "Clothing size / measure",
+    "transliteration": "mida",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-material",
+    "hebrew": "חומר",
+    "english": "Material",
+    "transliteration": "khomer",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-paper",
+    "hebrew": "נייר",
+    "english": "Paper",
+    "transliteration": "niyar",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-pen",
+    "hebrew": "עט",
+    "english": "Pen",
+    "transliteration": "et",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-pencil",
+    "hebrew": "עיפרון",
+    "english": "Pencil",
+    "transliteration": "iparon",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-notebook",
+    "hebrew": "מחברת",
+    "english": "Notebook",
+    "transliteration": "makhberet",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-folder",
+    "hebrew": "תיקייה",
+    "english": "Folder",
+    "transliteration": "tikiya",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-file",
+    "hebrew": "קובץ",
+    "english": "File",
+    "transliteration": "kovets",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-document",
+    "hebrew": "מסמך",
+    "english": "Document",
+    "transliteration": "mismakh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-contract",
+    "hebrew": "חוזה",
+    "english": "Contract",
+    "transliteration": "khoze",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-signature",
+    "hebrew": "חתימה",
+    "english": "Signature",
+    "transliteration": "khatima",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-certificate-document",
+    "hebrew": "תעודה",
+    "english": "Certificate / document",
+    "transliteration": "teuda",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-identity-card",
+    "hebrew": "תעודת זהות",
+    "english": "Identity card",
+    "transliteration": "teudat zehut",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-passport",
+    "hebrew": "דרכון",
+    "english": "Passport",
+    "transliteration": "darkon",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-license",
+    "hebrew": "רישיון",
+    "english": "License",
+    "transliteration": "rishayon",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-driving-license",
+    "hebrew": "רישיון נהיגה",
+    "english": "Driving license",
+    "transliteration": "rishayon nehiga",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-insurance",
+    "hebrew": "ביטוח",
+    "english": "Insurance",
+    "transliteration": "bituakh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-tax",
+    "hebrew": "מס",
+    "english": "Tax",
+    "transliteration": "mas",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-police",
+    "hebrew": "משטרה",
+    "english": "Police",
+    "transliteration": "mishtara",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-government",
+    "hebrew": "ממשלה",
+    "english": "Government",
+    "transliteration": "memshala",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-law",
+    "hebrew": "חוק",
+    "english": "Law",
+    "transliteration": "khok",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-right-entitlement",
+    "hebrew": "זכות",
+    "english": "Right / entitlement",
+    "transliteration": "zkhut",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-obligation-duty",
+    "hebrew": "חובה",
+    "english": "Obligation / duty",
+    "transliteration": "khova",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-responsibility-warranty",
+    "hebrew": "אחריות",
+    "english": "Responsibility / warranty",
+    "transliteration": "akhrayut",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-rule",
+    "hebrew": "כלל",
+    "english": "Rule",
+    "transliteration": "klal",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-decision",
+    "hebrew": "החלטה",
+    "english": "Decision",
+    "transliteration": "hakhlata",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-agreement",
+    "hebrew": "הסכם",
+    "english": "Agreement",
+    "transliteration": "heskem",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-plan-program",
+    "hebrew": "תוכנית",
+    "english": "Plan / program",
+    "transliteration": "tokhnit",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-project",
+    "hebrew": "פרויקט",
+    "english": "Project",
+    "transliteration": "proyekt",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-goal-target",
+    "hebrew": "מטרה",
+    "english": "Goal / target",
+    "transliteration": "matara",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-idea",
+    "hebrew": "רעיון",
+    "english": "Idea",
+    "transliteration": "raayon",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-success",
+    "hebrew": "הצלחה",
+    "english": "Success",
+    "transliteration": "hatslakha",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-failure",
+    "hebrew": "כישלון",
+    "english": "Failure",
+    "transliteration": "kishalon",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-mistake",
+    "hebrew": "טעות",
+    "english": "Mistake",
+    "transliteration": "taut",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-change",
+    "hebrew": "שינוי",
+    "english": "Change",
+    "transliteration": "shinui",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-improvement",
+    "hebrew": "שיפור",
+    "english": "Improvement",
+    "transliteration": "shipur",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-solution",
+    "hebrew": "פתרון",
+    "english": "Solution",
+    "transliteration": "pitron",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-option-possibility",
+    "hebrew": "אפשרות",
+    "english": "Option / possibility",
+    "transliteration": "efsharut",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-choice",
+    "hebrew": "בחירה",
+    "english": "Choice",
+    "transliteration": "bkhira",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-experience-attempt",
+    "hebrew": "ניסיון",
+    "english": "Experience / attempt",
+    "transliteration": "nisayon",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-knowledge",
+    "hebrew": "ידע",
+    "english": "Knowledge",
+    "transliteration": "yeda",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-information",
+    "hebrew": "מידע",
+    "english": "Information",
+    "transliteration": "meyda",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-news",
+    "hebrew": "חדשות",
+    "english": "News",
+    "transliteration": "khadashot",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-message-announcement",
+    "hebrew": "הודעה",
+    "english": "Message / announcement",
+    "transliteration": "hodaa",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-conversation",
+    "hebrew": "שיחה",
+    "english": "Conversation",
+    "transliteration": "sikha",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-language",
+    "hebrew": "שפה",
+    "english": "Language",
+    "transliteration": "safa",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-hebrew",
+    "hebrew": "עברית",
+    "english": "Hebrew",
+    "transliteration": "ivrit",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-english",
+    "hebrew": "אנגלית",
+    "english": "English",
+    "transliteration": "anglit",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-arabic",
+    "hebrew": "ערבית",
+    "english": "Arabic",
+    "transliteration": "aravit",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-translation",
+    "hebrew": "תרגום",
+    "english": "Translation",
+    "transliteration": "tirgum",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-meaning",
+    "hebrew": "משמעות",
+    "english": "Meaning",
+    "transliteration": "mashmaut",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-letter-alphabet-sign",
+    "hebrew": "אות",
+    "english": "Letter (alphabet) / sign",
+    "transliteration": "ot",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-alphabet",
+    "hebrew": "אלף בית",
+    "english": "Alphabet",
+    "transliteration": "alef bet",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-grammar",
+    "hebrew": "דקדוק",
+    "english": "Grammar",
+    "transliteration": "dikduk",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-dictionary",
+    "hebrew": "מילון",
+    "english": "Dictionary",
+    "transliteration": "milon",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-lesson",
+    "hebrew": "שיעור",
+    "english": "Lesson",
+    "transliteration": "shiur",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-course",
+    "hebrew": "קורס",
+    "english": "Course",
+    "transliteration": "kurs",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-exam",
+    "hebrew": "מבחן",
+    "english": "Exam",
+    "transliteration": "mivkhan",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-grade-mark",
+    "hebrew": "ציון",
+    "english": "Grade / mark",
+    "transliteration": "tsiyun",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-exercise",
+    "hebrew": "תרגיל",
+    "english": "Exercise",
+    "transliteration": "targil",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-homework",
+    "hebrew": "שיעורי בית",
+    "english": "Homework",
+    "transliteration": "shiurei bayit",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-classroom-class",
+    "hebrew": "כיתה",
+    "english": "Classroom / class",
+    "transliteration": "kita",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-library",
+    "hebrew": "ספרייה",
+    "english": "Library",
+    "transliteration": "sifriya",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-education",
+    "hebrew": "חינוך",
+    "english": "Education",
+    "transliteration": "khinukh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-research",
+    "hebrew": "מחקר",
+    "english": "Research",
+    "transliteration": "mekhkar",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-science",
+    "hebrew": "מדע",
+    "english": "Science",
+    "transliteration": "mada",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-history",
+    "hebrew": "היסטוריה",
+    "english": "History",
+    "transliteration": "historiya",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-culture",
+    "hebrew": "תרבות",
+    "english": "Culture",
+    "transliteration": "tarbut",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-music",
+    "hebrew": "מוזיקה",
+    "english": "Music",
+    "transliteration": "muzika",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-song-poem",
+    "hebrew": "שיר",
+    "english": "Song / poem",
+    "transliteration": "shir",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-film",
+    "hebrew": "סרט",
+    "english": "Film",
+    "transliteration": "seret",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-cinema",
+    "hebrew": "קולנוע",
+    "english": "Cinema",
+    "transliteration": "kolnoa",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-theater",
+    "hebrew": "תיאטרון",
+    "english": "Theater",
+    "transliteration": "teatron",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-performance",
+    "hebrew": "הופעה",
+    "english": "Performance",
+    "transliteration": "hofaa",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-museum",
+    "hebrew": "מוזיאון",
+    "english": "Museum",
+    "transliteration": "muzeon",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-picture",
+    "hebrew": "תמונה",
+    "english": "Picture",
+    "transliteration": "tmuna",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-drawing-painting",
+    "hebrew": "ציור",
+    "english": "Drawing / painting",
+    "transliteration": "tsiyur",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-photography",
+    "hebrew": "צילום",
+    "english": "Photography",
+    "transliteration": "tsilum",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-camera",
+    "hebrew": "מצלמה",
+    "english": "Camera",
+    "transliteration": "matslema",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-network-net",
+    "hebrew": "רשת",
+    "english": "Network / net",
+    "transliteration": "reshet",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-app",
+    "hebrew": "אפליקציה",
+    "english": "App",
+    "transliteration": "aplikatsiya",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-website-site",
+    "hebrew": "אתר",
+    "english": "Website / site",
+    "transliteration": "atar",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-page-sheet",
+    "hebrew": "דף",
+    "english": "Page / sheet",
+    "transliteration": "daf",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-link",
+    "hebrew": "קישור",
+    "english": "Link",
+    "transliteration": "kishur",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-password",
+    "hebrew": "סיסמה",
+    "english": "Password",
+    "transliteration": "sisma",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-username",
+    "hebrew": "שם משתמש",
+    "english": "Username",
+    "transliteration": "shem mishtamesh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-email",
+    "hebrew": "דואר אלקטרוני",
+    "english": "Email",
+    "transliteration": "doar elektroni",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-settings",
+    "hebrew": "הגדרות",
+    "english": "Settings",
+    "transliteration": "hagdarot",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-battery",
+    "hebrew": "סוללה",
+    "english": "Battery",
+    "transliteration": "solela",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-charger",
+    "hebrew": "מטען",
+    "english": "Charger",
+    "transliteration": "maten",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-cable",
+    "hebrew": "כבל",
+    "english": "Cable",
+    "transliteration": "kabel",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-headphones",
+    "hebrew": "אוזניות",
+    "english": "Headphones",
+    "transliteration": "ozniyot",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-loudspeaker",
+    "hebrew": "רמקול",
+    "english": "Loudspeaker",
+    "transliteration": "ramkol",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-printer",
+    "hebrew": "מדפסת",
+    "english": "Printer",
+    "transliteration": "madpeset",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-charging-loading",
+    "hebrew": "טעינה",
+    "english": "Charging / loading",
+    "transliteration": "teina",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-download",
+    "hebrew": "הורדה",
+    "english": "Download",
+    "transliteration": "horada",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-update",
+    "hebrew": "עדכון",
+    "english": "Update",
+    "transliteration": "idkun",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-connection",
+    "hebrew": "חיבור",
+    "english": "Connection",
+    "transliteration": "khibur",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-balcony",
+    "hebrew": "מרפסת",
+    "english": "Balcony",
+    "transliteration": "mirpeset",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-garden",
+    "hebrew": "גינה",
+    "english": "Garden",
+    "transliteration": "gina",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-yard",
+    "hebrew": "חצר",
+    "english": "Yard",
+    "transliteration": "khatser",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-roof",
+    "hebrew": "גג",
+    "english": "Roof",
+    "transliteration": "gag",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-stairs",
+    "hebrew": "מדרגות",
+    "english": "Stairs",
+    "transliteration": "madregot",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-elevator",
+    "hebrew": "מעלית",
+    "english": "Elevator",
+    "transliteration": "maalit",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-entrance",
+    "hebrew": "כניסה",
+    "english": "Entrance",
+    "transliteration": "knisa",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-exit",
+    "hebrew": "יציאה",
+    "english": "Exit",
+    "transliteration": "yetsia",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-story-floor-of-a-building",
+    "hebrew": "קומה",
+    "english": "Story / floor of a building",
+    "transliteration": "koma",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-building",
+    "hebrew": "בניין",
+    "english": "Building",
+    "transliteration": "binyan",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-apartment",
+    "hebrew": "דירה",
+    "english": "Apartment",
+    "transliteration": "dira",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-rent",
+    "hebrew": "שכירות",
+    "english": "Rent",
+    "transliteration": "skhirut",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-neighborhood",
+    "hebrew": "שכונה",
+    "english": "Neighborhood",
+    "transliteration": "shkhuna",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-living-room",
+    "hebrew": "סלון",
+    "english": "Living room",
+    "transliteration": "salon",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-bedroom",
+    "hebrew": "חדר שינה",
+    "english": "Bedroom",
+    "transliteration": "kheder shena",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-bathroom",
+    "hebrew": "חדר אמבטיה",
+    "english": "Bathroom",
+    "transliteration": "kheder ambatya",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-toilet-restroom",
+    "hebrew": "שירותים",
+    "english": "Toilet / restroom",
+    "transliteration": "sherutim",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-shower",
+    "hebrew": "מקלחת",
+    "english": "Shower",
+    "transliteration": "miklakhat",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-bathtub",
+    "hebrew": "אמבטיה",
+    "english": "Bathtub",
+    "transliteration": "ambatya",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-sink",
+    "hebrew": "כיור",
+    "english": "Sink",
+    "transliteration": "kiyor",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-faucet",
+    "hebrew": "ברז",
+    "english": "Faucet",
+    "transliteration": "berez",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-towel",
+    "hebrew": "מגבת",
+    "english": "Towel",
+    "transliteration": "magevet",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-soap",
+    "hebrew": "סבון",
+    "english": "Soap",
+    "transliteration": "sabon",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-shampoo",
+    "hebrew": "שמפו",
+    "english": "Shampoo",
+    "transliteration": "shampo",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-toothbrush",
+    "hebrew": "מברשת שיניים",
+    "english": "Toothbrush",
+    "transliteration": "mivreshet shinayim",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-toothpaste",
+    "hebrew": "משחת שיניים",
+    "english": "Toothpaste",
+    "transliteration": "mishkhat shinayim",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-mirror",
+    "hebrew": "מראה",
+    "english": "Mirror",
+    "transliteration": "mara",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-washing-machine",
+    "hebrew": "מכונת כביסה",
+    "english": "Washing machine",
+    "transliteration": "mekhonat kvisa",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-laundry",
+    "hebrew": "כביסה",
+    "english": "Laundry",
+    "transliteration": "kvisa",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-rope",
+    "hebrew": "חבל",
+    "english": "Rope",
+    "transliteration": "khevel",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-shelf",
+    "hebrew": "מדף",
+    "english": "Shelf",
+    "transliteration": "madaf",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-cupboard-wardrobe",
+    "hebrew": "ארון",
+    "english": "Cupboard / wardrobe",
+    "transliteration": "aron",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-drawer",
+    "hebrew": "מגירה",
+    "english": "Drawer",
+    "transliteration": "megira",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-sofa",
+    "hebrew": "ספה",
+    "english": "Sofa",
+    "transliteration": "sapa",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-pillow",
+    "hebrew": "כרית",
+    "english": "Pillow",
+    "transliteration": "karit",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-blanket",
+    "hebrew": "שמיכה",
+    "english": "Blanket",
+    "transliteration": "smikha",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-bedsheet",
+    "hebrew": "סדין",
+    "english": "Bedsheet",
+    "transliteration": "sadin",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-carpet",
+    "hebrew": "שטיח",
+    "english": "Carpet",
+    "transliteration": "shatiakh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-curtain",
+    "hebrew": "וילון",
+    "english": "Curtain",
+    "transliteration": "vilon",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-air-conditioner",
+    "hebrew": "מזגן",
+    "english": "Air conditioner",
+    "transliteration": "mazgan",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-fan",
+    "hebrew": "מאוורר",
+    "english": "Fan",
+    "transliteration": "meavrer",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-heating",
+    "hebrew": "חימום",
+    "english": "Heating",
+    "transliteration": "khimum",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-bin-tin",
+    "hebrew": "פח",
+    "english": "Bin / tin",
+    "transliteration": "pakh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-garbage",
+    "hebrew": "אשפה",
+    "english": "Garbage",
+    "transliteration": "ashpa",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-broom",
+    "hebrew": "מטאטא",
+    "english": "Broom",
+    "transliteration": "matate",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-vacuum-cleaner",
+    "hebrew": "שואב אבק",
+    "english": "Vacuum cleaner",
+    "transliteration": "shoev avak",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-dust",
+    "hebrew": "אבק",
+    "english": "Dust",
+    "transliteration": "avak",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-stone",
+    "hebrew": "אבן",
+    "english": "Stone",
+    "transliteration": "even",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-sand",
+    "hebrew": "חול",
+    "english": "Sand",
+    "transliteration": "khol",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-soil-earth",
+    "hebrew": "אדמה",
+    "english": "Soil / earth",
+    "transliteration": "adama",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-mountain",
+    "hebrew": "הר",
+    "english": "Mountain",
+    "transliteration": "har",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-hill",
+    "hebrew": "גבעה",
+    "english": "Hill",
+    "transliteration": "giva",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-valley",
+    "hebrew": "עמק",
+    "english": "Valley",
+    "transliteration": "emek",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-forest",
+    "hebrew": "יער",
+    "english": "Forest",
+    "transliteration": "yaar",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-river",
+    "hebrew": "נהר",
+    "english": "River",
+    "transliteration": "nahar",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-stream",
+    "hebrew": "נחל",
+    "english": "Stream",
+    "transliteration": "nakhal",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-lake",
+    "hebrew": "אגם",
+    "english": "Lake",
+    "transliteration": "agam",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-beach-shore",
+    "hebrew": "חוף",
+    "english": "Beach / shore",
+    "transliteration": "khof",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-island",
+    "hebrew": "אי",
+    "english": "Island",
+    "transliteration": "i",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-desert",
+    "hebrew": "מדבר",
+    "english": "Desert",
+    "transliteration": "midbar",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-nature",
+    "hebrew": "טבע",
+    "english": "Nature",
+    "transliteration": "teva",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-landscape-view",
+    "hebrew": "נוף",
+    "english": "Landscape / view",
+    "transliteration": "nof",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-environment-surroundings",
+    "hebrew": "סביבה",
+    "english": "Environment / surroundings",
+    "transliteration": "sviva",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-air",
+    "hebrew": "אוויר",
+    "english": "Air",
+    "transliteration": "avir",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-fire",
+    "hebrew": "אש",
+    "english": "Fire",
+    "transliteration": "esh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-smoke",
+    "hebrew": "עשן",
+    "english": "Smoke",
+    "transliteration": "ashan",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-cloud",
+    "hebrew": "ענן",
+    "english": "Cloud",
+    "transliteration": "anan",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-snow",
+    "hebrew": "שלג",
+    "english": "Snow",
+    "transliteration": "sheleg",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-ice",
+    "hebrew": "קרח",
+    "english": "Ice",
+    "transliteration": "kerakh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-storm",
+    "hebrew": "סערה",
+    "english": "Storm",
+    "transliteration": "seara",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-lightning",
+    "hebrew": "ברק",
+    "english": "Lightning",
+    "transliteration": "barak",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-thunder",
+    "hebrew": "רעם",
+    "english": "Thunder",
+    "transliteration": "raam",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-rainbow-arch",
+    "hebrew": "קשת",
+    "english": "Rainbow / arch",
+    "transliteration": "keshet",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-weather",
+    "hebrew": "מזג אוויר",
+    "english": "Weather",
+    "transliteration": "mezeg avir",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-temperature",
+    "hebrew": "טמפרטורה",
+    "english": "Temperature",
+    "transliteration": "temperatura",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-degree-step",
+    "hebrew": "מעלה",
+    "english": "Degree / step",
+    "transliteration": "maala",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-shade-shadow",
+    "hebrew": "צל",
+    "english": "Shade / shadow",
+    "transliteration": "tsel",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-sunrise",
+    "hebrew": "זריחה",
+    "english": "Sunrise",
+    "transliteration": "zrikha",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-sunset",
+    "hebrew": "שקיעה",
+    "english": "Sunset",
+    "transliteration": "shkia",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-star",
+    "hebrew": "כוכב",
+    "english": "Star",
+    "transliteration": "kokhav",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-animal",
+    "hebrew": "חיה",
+    "english": "Animal",
+    "transliteration": "khaya",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-horse",
+    "hebrew": "סוס",
+    "english": "Horse",
+    "transliteration": "sus",
+    "feminine": {
+      "hebrew": "סוסה",
+      "transliteration": "susa",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-cow",
+    "hebrew": "פרה",
+    "english": "Cow",
+    "transliteration": "para",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-sheep-ewe",
+    "hebrew": "כבשה",
+    "english": "Sheep (ewe)",
+    "transliteration": "kivsa",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-goat",
+    "hebrew": "עז",
+    "english": "Goat",
+    "transliteration": "ez",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-rooster",
+    "hebrew": "תרנגול",
+    "english": "Rooster",
+    "transliteration": "tarnegol",
+    "feminine": {
+      "hebrew": "תרנגולת",
+      "transliteration": "tarnegolet",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-duck",
+    "hebrew": "ברווז",
+    "english": "Duck",
+    "transliteration": "barvaz",
+    "feminine": {
+      "hebrew": "ברווזה",
+      "transliteration": "barvaza",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-dove-pigeon",
+    "hebrew": "יונה",
+    "english": "Dove / pigeon",
+    "transliteration": "yona",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-bee",
+    "hebrew": "דבורה",
+    "english": "Bee",
+    "transliteration": "dvora",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-butterfly",
+    "hebrew": "פרפר",
+    "english": "Butterfly",
+    "transliteration": "parpar",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-ant",
+    "hebrew": "נמלה",
+    "english": "Ant",
+    "transliteration": "nemala",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-mosquito",
+    "hebrew": "יתוש",
+    "english": "Mosquito",
+    "transliteration": "yatush",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-fly-insect",
+    "hebrew": "זבוב",
+    "english": "Fly (insect)",
+    "transliteration": "zvuv",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-spider",
+    "hebrew": "עכביש",
+    "english": "Spider",
+    "transliteration": "akavish",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-snake",
+    "hebrew": "נחש",
+    "english": "Snake",
+    "transliteration": "nakhash",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-turtle-tortoise",
+    "hebrew": "צב",
+    "english": "Turtle / tortoise",
+    "transliteration": "tsav",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-lion",
+    "hebrew": "אריה",
+    "english": "Lion",
+    "transliteration": "arye",
+    "feminine": {
+      "hebrew": "לביאה",
+      "transliteration": "levia",
+      "modification": "Use לביאה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-bear",
+    "hebrew": "דוב",
+    "english": "Bear",
+    "transliteration": "dov",
+    "feminine": {
+      "hebrew": "דובה",
+      "transliteration": "duba",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-monkey",
+    "hebrew": "קוף",
+    "english": "Monkey",
+    "transliteration": "kof",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-rabbit",
+    "hebrew": "ארנב",
+    "english": "Rabbit",
+    "transliteration": "arnav",
+    "feminine": {
+      "hebrew": "ארנבת",
+      "transliteration": "arnevet",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-branch",
+    "hebrew": "ענף",
+    "english": "Branch",
+    "transliteration": "anaf",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-leaf",
+    "hebrew": "עלה",
+    "english": "Leaf",
+    "transliteration": "ale",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-root",
+    "hebrew": "שורש",
+    "english": "Root",
+    "transliteration": "shoresh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-seed",
+    "hebrew": "זרע",
+    "english": "Seed",
+    "transliteration": "zera",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-grass",
+    "hebrew": "דשא",
+    "english": "Grass",
+    "transliteration": "deshe",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-field",
+    "hebrew": "שדה",
+    "english": "Field",
+    "transliteration": "sade",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-pear",
+    "hebrew": "אגס",
+    "english": "Pear",
+    "transliteration": "agas",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-peach",
+    "hebrew": "אפרסק",
+    "english": "Peach",
+    "transliteration": "afarsek",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-plum",
+    "hebrew": "שזיף",
+    "english": "Plum",
+    "transliteration": "shazif",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-apricot",
+    "hebrew": "משמש",
+    "english": "Apricot",
+    "transliteration": "mishmesh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-grapes",
+    "hebrew": "ענבים",
+    "english": "Grapes",
+    "transliteration": "anavim",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-watermelon",
+    "hebrew": "אבטיח",
+    "english": "Watermelon",
+    "transliteration": "avatiakh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-melon-fruit",
+    "hebrew": "מלון",
+    "english": "Melon (fruit)",
+    "transliteration": "melon",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-strawberry",
+    "hebrew": "תות",
+    "english": "Strawberry",
+    "transliteration": "tut",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-cherry",
+    "hebrew": "דובדבן",
+    "english": "Cherry",
+    "transliteration": "duvdevan",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-pomegranate",
+    "hebrew": "רימון",
+    "english": "Pomegranate",
+    "transliteration": "rimon",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-fig",
+    "hebrew": "תאנה",
+    "english": "Fig",
+    "transliteration": "teena",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-date-fruit",
+    "hebrew": "תמר",
+    "english": "Date (fruit)",
+    "transliteration": "tamar",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-olive",
+    "hebrew": "זית",
+    "english": "Olive",
+    "transliteration": "zayit",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-avocado",
+    "hebrew": "אבוקדו",
+    "english": "Avocado",
+    "transliteration": "avokado",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-mango",
+    "hebrew": "מנגו",
+    "english": "Mango",
+    "transliteration": "mango",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-pineapple",
+    "hebrew": "אננס",
+    "english": "Pineapple",
+    "transliteration": "ananas",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-coconut",
+    "hebrew": "קוקוס",
+    "english": "Coconut",
+    "transliteration": "kokos",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-cabbage",
+    "hebrew": "כרוב",
+    "english": "Cabbage",
+    "transliteration": "kruv",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-cauliflower",
+    "hebrew": "כרובית",
+    "english": "Cauliflower",
+    "transliteration": "kruvit",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-broccoli",
+    "hebrew": "ברוקולי",
+    "english": "Broccoli",
+    "transliteration": "brokoli",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-eggplant",
+    "hebrew": "חציל",
+    "english": "Eggplant",
+    "transliteration": "khatsil",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-zucchini",
+    "hebrew": "קישוא",
+    "english": "Zucchini",
+    "transliteration": "kishu",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-pumpkin",
+    "hebrew": "דלעת",
+    "english": "Pumpkin",
+    "transliteration": "dlaat",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-corn",
+    "hebrew": "תירס",
+    "english": "Corn",
+    "transliteration": "tiras",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-peas",
+    "hebrew": "אפונה",
+    "english": "Peas",
+    "transliteration": "afuna",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-beans",
+    "hebrew": "שעועית",
+    "english": "Beans",
+    "transliteration": "shu-it",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-lentils",
+    "hebrew": "עדשים",
+    "english": "Lentils",
+    "transliteration": "adashim",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-chickpeas-hummus",
+    "hebrew": "חומוס",
+    "english": "Chickpeas / hummus",
+    "transliteration": "khumus",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-tahini",
+    "hebrew": "טחינה",
+    "english": "Tahini",
+    "transliteration": "tkhina",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-mushroom",
+    "hebrew": "פטרייה",
+    "english": "Mushroom",
+    "transliteration": "pitriya",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-parsley",
+    "hebrew": "פטרוזיליה",
+    "english": "Parsley",
+    "transliteration": "petrozilya",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-mint",
+    "hebrew": "נענע",
+    "english": "Mint",
+    "transliteration": "nana",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-basil",
+    "hebrew": "בזיליקום",
+    "english": "Basil",
+    "transliteration": "bazilikum",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-cinnamon",
+    "hebrew": "קינמון",
+    "english": "Cinnamon",
+    "transliteration": "kinamon",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-honey",
+    "hebrew": "דבש",
+    "english": "Honey",
+    "transliteration": "dvash",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-jam",
+    "hebrew": "ריבה",
+    "english": "Jam",
+    "transliteration": "riba",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-chocolate",
+    "hebrew": "שוקולד",
+    "english": "Chocolate",
+    "transliteration": "shokolad",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-cake",
+    "hebrew": "עוגה",
+    "english": "Cake",
+    "transliteration": "uga",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-cookie",
+    "hebrew": "עוגייה",
+    "english": "Cookie",
+    "transliteration": "ugiya",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-ice-cream",
+    "hebrew": "גלידה",
+    "english": "Ice cream",
+    "transliteration": "glida",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-candy",
+    "hebrew": "ממתק",
+    "english": "Candy",
+    "transliteration": "mamtak",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-flour",
+    "hebrew": "קמח",
+    "english": "Flour",
+    "transliteration": "kemakh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-dough",
+    "hebrew": "בצק",
+    "english": "Dough",
+    "transliteration": "batsek",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-pita-bread",
+    "hebrew": "פיתה",
+    "english": "Pita bread",
+    "transliteration": "pita",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-challah",
+    "hebrew": "חלה",
+    "english": "Challah",
+    "transliteration": "khala",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-chocolate-milk",
+    "hebrew": "שוקו",
+    "english": "Chocolate milk",
+    "transliteration": "shoko",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-wine",
+    "hebrew": "יין",
+    "english": "Wine",
+    "transliteration": "yayin",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-beer",
+    "hebrew": "בירה",
+    "english": "Beer",
+    "transliteration": "bira",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-sparkling-water",
+    "hebrew": "מים מוגזים",
+    "english": "Sparkling water",
+    "transliteration": "mayim mugazim",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-green-tea",
+    "hebrew": "תה ירוק",
+    "english": "Green tea",
+    "transliteration": "te yarok",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-black-coffee",
+    "hebrew": "קפה שחור",
+    "english": "Black coffee",
+    "transliteration": "kafe shakhor",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-coffee-with-steamed-milk",
+    "hebrew": "קפה הפוך",
+    "english": "Coffee with steamed milk",
+    "transliteration": "kafe hafukh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-menu",
+    "hebrew": "תפריט",
+    "english": "Menu",
+    "transliteration": "tafrit",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-portion-dish",
+    "hebrew": "מנה",
+    "english": "Portion / dish",
+    "transliteration": "mana",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-addition-side-dish",
+    "hebrew": "תוספת",
+    "english": "Addition / side dish",
+    "transliteration": "tosefet",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-dessert",
+    "hebrew": "קינוח",
+    "english": "Dessert",
+    "transliteration": "kinuakh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-sauce",
+    "hebrew": "רוטב",
+    "english": "Sauce",
+    "transliteration": "rotev",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-taste-flavor",
+    "hebrew": "טעם",
+    "english": "Taste / flavor",
+    "transliteration": "taam",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-smell",
+    "hebrew": "ריח",
+    "english": "Smell",
+    "transliteration": "reakh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-hungry",
+    "hebrew": "רעב",
+    "english": "Hungry",
+    "transliteration": "raev",
+    "feminine": {
+      "hebrew": "רעבה",
+      "transliteration": "reeva",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-thirsty",
+    "hebrew": "צמא",
+    "english": "Thirsty",
+    "transliteration": "tsame",
+    "feminine": {
+      "hebrew": "צמאה",
+      "transliteration": "tsmea",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-full-after-eating",
+    "hebrew": "שבע",
+    "english": "Full after eating",
+    "transliteration": "savea",
+    "feminine": {
+      "hebrew": "שבעה",
+      "transliteration": "svea",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-tasty",
+    "hebrew": "טעים",
+    "english": "Tasty",
+    "transliteration": "taim",
+    "feminine": {
+      "hebrew": "טעימה",
+      "transliteration": "teima",
+      "modification": "Replace ם with מה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-sweet",
+    "hebrew": "מתוק",
+    "english": "Sweet",
+    "transliteration": "matok",
+    "feminine": {
+      "hebrew": "מתוקה",
+      "transliteration": "metuka",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-salty",
+    "hebrew": "מלוח",
+    "english": "Salty",
+    "transliteration": "maluakh",
+    "feminine": {
+      "hebrew": "מלוחה",
+      "transliteration": "melukha",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-sour",
+    "hebrew": "חמוץ",
+    "english": "Sour",
+    "transliteration": "khamuts",
+    "feminine": {
+      "hebrew": "חמוצה",
+      "transliteration": "khamutsa",
+      "modification": "Replace ץ with צה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-bitter",
+    "hebrew": "מר",
+    "english": "Bitter",
+    "transliteration": "mar",
+    "feminine": {
+      "hebrew": "מרה",
+      "transliteration": "mara",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-spicy",
+    "hebrew": "חריף",
+    "english": "Spicy",
+    "transliteration": "kharif",
+    "feminine": {
+      "hebrew": "חריפה",
+      "transliteration": "kharifa",
+      "modification": "Replace ף with פה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-fresh",
+    "hebrew": "טרי",
+    "english": "Fresh",
+    "transliteration": "tari",
+    "feminine": {
+      "hebrew": "טרייה",
+      "transliteration": "triya",
+      "modification": "Add יה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-tired",
+    "hebrew": "עייף",
+    "english": "Tired",
+    "transliteration": "ayef",
+    "feminine": {
+      "hebrew": "עייפה",
+      "transliteration": "ayefa",
+      "modification": "Replace ף with פה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-happy",
+    "hebrew": "שמח",
+    "english": "Happy",
+    "transliteration": "sameakh",
+    "feminine": {
+      "hebrew": "שמחה",
+      "transliteration": "smekha",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-sad",
+    "hebrew": "עצוב",
+    "english": "Sad",
+    "transliteration": "atsuv",
+    "feminine": {
+      "hebrew": "עצובה",
+      "transliteration": "atsuva",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-angry",
+    "hebrew": "כועס",
+    "english": "Angry",
+    "transliteration": "koes",
+    "feminine": {
+      "hebrew": "כועסת",
+      "transliteration": "koeset",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-calm",
+    "hebrew": "רגוע",
+    "english": "Calm",
+    "transliteration": "ragua",
+    "feminine": {
+      "hebrew": "רגועה",
+      "transliteration": "regua",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-worried",
+    "hebrew": "מודאג",
+    "english": "Worried",
+    "transliteration": "mudag",
+    "feminine": {
+      "hebrew": "מודאגת",
+      "transliteration": "mudeget",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-busy",
+    "hebrew": "עסוק",
+    "english": "Busy",
+    "transliteration": "asuk",
+    "feminine": {
+      "hebrew": "עסוקה",
+      "transliteration": "asuka",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-available-free",
+    "hebrew": "פנוי",
+    "english": "Available / free",
+    "transliteration": "panui",
+    "feminine": {
+      "hebrew": "פנויה",
+      "transliteration": "pnuya",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-ready",
+    "hebrew": "מוכן",
+    "english": "Ready",
+    "transliteration": "mukhan",
+    "feminine": {
+      "hebrew": "מוכנה",
+      "transliteration": "mukhana",
+      "modification": "Replace ן with נה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-safe-certain",
+    "hebrew": "בטוח",
+    "english": "Safe / certain",
+    "transliteration": "batuakh",
+    "feminine": {
+      "hebrew": "בטוחה",
+      "transliteration": "betukha",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-dangerous",
+    "hebrew": "מסוכן",
+    "english": "Dangerous",
+    "transliteration": "mesukan",
+    "feminine": {
+      "hebrew": "מסוכנת",
+      "transliteration": "mesukenet",
+      "modification": "Replace ן with נת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-important",
+    "hebrew": "חשוב",
+    "english": "Important",
+    "transliteration": "khashuv",
+    "feminine": {
+      "hebrew": "חשובה",
+      "transliteration": "khashuva",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-correct",
+    "hebrew": "נכון",
+    "english": "Correct",
+    "transliteration": "nakhon",
+    "feminine": {
+      "hebrew": "נכונה",
+      "transliteration": "nekhona",
+      "modification": "Replace ן with נה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-incorrect",
+    "hebrew": "לא נכון",
+    "english": "Incorrect",
+    "transliteration": "lo nakhon",
+    "feminine": {
+      "hebrew": "לא נכונה",
+      "transliteration": "lo nekhona",
+      "modification": "Use לא נכונה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-clear",
+    "hebrew": "ברור",
+    "english": "Clear",
+    "transliteration": "barur",
+    "feminine": {
+      "hebrew": "ברורה",
+      "transliteration": "brura",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-simple",
+    "hebrew": "פשוט",
+    "english": "Simple",
+    "transliteration": "pashut",
+    "feminine": {
+      "hebrew": "פשוטה",
+      "transliteration": "pshuta",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-special",
+    "hebrew": "מיוחד",
+    "english": "Special",
+    "transliteration": "meyukhad",
+    "feminine": {
+      "hebrew": "מיוחדת",
+      "transliteration": "meyukhedet",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-usual-ordinary",
+    "hebrew": "רגיל",
+    "english": "Usual / ordinary",
+    "transliteration": "ragil",
+    "feminine": {
+      "hebrew": "רגילה",
+      "transliteration": "regila",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-different",
+    "hebrew": "שונה",
+    "english": "Different",
+    "transliteration": "shone",
+    "feminine": {
+      "hebrew": "שונה",
+      "transliteration": "shona",
+      "modification": "Same spelling; pronunciation changes"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-similar",
+    "hebrew": "דומה",
+    "english": "Similar",
+    "transliteration": "dome",
+    "feminine": {
+      "hebrew": "דומה",
+      "transliteration": "doma",
+      "modification": "Same spelling; pronunciation changes"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-strong",
+    "hebrew": "חזק",
+    "english": "Strong",
+    "transliteration": "khazak",
+    "feminine": {
+      "hebrew": "חזקה",
+      "transliteration": "khazaka",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-weak",
+    "hebrew": "חלש",
+    "english": "Weak",
+    "transliteration": "khalash",
+    "feminine": {
+      "hebrew": "חלשה",
+      "transliteration": "khalasha",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-healthy",
+    "hebrew": "בריא",
+    "english": "Healthy",
+    "transliteration": "bari",
+    "feminine": {
+      "hebrew": "בריאה",
+      "transliteration": "bria",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-ill",
+    "hebrew": "חולה",
+    "english": "Ill",
+    "transliteration": "khole",
+    "feminine": {
+      "hebrew": "חולה",
+      "transliteration": "khola",
+      "modification": "Same spelling; pronunciation changes"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-clean",
+    "hebrew": "נקי",
+    "english": "Clean",
+    "transliteration": "naki",
+    "feminine": {
+      "hebrew": "נקייה",
+      "transliteration": "nekiya",
+      "modification": "Add יה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-dirty",
+    "hebrew": "מלוכלך",
+    "english": "Dirty",
+    "transliteration": "melukhlakh",
+    "feminine": {
+      "hebrew": "מלוכלכת",
+      "transliteration": "melukhlekhet",
+      "modification": "Replace ך with כת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-full",
+    "hebrew": "מלא",
+    "english": "Full",
+    "transliteration": "male",
+    "feminine": {
+      "hebrew": "מלאה",
+      "transliteration": "melea",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-empty",
+    "hebrew": "ריק",
+    "english": "Empty",
+    "transliteration": "rek",
+    "feminine": {
+      "hebrew": "ריקה",
+      "transliteration": "reka",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-open",
+    "hebrew": "פתוח",
+    "english": "Open",
+    "transliteration": "patuakh",
+    "feminine": {
+      "hebrew": "פתוחה",
+      "transliteration": "ptukha",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-closed",
+    "hebrew": "סגור",
+    "english": "Closed",
+    "transliteration": "sagur",
+    "feminine": {
+      "hebrew": "סגורה",
+      "transliteration": "sgura",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-long",
+    "hebrew": "ארוך",
+    "english": "Long",
+    "transliteration": "arokh",
+    "feminine": {
+      "hebrew": "ארוכה",
+      "transliteration": "aruka",
+      "modification": "Replace ך with כה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-short-length",
+    "hebrew": "קצר",
+    "english": "Short (length)",
+    "transliteration": "katsar",
+    "feminine": {
+      "hebrew": "קצרה",
+      "transliteration": "ktsara",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-tall-high",
+    "hebrew": "גבוה",
+    "english": "Tall / high",
+    "transliteration": "gavoha",
+    "feminine": {
+      "hebrew": "גבוהה",
+      "transliteration": "gvoha",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-low-short-in-height",
+    "hebrew": "נמוך",
+    "english": "Low / short in height",
+    "transliteration": "namukh",
+    "feminine": {
+      "hebrew": "נמוכה",
+      "transliteration": "nemukha",
+      "modification": "Replace ך with כה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-wide",
+    "hebrew": "רחב",
+    "english": "Wide",
+    "transliteration": "rakhav",
+    "feminine": {
+      "hebrew": "רחבה",
+      "transliteration": "rekhava",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-narrow",
+    "hebrew": "צר",
+    "english": "Narrow",
+    "transliteration": "tsar",
+    "feminine": {
+      "hebrew": "צרה",
+      "transliteration": "tsara",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-deep",
+    "hebrew": "עמוק",
+    "english": "Deep",
+    "transliteration": "amok",
+    "feminine": {
+      "hebrew": "עמוקה",
+      "transliteration": "amuka",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-heavy",
+    "hebrew": "כבד",
+    "english": "Heavy",
+    "transliteration": "kaved",
+    "feminine": {
+      "hebrew": "כבדה",
+      "transliteration": "kveda",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-fast",
+    "hebrew": "מהיר",
+    "english": "Fast",
+    "transliteration": "mahir",
+    "feminine": {
+      "hebrew": "מהירה",
+      "transliteration": "mehira",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-slow",
+    "hebrew": "איטי",
+    "english": "Slow",
+    "transliteration": "iti",
+    "feminine": {
+      "hebrew": "איטית",
+      "transliteration": "itit",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-free-unrestricted",
+    "hebrew": "חופשי",
+    "english": "Free (unrestricted)",
+    "transliteration": "khofshi",
+    "feminine": {
+      "hebrew": "חופשייה",
+      "transliteration": "khofshiya",
+      "modification": "Add יה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-free-of-charge",
+    "hebrew": "חינם",
+    "english": "Free of charge",
+    "transliteration": "khinam",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-comfortable-convenient",
+    "hebrew": "נוח",
+    "english": "Comfortable / convenient",
+    "transliteration": "noakh",
+    "feminine": {
+      "hebrew": "נוחה",
+      "transliteration": "nokha",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-quiet",
+    "hebrew": "שקט",
+    "english": "Quiet",
+    "transliteration": "shaket",
+    "feminine": {
+      "hebrew": "שקטה",
+      "transliteration": "shketa",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-noisy",
+    "hebrew": "רועש",
+    "english": "Noisy",
+    "transliteration": "roesh",
+    "feminine": {
+      "hebrew": "רועשת",
+      "transliteration": "roeshet",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-soft",
+    "hebrew": "רך",
+    "english": "Soft",
+    "transliteration": "rakh",
+    "feminine": {
+      "hebrew": "רכה",
+      "transliteration": "raka",
+      "modification": "Replace ך with כה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-dry",
+    "hebrew": "יבש",
+    "english": "Dry",
+    "transliteration": "yavesh",
+    "feminine": {
+      "hebrew": "יבשה",
+      "transliteration": "yevesha",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-wet",
+    "hebrew": "רטוב",
+    "english": "Wet",
+    "transliteration": "ratuv",
+    "feminine": {
+      "hebrew": "רטובה",
+      "transliteration": "retuva",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-white",
+    "hebrew": "לבן",
+    "english": "White",
+    "transliteration": "lavan",
+    "feminine": {
+      "hebrew": "לבנה",
+      "transliteration": "levana",
+      "modification": "Replace ן with נה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-black",
+    "hebrew": "שחור",
+    "english": "Black",
+    "transliteration": "shakhor",
+    "feminine": {
+      "hebrew": "שחורה",
+      "transliteration": "shkhora",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-red",
+    "hebrew": "אדום",
+    "english": "Red",
+    "transliteration": "adom",
+    "feminine": {
+      "hebrew": "אדומה",
+      "transliteration": "aduma",
+      "modification": "Replace ם with מה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-blue",
+    "hebrew": "כחול",
+    "english": "Blue",
+    "transliteration": "kakhol",
+    "feminine": {
+      "hebrew": "כחולה",
+      "transliteration": "kkhula",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-green",
+    "hebrew": "ירוק",
+    "english": "Green",
+    "transliteration": "yarok",
+    "feminine": {
+      "hebrew": "ירוקה",
+      "transliteration": "yeruka",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-yellow",
+    "hebrew": "צהוב",
+    "english": "Yellow",
+    "transliteration": "tsahov",
+    "feminine": {
+      "hebrew": "צהובה",
+      "transliteration": "tsehuba",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-orange-color",
+    "hebrew": "כתום",
+    "english": "Orange (color)",
+    "transliteration": "katom",
+    "feminine": {
+      "hebrew": "כתומה",
+      "transliteration": "ktuma",
+      "modification": "Replace ם with מה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-purple",
+    "hebrew": "סגול",
+    "english": "Purple",
+    "transliteration": "sagol",
+    "feminine": {
+      "hebrew": "סגולה",
+      "transliteration": "sgula",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-pink",
+    "hebrew": "ורוד",
+    "english": "Pink",
+    "transliteration": "varod",
+    "feminine": {
+      "hebrew": "ורודה",
+      "transliteration": "vruda",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-gray",
+    "hebrew": "אפור",
+    "english": "Gray",
+    "transliteration": "afor",
+    "feminine": {
+      "hebrew": "אפורה",
+      "transliteration": "afora",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-brown",
+    "hebrew": "חום",
+    "english": "Brown",
+    "transliteration": "khum",
+    "feminine": {
+      "hebrew": "חומה",
+      "transliteration": "khuma",
+      "modification": "Replace ם with מה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-early",
+    "hebrew": "מוקדם",
+    "english": "Early",
+    "transliteration": "mukdam",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-late",
+    "hebrew": "מאוחר",
+    "english": "Late",
+    "transliteration": "meukhar",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-exactly",
+    "hebrew": "בדיוק",
+    "english": "Exactly",
+    "transliteration": "bediyuk",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-approximately",
+    "hebrew": "בערך",
+    "english": "Approximately",
+    "transliteration": "beerekh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-mainly",
+    "hebrew": "בעיקר",
+    "english": "Mainly",
+    "transliteration": "beikar",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-at-all-in-general",
+    "hebrew": "בכלל",
+    "english": "At all / in general",
+    "transliteration": "bikhlal",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-especially",
+    "hebrew": "במיוחד",
+    "english": "Especially",
+    "transliteration": "bimyukhad",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-therefore",
+    "hebrew": "לכן",
+    "english": "Therefore",
+    "transliteration": "lakhen",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-then-so",
+    "hebrew": "אז",
+    "english": "Then / so",
+    "transliteration": "az",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-until-up-to",
+    "hebrew": "עד",
+    "english": "Until / up to",
+    "transliteration": "ad",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-between",
+    "hebrew": "בין",
+    "english": "Between",
+    "transliteration": "bein",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-at-someone-s-place-with",
+    "hebrew": "אצל",
+    "english": "At someone's place / with",
+    "transliteration": "etsel",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-opposite-facing",
+    "hebrew": "מול",
+    "english": "Opposite / facing",
+    "transliteration": "mul",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-beside-next-to",
+    "hebrew": "ליד",
+    "english": "Beside / next to",
+    "transliteration": "leyad",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-under",
+    "hebrew": "מתחת",
+    "english": "Under",
+    "transliteration": "mitakhat",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-above",
+    "hebrew": "מעל",
+    "english": "Above",
+    "transliteration": "meal",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-around",
+    "hebrew": "מסביב",
+    "english": "Around",
+    "transliteration": "misaviv",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-by-the-way",
+    "hebrew": "דרך אגב",
+    "english": "By the way",
+    "transliteration": "derekh agav",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-even",
+    "hebrew": "אפילו",
+    "english": "Even",
+    "transliteration": "afilu",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-despite",
+    "hebrew": "למרות",
+    "english": "Despite",
+    "transliteration": "lamrot",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-according-to",
+    "hebrew": "לפי",
+    "english": "According to",
+    "transliteration": "lefi",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-because-of",
+    "hebrew": "בגלל",
+    "english": "Because of",
+    "transliteration": "biglal",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-during-on-time",
+    "hebrew": "בזמן",
+    "english": "During / on time",
+    "transliteration": "bizman",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-meanwhile",
+    "hebrew": "בינתיים",
+    "english": "Meanwhile",
+    "transliteration": "beintayim",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-immediately",
+    "hebrew": "מיד",
+    "english": "Immediately",
+    "transliteration": "miyad",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-suddenly",
+    "hebrew": "פתאום",
+    "english": "Suddenly",
+    "transliteration": "pitom",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-again",
+    "hebrew": "שוב",
+    "english": "Again",
+    "transliteration": "shuv",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-once-time-occasion",
+    "hebrew": "פעם",
+    "english": "Once / time (occasion)",
+    "transliteration": "paam",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-the-day-after-tomorrow",
+    "hebrew": "מחרתיים",
+    "english": "The day after tomorrow",
+    "transliteration": "mokhratayim",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-the-day-before-yesterday",
+    "hebrew": "שלשום",
+    "english": "The day before yesterday",
+    "transliteration": "shilshom",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-recently",
+    "hebrew": "לאחרונה",
+    "english": "Recently",
+    "transliteration": "leakharona",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-soon",
+    "hebrew": "בקרוב",
+    "english": "Soon",
+    "transliteration": "bekarov",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-later-on",
+    "hebrew": "בהמשך",
+    "english": "Later on",
+    "transliteration": "behemshekh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-previously-first",
+    "hebrew": "קודם",
+    "english": "Previously / first",
+    "transliteration": "kodem",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-next",
+    "hebrew": "הבא",
+    "english": "Next",
+    "transliteration": "haba",
+    "feminine": {
+      "hebrew": "הבאה",
+      "transliteration": "habaa",
+      "modification": "Add ה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-second-ordinal",
+    "hebrew": "שני",
+    "english": "Second (ordinal)",
+    "transliteration": "sheni",
+    "feminine": {
+      "hebrew": "שנייה",
+      "transliteration": "shniya",
+      "modification": "Add יה"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-third",
+    "hebrew": "שלישי",
+    "english": "Third",
+    "transliteration": "shlishi",
+    "feminine": {
+      "hebrew": "שלישית",
+      "transliteration": "shlishit",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-fourth",
+    "hebrew": "רביעי",
+    "english": "Fourth",
+    "transliteration": "revii",
+    "feminine": {
+      "hebrew": "רביעית",
+      "transliteration": "reviit",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-fifth",
+    "hebrew": "חמישי",
+    "english": "Fifth",
+    "transliteration": "khamishi",
+    "feminine": {
+      "hebrew": "חמישית",
+      "transliteration": "khamishit",
+      "modification": "Add ת"
+    },
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-meet-up",
+    "hebrew": "להיפגש",
+    "english": "To meet up",
+    "transliteration": "lehipagesh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-wait-formal",
+    "hebrew": "להמתין",
+    "english": "To wait (formal)",
+    "transliteration": "lehamtin",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-remind-mention",
+    "hebrew": "להזכיר",
+    "english": "To remind / mention",
+    "transliteration": "lehazkir",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-add",
+    "hebrew": "להוסיף",
+    "english": "To add",
+    "transliteration": "lehosif",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-remove",
+    "hebrew": "להסיר",
+    "english": "To remove",
+    "transliteration": "lehasir",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-delete-erase",
+    "hebrew": "למחוק",
+    "english": "To delete / erase",
+    "transliteration": "limkhok",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-copy",
+    "hebrew": "להעתיק",
+    "english": "To copy",
+    "transliteration": "lehaatik",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-photograph",
+    "hebrew": "לצלם",
+    "english": "To photograph",
+    "transliteration": "letsalem",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-print",
+    "hebrew": "להדפיס",
+    "english": "To print",
+    "transliteration": "lehadpis",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-record",
+    "hebrew": "להקליט",
+    "english": "To record",
+    "transliteration": "lehaklit",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-operate-activate",
+    "hebrew": "להפעיל",
+    "english": "To operate / activate",
+    "transliteration": "lehaf-il",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-connect",
+    "hebrew": "לחבר",
+    "english": "To connect",
+    "transliteration": "lekhaber",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-disconnect",
+    "hebrew": "לנתק",
+    "english": "To disconnect",
+    "transliteration": "lenatek",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-charge",
+    "hebrew": "להטעין",
+    "english": "To charge",
+    "transliteration": "lehat-in",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-sign",
+    "hebrew": "לחתום",
+    "english": "To sign",
+    "transliteration": "lakhtom",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-fill",
+    "hebrew": "למלא",
+    "english": "To fill",
+    "transliteration": "lemale",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-empty",
+    "hebrew": "לרוקן",
+    "english": "To empty",
+    "transliteration": "leroken",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-pack",
+    "hebrew": "לארוז",
+    "english": "To pack",
+    "transliteration": "leeroz",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-unload-unpack-cargo",
+    "hebrew": "לפרוק",
+    "english": "To unload / unpack cargo",
+    "transliteration": "lifrok",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-organize",
+    "hebrew": "לארגן",
+    "english": "To organize",
+    "transliteration": "leargen",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-plan",
+    "hebrew": "לתכנן",
+    "english": "To plan",
+    "transliteration": "letakhnen",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-set-arrange",
+    "hebrew": "לקבוע",
+    "english": "To set / arrange",
+    "transliteration": "likboa",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-postpone-reject",
+    "hebrew": "לדחות",
+    "english": "To postpone / reject",
+    "transliteration": "lidkhot",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-cancel",
+    "hebrew": "לבטל",
+    "english": "To cancel",
+    "transliteration": "levatel",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-distinguish-differentiate",
+    "hebrew": "לבדל",
+    "english": "To distinguish / differentiate",
+    "transliteration": "levadel",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-compare",
+    "hebrew": "להשוות",
+    "english": "To compare",
+    "transliteration": "lehashvot",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-measure-try-on",
+    "hebrew": "למדוד",
+    "english": "To measure / try on",
+    "transliteration": "limdod",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-weigh-consider",
+    "hebrew": "לשקול",
+    "english": "To weigh / consider",
+    "transliteration": "lishkol",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-consult",
+    "hebrew": "להתייעץ",
+    "english": "To consult",
+    "transliteration": "lehityaats",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-trust-rely",
+    "hebrew": "לסמוך",
+    "english": "To trust / rely",
+    "transliteration": "lismokh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-promise-ensure",
+    "hebrew": "להבטיח",
+    "english": "To promise / ensure",
+    "transliteration": "lehavtiakh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-believe",
+    "hebrew": "להאמין",
+    "english": "To believe",
+    "transliteration": "lehaamin",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-hope",
+    "hebrew": "לקוות",
+    "english": "To hope",
+    "transliteration": "lekavot",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-dream",
+    "hebrew": "לחלום",
+    "english": "To dream",
+    "transliteration": "lakhalom",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-miss-someone",
+    "hebrew": "להתגעגע",
+    "english": "To miss someone",
+    "transliteration": "lehitgaagea",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-apologize",
+    "hebrew": "להתנצל",
+    "english": "To apologize",
+    "transliteration": "lehitnatsel",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-thank-admit",
+    "hebrew": "להודות",
+    "english": "To thank / admit",
+    "transliteration": "lehodot",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-congratulate-bless",
+    "hebrew": "לברך",
+    "english": "To congratulate / bless",
+    "transliteration": "levarekh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-celebrate",
+    "hebrew": "לחגוג",
+    "english": "To celebrate",
+    "transliteration": "lakhgog",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-get-married",
+    "hebrew": "להתחתן",
+    "english": "To get married",
+    "transliteration": "lehitkhaten",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-be-born",
+    "hebrew": "להיוולד",
+    "english": "To be born",
+    "transliteration": "lehivaled",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-grow",
+    "hebrew": "לגדול",
+    "english": "To grow",
+    "transliteration": "ligdol",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-grow-old",
+    "hebrew": "להזדקן",
+    "english": "To grow old",
+    "transliteration": "lehizdaken",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-die",
+    "hebrew": "למות",
+    "english": "To die",
+    "transliteration": "lamut",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-breathe",
+    "hebrew": "לנשום",
+    "english": "To breathe",
+    "transliteration": "linshom",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-get-injured",
+    "hebrew": "להיפצע",
+    "english": "To get injured",
+    "transliteration": "lehipatsa",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-recover-from-illness",
+    "hebrew": "להבריא",
+    "english": "To recover from illness",
+    "transliteration": "lehavri",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-heal-cure",
+    "hebrew": "לרפא",
+    "english": "To heal / cure",
+    "transliteration": "lerape",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-swallow",
+    "hebrew": "לבלוע",
+    "english": "To swallow",
+    "transliteration": "livloa",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-cough",
+    "hebrew": "להשתעל",
+    "english": "To cough",
+    "transliteration": "lehishtael",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-sneeze",
+    "hebrew": "להתעטש",
+    "english": "To sneeze",
+    "transliteration": "lehitatesh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-be-careful",
+    "hebrew": "להיזהר",
+    "english": "To be careful",
+    "transliteration": "lehizaher",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-fall",
+    "hebrew": "ליפול",
+    "english": "To fall",
+    "transliteration": "lipol",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-jump",
+    "hebrew": "לקפוץ",
+    "english": "To jump",
+    "transliteration": "likpots",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-swim",
+    "hebrew": "לשחות",
+    "english": "To swim",
+    "transliteration": "liskhot",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-climb",
+    "hebrew": "לטפס",
+    "english": "To climb",
+    "transliteration": "letapes",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-lift",
+    "hebrew": "להרים",
+    "english": "To lift",
+    "transliteration": "leharim",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-push",
+    "hebrew": "לדחוף",
+    "english": "To push",
+    "transliteration": "lidkhof",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-pull",
+    "hebrew": "למשוך",
+    "english": "To pull",
+    "transliteration": "limshokh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-throw",
+    "hebrew": "לזרוק",
+    "english": "To throw",
+    "transliteration": "lizrok",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-catch",
+    "hebrew": "לתפוס",
+    "english": "To catch",
+    "transliteration": "litpos",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-kick",
+    "hebrew": "לבעוט",
+    "english": "To kick",
+    "transliteration": "liv-ot",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-bend-down",
+    "hebrew": "להתכופף",
+    "english": "To bend down",
+    "transliteration": "lehitkofef",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-turn-around-wander",
+    "hebrew": "להסתובב",
+    "english": "To turn around / wander",
+    "transliteration": "lehistovev",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-pass-move-across",
+    "hebrew": "לעבור",
+    "english": "To pass / move across",
+    "transliteration": "laavor",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-cross",
+    "hebrew": "לחצות",
+    "english": "To cross",
+    "transliteration": "lakhatsot",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-lead-transport",
+    "hebrew": "להוביל",
+    "english": "To lead / transport",
+    "transliteration": "lehovil",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-follow-track",
+    "hebrew": "לעקוב",
+    "english": "To follow / track",
+    "transliteration": "laakov",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-accompany",
+    "hebrew": "ללוות",
+    "english": "To accompany",
+    "transliteration": "lelavot",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-stay-remain",
+    "hebrew": "להישאר",
+    "english": "To stay / remain",
+    "transliteration": "lehishaer",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-leave-abandon",
+    "hebrew": "לעזוב",
+    "english": "To leave / abandon",
+    "transliteration": "laazov",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-approach",
+    "hebrew": "להתקרב",
+    "english": "To approach",
+    "transliteration": "lehitkarev",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-move-away",
+    "hebrew": "להתרחק",
+    "english": "To move away",
+    "transliteration": "lehitrakhek",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-look-at",
+    "hebrew": "להסתכל",
+    "english": "To look at",
+    "transliteration": "lehistakel",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-gaze-look",
+    "hebrew": "להביט",
+    "english": "To gaze / look",
+    "transliteration": "lehabit",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-discover-reveal",
+    "hebrew": "לגלות",
+    "english": "To discover / reveal",
+    "transliteration": "legalot",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-hide-something",
+    "hebrew": "להסתיר",
+    "english": "To hide something",
+    "transliteration": "lehastir",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-hide-oneself",
+    "hebrew": "להתחבא",
+    "english": "To hide oneself",
+    "transliteration": "lehitkhabe",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-identify",
+    "hebrew": "לזהות",
+    "english": "To identify",
+    "transliteration": "lezahot",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-change",
+    "hebrew": "לשנות",
+    "english": "To change",
+    "transliteration": "leshanot",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-change-oneself-become-different",
+    "hebrew": "להשתנות",
+    "english": "To change oneself / become different",
+    "transliteration": "lehishtanot",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-influence",
+    "hebrew": "להשפיע",
+    "english": "To influence",
+    "transliteration": "lehashpia",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-improve",
+    "hebrew": "לשפר",
+    "english": "To improve",
+    "transliteration": "leshaper",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-develop",
+    "hebrew": "להתפתח",
+    "english": "To develop",
+    "transliteration": "lehitpateakh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-solve",
+    "hebrew": "לפתור",
+    "english": "To solve",
+    "transliteration": "liftor",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-suggest-offer",
+    "hebrew": "להציע",
+    "english": "To suggest / offer",
+    "transliteration": "lehatsia",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-request",
+    "hebrew": "לבקש",
+    "english": "To request",
+    "transliteration": "levakesh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-demand",
+    "hebrew": "לדרוש",
+    "english": "To demand",
+    "transliteration": "lidrosh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-allow-enable",
+    "hebrew": "לאפשר",
+    "english": "To allow / enable",
+    "transliteration": "leafsher",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-forbid",
+    "hebrew": "לאסור",
+    "english": "To forbid",
+    "transliteration": "leesor",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-permit",
+    "hebrew": "להרשות",
+    "english": "To permit",
+    "transliteration": "leharshot",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-refuse",
+    "hebrew": "לסרב",
+    "english": "To refuse",
+    "transliteration": "lesarev",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-oppose",
+    "hebrew": "להתנגד",
+    "english": "To oppose",
+    "transliteration": "lehitnaged",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-argue",
+    "hebrew": "להתווכח",
+    "english": "To argue",
+    "transliteration": "lehitvakeakh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-quarrel",
+    "hebrew": "לריב",
+    "english": "To quarrel",
+    "transliteration": "lariv",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-give-up-yield",
+    "hebrew": "לוותר",
+    "english": "To give up / yield",
+    "transliteration": "levater",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-compromise",
+    "hebrew": "להתפשר",
+    "english": "To compromise",
+    "transliteration": "lehitpasher",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-forgive",
+    "hebrew": "לסלוח",
+    "english": "To forgive",
+    "transliteration": "lisloakh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-protect",
+    "hebrew": "להגן",
+    "english": "To protect",
+    "transliteration": "lehagen",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-rescue",
+    "hebrew": "להציל",
+    "english": "To rescue",
+    "transliteration": "lehatsil",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-be-afraid",
+    "hebrew": "לפחד",
+    "english": "To be afraid",
+    "transliteration": "lifkhod",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-be-excited-moved",
+    "hebrew": "להתרגש",
+    "english": "To be excited / moved",
+    "transliteration": "lehitragesh",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-calm-down",
+    "hebrew": "להירגע",
+    "english": "To calm down",
+    "transliteration": "lehiraga",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-surprise",
+    "hebrew": "להפתיע",
+    "english": "To surprise",
+    "transliteration": "lehaftia",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-be-interested",
+    "hebrew": "להתעניין",
+    "english": "To be interested",
+    "transliteration": "lehitanyen",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-interest-someone",
+    "hebrew": "לעניין",
+    "english": "To interest someone",
+    "transliteration": "leanyen",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-be-bored",
+    "hebrew": "להשתעמם",
+    "english": "To be bored",
+    "transliteration": "lehishtaamem",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-be-disappointed",
+    "hebrew": "להתאכזב",
+    "english": "To be disappointed",
+    "transliteration": "lehitakhzev",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-make-an-effort",
+    "hebrew": "להתאמץ",
+    "english": "To make an effort",
+    "transliteration": "lehitamets",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-cope-deal-with",
+    "hebrew": "להתמודד",
+    "english": "To cope / deal with",
+    "transliteration": "lehitmoded",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-prepare-oneself",
+    "hebrew": "להתכונן",
+    "english": "To prepare oneself",
+    "transliteration": "lehitkonen",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-participate",
+    "hebrew": "להשתתף",
+    "english": "To participate",
+    "transliteration": "lehishtatef",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-volunteer",
+    "hebrew": "להתנדב",
+    "english": "To volunteer",
+    "transliteration": "lehitnadev",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-register",
+    "hebrew": "להירשם",
+    "english": "To register",
+    "transliteration": "lehirashem",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-take-an-exam",
+    "hebrew": "להיבחן",
+    "english": "To take an exam",
+    "transliteration": "lehibakhen",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-translate",
+    "hebrew": "לתרגם",
+    "english": "To translate",
+    "transliteration": "letargem",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-pronounce-contemplate",
+    "hebrew": "להגות",
+    "english": "To pronounce / contemplate",
+    "transliteration": "lehagot",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-practice-exercises",
+    "hebrew": "לתרגל",
+    "english": "To practice exercises",
+    "transliteration": "letargel",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-to-get-used-to",
+    "hebrew": "להתרגל",
+    "english": "To get used to",
+    "transliteration": "lehitragel",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-where-is-the-restroom",
+    "hebrew": "איפה השירותים",
+    "english": "Where is the restroom?",
+    "transliteration": "eifo hasherutim",
+    "priority": 1000
+  },
+  {
+    "id": "vocab-how-much-does-this-cost",
+    "hebrew": "כמה זה עולה",
+    "english": "How much does this cost?",
+    "transliteration": "kama ze ole",
+    "priority": 1000
   }
 ]

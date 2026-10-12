@@ -1,0 +1,592 @@
+vocab-six|שישה|shisha|Six|שש|shesh
+vocab-seven|שבעה|shiva|Seven|שבע|sheva
+vocab-eight-masculine|שמונה|shmona|Eight (masculine)|שמונה|shmone
+vocab-nine|תשעה|tisha|Nine|תשע|tesha
+vocab-ten|עשרה|asara|Ten|עשר|eser
+vocab-twenty|עשרים|esrim|Twenty
+vocab-thirty|שלושים|shloshim|Thirty
+vocab-forty|ארבעים|arbaim|Forty
+vocab-fifty|חמישים|khamishim|Fifty
+vocab-one-hundred|מאה|mea|One hundred
+vocab-one-thousand|אלף|elef|One thousand
+vocab-half|חצי|khetsi|Half
+vocab-quarter|רבע|reva|Quarter
+vocab-whole-complete|שלם|shalem|Whole / complete|שלמה|shlema
+vocab-sunday|יום ראשון|yom rishon|Sunday
+vocab-monday|יום שני|yom sheni|Monday
+vocab-tuesday|יום שלישי|yom shlishi|Tuesday
+vocab-wednesday|יום רביעי|yom revii|Wednesday
+vocab-thursday|יום חמישי|yom khamishi|Thursday
+vocab-friday|יום שישי|yom shishi|Friday
+vocab-saturday-sabbath|שבת|shabat|Saturday / Sabbath
+vocab-weekend|סוף שבוע|sof shavua|Weekend
+vocab-spring|אביב|aviv|Spring
+vocab-summer|קיץ|kayits|Summer
+vocab-autumn|סתיו|stav|Autumn
+vocab-winter|חורף|khoref|Winter
+vocab-date-calendar|תאריך|taarikh|Date (calendar)
+vocab-holiday-festival|חג|khag|Holiday / festival
+vocab-vacation|חופשה|khufsha|Vacation
+vocab-birthday|יום הולדת|yom huledet|Birthday
+vocab-meeting-appointment|פגישה|pgisha|Meeting / appointment
+vocab-queue-appointment|תור|tor|Queue / appointment
+vocab-calendar|לוח שנה|luakh shana|Calendar
+vocab-uncle|דוד|dod|Uncle|דודה|doda
+vocab-cousin|בן דוד|ben dod|Cousin|בת דודה|bat doda
+vocab-grandchild|נכד|nekhed|Grandchild|נכדה|nekhda
+vocab-husband|בעל|baal|Husband
+vocab-wife-spouse|רעיה|raaya|Wife / spouse
+vocab-groom-bride|חתן|khatan|Groom / bride|כלה|kala
+vocab-marriage|נישואים|nisuim|Marriage
+vocab-wedding|חתונה|khatuna|Wedding
+vocab-baby|תינוק|tinok|Baby|תינוקת|tinoket
+vocab-adult-older|מבוגר|mevugar|Adult / older|מבוגרת|mevugeret
+vocab-young|צעיר|tsair|Young|צעירה|tseira
+vocab-elderly|זקן|zaken|Elderly|זקנה|zkena
+vocab-employee-worker|עובד|oved|Employee / worker|עובדת|ovedet
+vocab-manager|מנהל|menahel|Manager|מנהלת|menahelet
+vocab-secretary|מזכיר|mazkir|Secretary|מזכירה|mazkira
+vocab-driver|נהג|nahag|Driver|נהגת|naheget
+vocab-police-officer|שוטר|shoter|Police officer|שוטרת|shoteret
+vocab-soldier|חייל|khayal|Soldier|חיילת|khayelet
+vocab-waiter|מלצר|meltsar|Waiter|מלצרית|meltsarit
+vocab-cook-chef|טבח|tabakh|Cook / chef|טבחית|tabakhit
+vocab-baker|אופה|ofe|Baker|אופה|ofa
+vocab-hairdresser|ספר|sapar|Hairdresser|ספרית|saparit
+vocab-engineer|מהנדס|mehandes|Engineer|מהנדסת|mehandeset
+vocab-lawyer|עורך דין|orekh din|Lawyer|עורכת דין|orekhet din
+vocab-judge|שופט|shofet|Judge|שופטת|shofetet
+vocab-programmer|מתכנת|metakhnet|Programmer|מתכנתת|metakhnetet
+vocab-designer|מעצב|meatsev|Designer|מעצבת|meatsevet
+vocab-journalist|עיתונאי|itonai|Journalist|עיתונאית|itonait
+vocab-author|סופר|sofer|Author|סופרת|soferet
+vocab-actor-player|שחקן|sakhkan|Actor / player|שחקנית|sakhkanit
+vocab-singer|זמר|zamar|Singer|זמרת|zameret
+vocab-photographer|צלם|tsalam|Photographer|צלמת|tsalemet
+vocab-artist|אמן|oman|Artist|אמנית|omanit
+vocab-customer|לקוח|lakoakh|Customer|לקוחה|lekokha
+vocab-citizen|אזרח|ezrakh|Citizen|אזרחית|ezrakhit
+vocab-tourist|תייר|tayar|Tourist|תיירת|tayeret
+vocab-volunteer|מתנדב|mitnadev|Volunteer|מתנדבת|mitnadevet
+vocab-guide-instructor|מדריך|madrikh|Guide / instructor|מדריכה|madrikha
+vocab-team-member|חבר צוות|khaver tsevet|Team member|חברת צוות|khavrat tsevet
+vocab-team-crew|צוות|tsevet|Team / crew
+vocab-office|משרד|misrad|Office
+vocab-company-society|חברה|khevra|Company / society
+vocab-business|עסק|esek|Business
+vocab-factory|מפעל|mifal|Factory
+vocab-profession|מקצוע|miktsoa|Profession
+vocab-salary|משכורת|maskoret|Salary
+vocab-wages-remuneration|שכר|sakhar|Wages / remuneration
+vocab-income|הכנסה|hakhnasa|Income
+vocab-expense|הוצאה|hotsaa|Expense
+vocab-budget|תקציב|taktsiv|Budget
+vocab-bill-account|חשבון|kheshbon|Bill / account
+vocab-receipt|קבלה|kabala|Receipt
+vocab-price|מחיר|mekhir|Price
+vocab-discount|הנחה|hanakha|Discount
+vocab-cash|מזומן|mezuman|Cash
+vocab-credit|אשראי|ashrai|Credit
+vocab-credit-card|כרטיס אשראי|kartis ashrai|Credit card
+vocab-coin-currency|מטבע|matbea|Coin / currency
+vocab-shekel|שקל|shekel|Shekel
+vocab-agora-one-hundredth-of-a-shekel|אגורה|agora|Agora (one hundredth of a shekel)
+vocab-order-invitation|הזמנה|hazmana|Order / invitation
+vocab-product|מוצר|mutsar|Product
+vocab-service|שירות|sherut|Service
+vocab-quality|איכות|eikhut|Quality
+vocab-quantity|כמות|kamut|Quantity
+vocab-size|גודל|godel|Size
+vocab-color|צבע|tseva|Color
+vocab-clothing-size-measure|מידה|mida|Clothing size / measure
+vocab-material|חומר|khomer|Material
+vocab-paper|נייר|niyar|Paper
+vocab-pen|עט|et|Pen
+vocab-pencil|עיפרון|iparon|Pencil
+vocab-notebook|מחברת|makhberet|Notebook
+vocab-folder|תיקייה|tikiya|Folder
+vocab-file|קובץ|kovets|File
+vocab-document|מסמך|mismakh|Document
+vocab-contract|חוזה|khoze|Contract
+vocab-signature|חתימה|khatima|Signature
+vocab-certificate-document|תעודה|teuda|Certificate / document
+vocab-identity-card|תעודת זהות|teudat zehut|Identity card
+vocab-passport|דרכון|darkon|Passport
+vocab-license|רישיון|rishayon|License
+vocab-driving-license|רישיון נהיגה|rishayon nehiga|Driving license
+vocab-insurance|ביטוח|bituakh|Insurance
+vocab-tax|מס|mas|Tax
+vocab-police|משטרה|mishtara|Police
+vocab-government|ממשלה|memshala|Government
+vocab-law|חוק|khok|Law
+vocab-right-entitlement|זכות|zkhut|Right / entitlement
+vocab-obligation-duty|חובה|khova|Obligation / duty
+vocab-responsibility-warranty|אחריות|akhrayut|Responsibility / warranty
+vocab-rule|כלל|klal|Rule
+vocab-decision|החלטה|hakhlata|Decision
+vocab-agreement|הסכם|heskem|Agreement
+vocab-plan-program|תוכנית|tokhnit|Plan / program
+vocab-project|פרויקט|proyekt|Project
+vocab-goal-target|מטרה|matara|Goal / target
+vocab-idea|רעיון|raayon|Idea
+vocab-success|הצלחה|hatslakha|Success
+vocab-failure|כישלון|kishalon|Failure
+vocab-mistake|טעות|taut|Mistake
+vocab-change|שינוי|shinui|Change
+vocab-improvement|שיפור|shipur|Improvement
+vocab-solution|פתרון|pitron|Solution
+vocab-option-possibility|אפשרות|efsharut|Option / possibility
+vocab-choice|בחירה|bkhira|Choice
+vocab-experience-attempt|ניסיון|nisayon|Experience / attempt
+vocab-knowledge|ידע|yeda|Knowledge
+vocab-information|מידע|meyda|Information
+vocab-news|חדשות|khadashot|News
+vocab-message-announcement|הודעה|hodaa|Message / announcement
+vocab-conversation|שיחה|sikha|Conversation
+vocab-language|שפה|safa|Language
+vocab-hebrew|עברית|ivrit|Hebrew
+vocab-english|אנגלית|anglit|English
+vocab-arabic|ערבית|aravit|Arabic
+vocab-translation|תרגום|tirgum|Translation
+vocab-meaning|משמעות|mashmaut|Meaning
+vocab-letter-alphabet-sign|אות|ot|Letter (alphabet) / sign
+vocab-alphabet|אלף בית|alef bet|Alphabet
+vocab-grammar|דקדוק|dikduk|Grammar
+vocab-dictionary|מילון|milon|Dictionary
+vocab-lesson|שיעור|shiur|Lesson
+vocab-course|קורס|kurs|Course
+vocab-exam|מבחן|mivkhan|Exam
+vocab-grade-mark|ציון|tsiyun|Grade / mark
+vocab-exercise|תרגיל|targil|Exercise
+vocab-homework|שיעורי בית|shiurei bayit|Homework
+vocab-classroom-class|כיתה|kita|Classroom / class
+vocab-library|ספרייה|sifriya|Library
+vocab-education|חינוך|khinukh|Education
+vocab-research|מחקר|mekhkar|Research
+vocab-science|מדע|mada|Science
+vocab-history|היסטוריה|historiya|History
+vocab-culture|תרבות|tarbut|Culture
+vocab-music|מוזיקה|muzika|Music
+vocab-song-poem|שיר|shir|Song / poem
+vocab-film|סרט|seret|Film
+vocab-cinema|קולנוע|kolnoa|Cinema
+vocab-theater|תיאטרון|teatron|Theater
+vocab-performance|הופעה|hofaa|Performance
+vocab-museum|מוזיאון|muzeon|Museum
+vocab-picture|תמונה|tmuna|Picture
+vocab-drawing-painting|ציור|tsiyur|Drawing / painting
+vocab-photography|צילום|tsilum|Photography
+vocab-camera|מצלמה|matslema|Camera
+vocab-network-net|רשת|reshet|Network / net
+vocab-app|אפליקציה|aplikatsiya|App
+vocab-website-site|אתר|atar|Website / site
+vocab-page-sheet|דף|daf|Page / sheet
+vocab-link|קישור|kishur|Link
+vocab-password|סיסמה|sisma|Password
+vocab-username|שם משתמש|shem mishtamesh|Username
+vocab-email|דואר אלקטרוני|doar elektroni|Email
+vocab-settings|הגדרות|hagdarot|Settings
+vocab-battery|סוללה|solela|Battery
+vocab-charger|מטען|maten|Charger
+vocab-cable|כבל|kabel|Cable
+vocab-headphones|אוזניות|ozniyot|Headphones
+vocab-loudspeaker|רמקול|ramkol|Loudspeaker
+vocab-printer|מדפסת|madpeset|Printer
+vocab-charging-loading|טעינה|teina|Charging / loading
+vocab-download|הורדה|horada|Download
+vocab-update|עדכון|idkun|Update
+vocab-connection|חיבור|khibur|Connection
+vocab-balcony|מרפסת|mirpeset|Balcony
+vocab-garden|גינה|gina|Garden
+vocab-yard|חצר|khatser|Yard
+vocab-roof|גג|gag|Roof
+vocab-stairs|מדרגות|madregot|Stairs
+vocab-elevator|מעלית|maalit|Elevator
+vocab-entrance|כניסה|knisa|Entrance
+vocab-exit|יציאה|yetsia|Exit
+vocab-story-floor-of-a-building|קומה|koma|Story / floor of a building
+vocab-building|בניין|binyan|Building
+vocab-apartment|דירה|dira|Apartment
+vocab-rent|שכירות|skhirut|Rent
+vocab-neighborhood|שכונה|shkhuna|Neighborhood
+vocab-living-room|סלון|salon|Living room
+vocab-bedroom|חדר שינה|kheder shena|Bedroom
+vocab-bathroom|חדר אמבטיה|kheder ambatya|Bathroom
+vocab-toilet-restroom|שירותים|sherutim|Toilet / restroom
+vocab-shower|מקלחת|miklakhat|Shower
+vocab-bathtub|אמבטיה|ambatya|Bathtub
+vocab-sink|כיור|kiyor|Sink
+vocab-faucet|ברז|berez|Faucet
+vocab-towel|מגבת|magevet|Towel
+vocab-soap|סבון|sabon|Soap
+vocab-shampoo|שמפו|shampo|Shampoo
+vocab-toothbrush|מברשת שיניים|mivreshet shinayim|Toothbrush
+vocab-toothpaste|משחת שיניים|mishkhat shinayim|Toothpaste
+vocab-mirror|מראה|mara|Mirror
+vocab-washing-machine|מכונת כביסה|mekhonat kvisa|Washing machine
+vocab-laundry|כביסה|kvisa|Laundry
+vocab-rope|חבל|khevel|Rope
+vocab-shelf|מדף|madaf|Shelf
+vocab-cupboard-wardrobe|ארון|aron|Cupboard / wardrobe
+vocab-drawer|מגירה|megira|Drawer
+vocab-sofa|ספה|sapa|Sofa
+vocab-pillow|כרית|karit|Pillow
+vocab-blanket|שמיכה|smikha|Blanket
+vocab-bedsheet|סדין|sadin|Bedsheet
+vocab-carpet|שטיח|shatiakh|Carpet
+vocab-curtain|וילון|vilon|Curtain
+vocab-air-conditioner|מזגן|mazgan|Air conditioner
+vocab-fan|מאוורר|meavrer|Fan
+vocab-heating|חימום|khimum|Heating
+vocab-bin-tin|פח|pakh|Bin / tin
+vocab-garbage|אשפה|ashpa|Garbage
+vocab-broom|מטאטא|matate|Broom
+vocab-vacuum-cleaner|שואב אבק|shoev avak|Vacuum cleaner
+vocab-dust|אבק|avak|Dust
+vocab-stone|אבן|even|Stone
+vocab-sand|חול|khol|Sand
+vocab-soil-earth|אדמה|adama|Soil / earth
+vocab-mountain|הר|har|Mountain
+vocab-hill|גבעה|giva|Hill
+vocab-valley|עמק|emek|Valley
+vocab-forest|יער|yaar|Forest
+vocab-river|נהר|nahar|River
+vocab-stream|נחל|nakhal|Stream
+vocab-lake|אגם|agam|Lake
+vocab-beach-shore|חוף|khof|Beach / shore
+vocab-island|אי|i|Island
+vocab-desert|מדבר|midbar|Desert
+vocab-nature|טבע|teva|Nature
+vocab-landscape-view|נוף|nof|Landscape / view
+vocab-environment-surroundings|סביבה|sviva|Environment / surroundings
+vocab-air|אוויר|avir|Air
+vocab-fire|אש|esh|Fire
+vocab-smoke|עשן|ashan|Smoke
+vocab-cloud|ענן|anan|Cloud
+vocab-snow|שלג|sheleg|Snow
+vocab-ice|קרח|kerakh|Ice
+vocab-storm|סערה|seara|Storm
+vocab-lightning|ברק|barak|Lightning
+vocab-thunder|רעם|raam|Thunder
+vocab-rainbow-arch|קשת|keshet|Rainbow / arch
+vocab-weather|מזג אוויר|mezeg avir|Weather
+vocab-temperature|טמפרטורה|temperatura|Temperature
+vocab-degree-step|מעלה|maala|Degree / step
+vocab-shade-shadow|צל|tsel|Shade / shadow
+vocab-sunrise|זריחה|zrikha|Sunrise
+vocab-sunset|שקיעה|shkia|Sunset
+vocab-star|כוכב|kokhav|Star
+vocab-animal|חיה|khaya|Animal
+vocab-horse|סוס|sus|Horse|סוסה|susa
+vocab-cow|פרה|para|Cow
+vocab-sheep-ewe|כבשה|kivsa|Sheep (ewe)
+vocab-goat|עז|ez|Goat
+vocab-rooster|תרנגול|tarnegol|Rooster|תרנגולת|tarnegolet
+vocab-duck|ברווז|barvaz|Duck|ברווזה|barvaza
+vocab-dove-pigeon|יונה|yona|Dove / pigeon
+vocab-bee|דבורה|dvora|Bee
+vocab-butterfly|פרפר|parpar|Butterfly
+vocab-ant|נמלה|nemala|Ant
+vocab-mosquito|יתוש|yatush|Mosquito
+vocab-fly-insect|זבוב|zvuv|Fly (insect)
+vocab-spider|עכביש|akavish|Spider
+vocab-snake|נחש|nakhash|Snake
+vocab-turtle-tortoise|צב|tsav|Turtle / tortoise
+vocab-lion|אריה|arye|Lion|לביאה|levia
+vocab-bear|דוב|dov|Bear|דובה|duba
+vocab-monkey|קוף|kof|Monkey
+vocab-rabbit|ארנב|arnav|Rabbit|ארנבת|arnevet
+vocab-branch|ענף|anaf|Branch
+vocab-leaf|עלה|ale|Leaf
+vocab-root|שורש|shoresh|Root
+vocab-seed|זרע|zera|Seed
+vocab-grass|דשא|deshe|Grass
+vocab-field|שדה|sade|Field
+vocab-pear|אגס|agas|Pear
+vocab-peach|אפרסק|afarsek|Peach
+vocab-plum|שזיף|shazif|Plum
+vocab-apricot|משמש|mishmesh|Apricot
+vocab-grapes|ענבים|anavim|Grapes
+vocab-watermelon|אבטיח|avatiakh|Watermelon
+vocab-melon-fruit|מלון|melon|Melon (fruit)
+vocab-strawberry|תות|tut|Strawberry
+vocab-cherry|דובדבן|duvdevan|Cherry
+vocab-pomegranate|רימון|rimon|Pomegranate
+vocab-fig|תאנה|teena|Fig
+vocab-date-fruit|תמר|tamar|Date (fruit)
+vocab-olive|זית|zayit|Olive
+vocab-avocado|אבוקדו|avokado|Avocado
+vocab-mango|מנגו|mango|Mango
+vocab-pineapple|אננס|ananas|Pineapple
+vocab-coconut|קוקוס|kokos|Coconut
+vocab-cabbage|כרוב|kruv|Cabbage
+vocab-cauliflower|כרובית|kruvit|Cauliflower
+vocab-broccoli|ברוקולי|brokoli|Broccoli
+vocab-eggplant|חציל|khatsil|Eggplant
+vocab-zucchini|קישוא|kishu|Zucchini
+vocab-pumpkin|דלעת|dlaat|Pumpkin
+vocab-corn|תירס|tiras|Corn
+vocab-peas|אפונה|afuna|Peas
+vocab-beans|שעועית|shu-it|Beans
+vocab-lentils|עדשים|adashim|Lentils
+vocab-chickpeas-hummus|חומוס|khumus|Chickpeas / hummus
+vocab-tahini|טחינה|tkhina|Tahini
+vocab-mushroom|פטרייה|pitriya|Mushroom
+vocab-parsley|פטרוזיליה|petrozilya|Parsley
+vocab-mint|נענע|nana|Mint
+vocab-basil|בזיליקום|bazilikum|Basil
+vocab-cinnamon|קינמון|kinamon|Cinnamon
+vocab-honey|דבש|dvash|Honey
+vocab-jam|ריבה|riba|Jam
+vocab-chocolate|שוקולד|shokolad|Chocolate
+vocab-cake|עוגה|uga|Cake
+vocab-cookie|עוגייה|ugiya|Cookie
+vocab-ice-cream|גלידה|glida|Ice cream
+vocab-candy|ממתק|mamtak|Candy
+vocab-flour|קמח|kemakh|Flour
+vocab-dough|בצק|batsek|Dough
+vocab-pita-bread|פיתה|pita|Pita bread
+vocab-challah|חלה|khala|Challah
+vocab-chocolate-milk|שוקו|shoko|Chocolate milk
+vocab-wine|יין|yayin|Wine
+vocab-beer|בירה|bira|Beer
+vocab-sparkling-water|מים מוגזים|mayim mugazim|Sparkling water
+vocab-green-tea|תה ירוק|te yarok|Green tea
+vocab-black-coffee|קפה שחור|kafe shakhor|Black coffee
+vocab-coffee-with-steamed-milk|קפה הפוך|kafe hafukh|Coffee with steamed milk
+vocab-menu|תפריט|tafrit|Menu
+vocab-portion-dish|מנה|mana|Portion / dish
+vocab-addition-side-dish|תוספת|tosefet|Addition / side dish
+vocab-dessert|קינוח|kinuakh|Dessert
+vocab-sauce|רוטב|rotev|Sauce
+vocab-taste-flavor|טעם|taam|Taste / flavor
+vocab-smell|ריח|reakh|Smell
+vocab-hungry|רעב|raev|Hungry|רעבה|reeva
+vocab-thirsty|צמא|tsame|Thirsty|צמאה|tsmea
+vocab-full-after-eating|שבע|savea|Full after eating|שבעה|svea
+vocab-tasty|טעים|taim|Tasty|טעימה|teima
+vocab-sweet|מתוק|matok|Sweet|מתוקה|metuka
+vocab-salty|מלוח|maluakh|Salty|מלוחה|melukha
+vocab-sour|חמוץ|khamuts|Sour|חמוצה|khamutsa
+vocab-bitter|מר|mar|Bitter|מרה|mara
+vocab-spicy|חריף|kharif|Spicy|חריפה|kharifa
+vocab-fresh|טרי|tari|Fresh|טרייה|triya
+vocab-tired|עייף|ayef|Tired|עייפה|ayefa
+vocab-happy|שמח|sameakh|Happy|שמחה|smekha
+vocab-sad|עצוב|atsuv|Sad|עצובה|atsuva
+vocab-angry|כועס|koes|Angry|כועסת|koeset
+vocab-calm|רגוע|ragua|Calm|רגועה|regua
+vocab-worried|מודאג|mudag|Worried|מודאגת|mudeget
+vocab-busy|עסוק|asuk|Busy|עסוקה|asuka
+vocab-available-free|פנוי|panui|Available / free|פנויה|pnuya
+vocab-ready|מוכן|mukhan|Ready|מוכנה|mukhana
+vocab-safe-certain|בטוח|batuakh|Safe / certain|בטוחה|betukha
+vocab-dangerous|מסוכן|mesukan|Dangerous|מסוכנת|mesukenet
+vocab-important|חשוב|khashuv|Important|חשובה|khashuva
+vocab-correct|נכון|nakhon|Correct|נכונה|nekhona
+vocab-incorrect|לא נכון|lo nakhon|Incorrect|לא נכונה|lo nekhona
+vocab-clear|ברור|barur|Clear|ברורה|brura
+vocab-simple|פשוט|pashut|Simple|פשוטה|pshuta
+vocab-special|מיוחד|meyukhad|Special|מיוחדת|meyukhedet
+vocab-usual-ordinary|רגיל|ragil|Usual / ordinary|רגילה|regila
+vocab-different|שונה|shone|Different|שונה|shona
+vocab-similar|דומה|dome|Similar|דומה|doma
+vocab-strong|חזק|khazak|Strong|חזקה|khazaka
+vocab-weak|חלש|khalash|Weak|חלשה|khalasha
+vocab-healthy|בריא|bari|Healthy|בריאה|bria
+vocab-ill|חולה|khole|Ill|חולה|khola
+vocab-clean|נקי|naki|Clean|נקייה|nekiya
+vocab-dirty|מלוכלך|melukhlakh|Dirty|מלוכלכת|melukhlekhet
+vocab-full|מלא|male|Full|מלאה|melea
+vocab-empty|ריק|rek|Empty|ריקה|reka
+vocab-open|פתוח|patuakh|Open|פתוחה|ptukha
+vocab-closed|סגור|sagur|Closed|סגורה|sgura
+vocab-long|ארוך|arokh|Long|ארוכה|aruka
+vocab-short-length|קצר|katsar|Short (length)|קצרה|ktsara
+vocab-tall-high|גבוה|gavoha|Tall / high|גבוהה|gvoha
+vocab-low-short-in-height|נמוך|namukh|Low / short in height|נמוכה|nemukha
+vocab-wide|רחב|rakhav|Wide|רחבה|rekhava
+vocab-narrow|צר|tsar|Narrow|צרה|tsara
+vocab-deep|עמוק|amok|Deep|עמוקה|amuka
+vocab-heavy|כבד|kaved|Heavy|כבדה|kveda
+vocab-fast|מהיר|mahir|Fast|מהירה|mehira
+vocab-slow|איטי|iti|Slow|איטית|itit
+vocab-free-unrestricted|חופשי|khofshi|Free (unrestricted)|חופשייה|khofshiya
+vocab-free-of-charge|חינם|khinam|Free of charge
+vocab-comfortable-convenient|נוח|noakh|Comfortable / convenient|נוחה|nokha
+vocab-quiet|שקט|shaket|Quiet|שקטה|shketa
+vocab-noisy|רועש|roesh|Noisy|רועשת|roeshet
+vocab-soft|רך|rakh|Soft|רכה|raka
+vocab-dry|יבש|yavesh|Dry|יבשה|yevesha
+vocab-wet|רטוב|ratuv|Wet|רטובה|retuva
+vocab-white|לבן|lavan|White|לבנה|levana
+vocab-black|שחור|shakhor|Black|שחורה|shkhora
+vocab-red|אדום|adom|Red|אדומה|aduma
+vocab-blue|כחול|kakhol|Blue|כחולה|kkhula
+vocab-green|ירוק|yarok|Green|ירוקה|yeruka
+vocab-yellow|צהוב|tsahov|Yellow|צהובה|tsehuba
+vocab-orange-color|כתום|katom|Orange (color)|כתומה|ktuma
+vocab-purple|סגול|sagol|Purple|סגולה|sgula
+vocab-pink|ורוד|varod|Pink|ורודה|vruda
+vocab-gray|אפור|afor|Gray|אפורה|afora
+vocab-brown|חום|khum|Brown|חומה|khuma
+vocab-early|מוקדם|mukdam|Early
+vocab-late|מאוחר|meukhar|Late
+vocab-exactly|בדיוק|bediyuk|Exactly
+vocab-approximately|בערך|beerekh|Approximately
+vocab-mainly|בעיקר|beikar|Mainly
+vocab-at-all-in-general|בכלל|bikhlal|At all / in general
+vocab-especially|במיוחד|bimyukhad|Especially
+vocab-therefore|לכן|lakhen|Therefore
+vocab-then-so|אז|az|Then / so
+vocab-until-up-to|עד|ad|Until / up to
+vocab-between|בין|bein|Between
+vocab-at-someone-s-place-with|אצל|etsel|At someone's place / with
+vocab-opposite-facing|מול|mul|Opposite / facing
+vocab-beside-next-to|ליד|leyad|Beside / next to
+vocab-under|מתחת|mitakhat|Under
+vocab-above|מעל|meal|Above
+vocab-around|מסביב|misaviv|Around
+vocab-by-the-way|דרך אגב|derekh agav|By the way
+vocab-even|אפילו|afilu|Even
+vocab-despite|למרות|lamrot|Despite
+vocab-according-to|לפי|lefi|According to
+vocab-because-of|בגלל|biglal|Because of
+vocab-during-on-time|בזמן|bizman|During / on time
+vocab-meanwhile|בינתיים|beintayim|Meanwhile
+vocab-immediately|מיד|miyad|Immediately
+vocab-suddenly|פתאום|pitom|Suddenly
+vocab-again|שוב|shuv|Again
+vocab-once-time-occasion|פעם|paam|Once / time (occasion)
+vocab-the-day-after-tomorrow|מחרתיים|mokhratayim|The day after tomorrow
+vocab-the-day-before-yesterday|שלשום|shilshom|The day before yesterday
+vocab-recently|לאחרונה|leakharona|Recently
+vocab-soon|בקרוב|bekarov|Soon
+vocab-later-on|בהמשך|behemshekh|Later on
+vocab-previously-first|קודם|kodem|Previously / first
+vocab-next|הבא|haba|Next|הבאה|habaa
+vocab-second-ordinal|שני|sheni|Second (ordinal)|שנייה|shniya
+vocab-third|שלישי|shlishi|Third|שלישית|shlishit
+vocab-fourth|רביעי|revii|Fourth|רביעית|reviit
+vocab-fifth|חמישי|khamishi|Fifth|חמישית|khamishit
+vocab-to-meet-up|להיפגש|lehipagesh|To meet up
+vocab-to-wait-formal|להמתין|lehamtin|To wait (formal)
+vocab-to-remind-mention|להזכיר|lehazkir|To remind / mention
+vocab-to-add|להוסיף|lehosif|To add
+vocab-to-remove|להסיר|lehasir|To remove
+vocab-to-delete-erase|למחוק|limkhok|To delete / erase
+vocab-to-copy|להעתיק|lehaatik|To copy
+vocab-to-photograph|לצלם|letsalem|To photograph
+vocab-to-print|להדפיס|lehadpis|To print
+vocab-to-record|להקליט|lehaklit|To record
+vocab-to-operate-activate|להפעיל|lehaf-il|To operate / activate
+vocab-to-connect|לחבר|lekhaber|To connect
+vocab-to-disconnect|לנתק|lenatek|To disconnect
+vocab-to-charge|להטעין|lehat-in|To charge
+vocab-to-sign|לחתום|lakhtom|To sign
+vocab-to-fill|למלא|lemale|To fill
+vocab-to-empty|לרוקן|leroken|To empty
+vocab-to-pack|לארוז|leeroz|To pack
+vocab-to-unload-unpack-cargo|לפרוק|lifrok|To unload / unpack cargo
+vocab-to-organize|לארגן|leargen|To organize
+vocab-to-plan|לתכנן|letakhnen|To plan
+vocab-to-set-arrange|לקבוע|likboa|To set / arrange
+vocab-to-postpone-reject|לדחות|lidkhot|To postpone / reject
+vocab-to-cancel|לבטל|levatel|To cancel
+vocab-to-distinguish-differentiate|לבדל|levadel|To distinguish / differentiate
+vocab-to-compare|להשוות|lehashvot|To compare
+vocab-to-measure-try-on|למדוד|limdod|To measure / try on
+vocab-to-weigh-consider|לשקול|lishkol|To weigh / consider
+vocab-to-consult|להתייעץ|lehityaats|To consult
+vocab-to-trust-rely|לסמוך|lismokh|To trust / rely
+vocab-to-promise-ensure|להבטיח|lehavtiakh|To promise / ensure
+vocab-to-believe|להאמין|lehaamin|To believe
+vocab-to-hope|לקוות|lekavot|To hope
+vocab-to-dream|לחלום|lakhalom|To dream
+vocab-to-miss-someone|להתגעגע|lehitgaagea|To miss someone
+vocab-to-apologize|להתנצל|lehitnatsel|To apologize
+vocab-to-thank-admit|להודות|lehodot|To thank / admit
+vocab-to-congratulate-bless|לברך|levarekh|To congratulate / bless
+vocab-to-celebrate|לחגוג|lakhgog|To celebrate
+vocab-to-get-married|להתחתן|lehitkhaten|To get married
+vocab-to-be-born|להיוולד|lehivaled|To be born
+vocab-to-grow|לגדול|ligdol|To grow
+vocab-to-grow-old|להזדקן|lehizdaken|To grow old
+vocab-to-die|למות|lamut|To die
+vocab-to-breathe|לנשום|linshom|To breathe
+vocab-to-get-injured|להיפצע|lehipatsa|To get injured
+vocab-to-recover-from-illness|להבריא|lehavri|To recover from illness
+vocab-to-heal-cure|לרפא|lerape|To heal / cure
+vocab-to-swallow|לבלוע|livloa|To swallow
+vocab-to-cough|להשתעל|lehishtael|To cough
+vocab-to-sneeze|להתעטש|lehitatesh|To sneeze
+vocab-to-be-careful|להיזהר|lehizaher|To be careful
+vocab-to-fall|ליפול|lipol|To fall
+vocab-to-jump|לקפוץ|likpots|To jump
+vocab-to-swim|לשחות|liskhot|To swim
+vocab-to-climb|לטפס|letapes|To climb
+vocab-to-lift|להרים|leharim|To lift
+vocab-to-push|לדחוף|lidkhof|To push
+vocab-to-pull|למשוך|limshokh|To pull
+vocab-to-throw|לזרוק|lizrok|To throw
+vocab-to-catch|לתפוס|litpos|To catch
+vocab-to-kick|לבעוט|liv-ot|To kick
+vocab-to-bend-down|להתכופף|lehitkofef|To bend down
+vocab-to-turn-around-wander|להסתובב|lehistovev|To turn around / wander
+vocab-to-pass-move-across|לעבור|laavor|To pass / move across
+vocab-to-cross|לחצות|lakhatsot|To cross
+vocab-to-lead-transport|להוביל|lehovil|To lead / transport
+vocab-to-follow-track|לעקוב|laakov|To follow / track
+vocab-to-accompany|ללוות|lelavot|To accompany
+vocab-to-stay-remain|להישאר|lehishaer|To stay / remain
+vocab-to-leave-abandon|לעזוב|laazov|To leave / abandon
+vocab-to-approach|להתקרב|lehitkarev|To approach
+vocab-to-move-away|להתרחק|lehitrakhek|To move away
+vocab-to-look-at|להסתכל|lehistakel|To look at
+vocab-to-gaze-look|להביט|lehabit|To gaze / look
+vocab-to-discover-reveal|לגלות|legalot|To discover / reveal
+vocab-to-hide-something|להסתיר|lehastir|To hide something
+vocab-to-hide-oneself|להתחבא|lehitkhabe|To hide oneself
+vocab-to-identify|לזהות|lezahot|To identify
+vocab-to-change|לשנות|leshanot|To change
+vocab-to-change-oneself-become-different|להשתנות|lehishtanot|To change oneself / become different
+vocab-to-influence|להשפיע|lehashpia|To influence
+vocab-to-improve|לשפר|leshaper|To improve
+vocab-to-develop|להתפתח|lehitpateakh|To develop
+vocab-to-solve|לפתור|liftor|To solve
+vocab-to-suggest-offer|להציע|lehatsia|To suggest / offer
+vocab-to-request|לבקש|levakesh|To request
+vocab-to-demand|לדרוש|lidrosh|To demand
+vocab-to-allow-enable|לאפשר|leafsher|To allow / enable
+vocab-to-forbid|לאסור|leesor|To forbid
+vocab-to-permit|להרשות|leharshot|To permit
+vocab-to-refuse|לסרב|lesarev|To refuse
+vocab-to-oppose|להתנגד|lehitnaged|To oppose
+vocab-to-argue|להתווכח|lehitvakeakh|To argue
+vocab-to-quarrel|לריב|lariv|To quarrel
+vocab-to-give-up-yield|לוותר|levater|To give up / yield
+vocab-to-compromise|להתפשר|lehitpasher|To compromise
+vocab-to-forgive|לסלוח|lisloakh|To forgive
+vocab-to-protect|להגן|lehagen|To protect
+vocab-to-rescue|להציל|lehatsil|To rescue
+vocab-to-be-afraid|לפחד|lifkhod|To be afraid
+vocab-to-be-excited-moved|להתרגש|lehitragesh|To be excited / moved
+vocab-to-calm-down|להירגע|lehiraga|To calm down
+vocab-to-surprise|להפתיע|lehaftia|To surprise
+vocab-to-be-interested|להתעניין|lehitanyen|To be interested
+vocab-to-interest-someone|לעניין|leanyen|To interest someone
+vocab-to-be-bored|להשתעמם|lehishtaamem|To be bored
+vocab-to-be-disappointed|להתאכזב|lehitakhzev|To be disappointed
+vocab-to-make-an-effort|להתאמץ|lehitamets|To make an effort
+vocab-to-cope-deal-with|להתמודד|lehitmoded|To cope / deal with
+vocab-to-prepare-oneself|להתכונן|lehitkonen|To prepare oneself
+vocab-to-participate|להשתתף|lehishtatef|To participate
+vocab-to-volunteer|להתנדב|lehitnadev|To volunteer
+vocab-to-register|להירשם|lehirashem|To register
+vocab-to-take-an-exam|להיבחן|lehibakhen|To take an exam
+vocab-to-translate|לתרגם|letargem|To translate
+vocab-to-pronounce-contemplate|להגות|lehagot|To pronounce / contemplate
+vocab-to-practice-exercises|לתרגל|letargel|To practice exercises
+vocab-to-get-used-to|להתרגל|lehitragel|To get used to
+vocab-where-is-the-restroom|איפה השירותים|eifo hasherutim|Where is the restroom?
+vocab-how-much-does-this-cost|כמה זה עולה|kama ze ole|How much does this cost?

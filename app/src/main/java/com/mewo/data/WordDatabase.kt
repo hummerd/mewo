@@ -1,5 +1,7 @@
 package com.mewo.data
 
+import androidx.room.AutoMigration
+import androidx.room.ColumnInfo
 import androidx.room.Dao
 import androidx.room.Database
 import androidx.room.Entity
@@ -9,6 +11,7 @@ import androidx.room.PrimaryKey
 import androidx.room.Query
 import androidx.room.RoomDatabase
 import androidx.room.Update
+import com.mewo.domain.WordPriority
 import com.mewo.domain.WordProgress
 import kotlinx.coroutines.flow.Flow
 
@@ -22,8 +25,14 @@ data class WordEntity(
     val shownCount: Int = 0,
     val introduced: Boolean = false,
     val nextDueAt: Long = 0,
+    @ColumnInfo(defaultValue = "100") val priority: Int = WordPriority.COMMON,
+    val feminineHebrew: String? = null,
+    val feminineTransliteration: String? = null,
+    val feminineModification: String? = null,
 ) {
-    fun progress() = WordProgress(id, position, shownCount, introduced, nextDueAt)
+    fun progress() = WordProgress(id, position, shownCount, introduced, nextDueAt, priority)
+
+    fun feminineDescription(): String? = feminineHebrew?.let { "Feminine: \u200f$it\u200e ($feminineModification)" }
 
     fun withProgress(progress: WordProgress) =
         copy(
@@ -35,10 +44,10 @@ data class WordEntity(
 
 @Dao
 interface WordDao {
-    @Query("SELECT * FROM words ORDER BY position")
+    @Query("SELECT * FROM words ORDER BY priority, position")
     fun observe(): Flow<List<WordEntity>>
 
-    @Query("SELECT * FROM words ORDER BY position")
+    @Query("SELECT * FROM words ORDER BY priority, position")
     suspend fun getAll(): List<WordEntity>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
@@ -46,9 +55,17 @@ interface WordDao {
 
     @Update
     suspend fun update(words: List<WordEntity>)
+
+    @Query("DELETE FROM words WHERE id IN (:ids)")
+    suspend fun deleteMerged(ids: List<String>)
 }
 
-@Database(entities = [WordEntity::class], version = 1, exportSchema = true)
+@Database(
+    entities = [WordEntity::class],
+    version = 2,
+    exportSchema = true,
+    autoMigrations = [AutoMigration(from = 1, to = 2)],
+)
 abstract class WordDatabase : RoomDatabase() {
     abstract fun words(): WordDao
 }

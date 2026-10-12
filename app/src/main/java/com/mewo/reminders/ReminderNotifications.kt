@@ -10,6 +10,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.media.AudioAttributes
 import android.os.Build
+import android.text.SpannableStringBuilder
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
@@ -78,7 +79,7 @@ class ReminderNotifications(
         val preview =
             buildSpannedString {
                 val word = words.first()
-                bold { append("\u200f${word.hebrew}\u200e") }
+                appendHebrew(word)
                 append(" — ${word.english} (")
                 italic { append(word.transliteration) }
                 append(")")
@@ -90,6 +91,12 @@ class ReminderNotifications(
                     bold { append("\u200f${word.hebrew}\u200e") }
                     append(" — ${word.english}\n")
                     italic { append("\u200e${word.transliteration}") }
+                    word.feminineHebrew?.let {
+                        append("\nFeminine: ")
+                        bold { append("\u200f$it\u200e") }
+                        append(" (${word.feminineModification})\n")
+                        italic { append("\u200e${word.feminineTransliteration}") }
+                    }
                 }
             }
         val notification =
@@ -107,6 +114,14 @@ class ReminderNotifications(
             true
         } catch (_: SecurityException) {
             false
+        }
+    }
+
+    private fun SpannableStringBuilder.appendHebrew(word: WordEntity) {
+        bold { append("\u200f${word.hebrew}\u200e") }
+        word.feminineHebrew?.let {
+            append(" / ")
+            bold { append("\u200f$it\u200e") }
         }
     }
 }

@@ -167,6 +167,8 @@ private fun WordCard(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 style = MaterialTheme.typography.bodyMedium.copy(textDirection = TextDirection.Ltr),
             )
+            FeminineWord(word)
+            Text("Priority ${word.priority}", style = MaterialTheme.typography.labelSmall)
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                 Text(
                     when (status) {
@@ -181,6 +183,18 @@ private fun WordCard(
                 Text("Shown ${word.shownCount} times", style = MaterialTheme.typography.labelLarge)
             }
         }
+    }
+}
+
+@Composable
+private fun FeminineWord(word: WordEntity) {
+    word.feminineDescription()?.let { description ->
+        Text(description, style = MaterialTheme.typography.bodyMedium)
+        Text(
+            word.feminineTransliteration.orEmpty(),
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            style = MaterialTheme.typography.bodyMedium.copy(textDirection = TextDirection.Ltr),
+        )
     }
 }
 

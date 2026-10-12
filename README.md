@@ -41,9 +41,16 @@ previous reminder; expand one to see every included word.
 - `data/`: Room dictionary/progress, JSON import, and Preferences DataStore settings.
 - `reminders/`: unique periodic WorkManager job, notification channel and publisher.
 - `ui/`: Compose dictionary and validated settings screens, backed by ViewModel/Flow.
-- `app/src/main/assets/hebrew.json`: 40 starter Hebrew words and phrases, including
-  English meanings and simple transliterations. This is a starter collection,
-  not a frequency-ranked corpus. Stable IDs preserve stored progress on import.
+- `app/src/main/assets/hebrew.json`: 1,000 Hebrew learning records with English
+  meanings and transliterations, in priority tiers 100, 300, and 1000 containing
+  100, 300, and 600 records. These are approximate learning priorities rather
+  than measured frequency ranks. See [dictionary maintenance](tools/dictionary/README.md).
+
+New words enter the rotation in priority order, then dictionary order within
+each tier. Due reviews remain ordered by due time. Masculine/feminine forms share
+one learning record; cards and notifications show the feminine form,
+pronunciation, and modification alongside the masculine form. Database upgrades
+and dictionary imports preserve progress, including merged legacy gender forms.
 
 Words leave the learning rotation after four appearances, allowing new words to
 enter. Introduced review words continue at increasing intervals, capped at seven
@@ -95,6 +102,8 @@ Before release, also check on a device:
 4. Reopen the app and reboot the device; progress/settings should remain saved
    and enabled reminders should continue. Check light/dark mode and large fonts.
 
-The 12 JVM tests, static checks, debug APK build, and device-test APK build have
-been verified. Device integration tests and the runtime checks above still need
-a running emulator or device, including verification on Android 17 (API 37).
+The 20 JVM tests, static checks, and debug APK build have been verified. All six
+database integration tests passed on the Android 17 (API 37) Pixel emulator,
+including the version-1 upgrade, gender-record progress merge, and repeated
+imports. Notification delivery and the runtime checks above should also be
+verified on a physical device.

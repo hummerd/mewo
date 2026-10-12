@@ -157,4 +157,41 @@ class ReminderEngineTest {
         assertEquals(Int.MAX_VALUE, updated.shownCount)
         assertEquals(7 * 24 * 60 * 60_000L, updated.nextDueAt)
     }
+
+    @Test fun introducesLowerPrioritiesBeforeEarlierPositions() {
+        val words =
+            listOf(
+                WordProgress("extended", 0, priority = WordPriority.EXTENDED),
+                WordProgress("everyday", 1, priority = WordPriority.EVERYDAY),
+                WordProgress("common-later", 3, priority = WordPriority.COMMON),
+                WordProgress("common-first", 2, priority = WordPriority.COMMON),
+            )
+        val plan = ReminderEngine.plan(words, settings, 100)
+        assertEquals(listOf("common-first", "common-later"), plan.selected.map { it.id })
+        val reviewed = plan.progress.map { if (it.introduced) it.copy(shownCount = 4, nextDueAt = 200) else it }
+        val next = ReminderEngine.plan(reviewed, settings, 100)
+        assertEquals(listOf("everyday", "extended"), next.selected.map { it.id })
+    }
+
+    @Test fun dueTimePrecedesPriorityAndPriorityBreaksDueTimeTies() {
+        val words =
+            listOf(
+                WordProgress("extended-overdue", 0, 4, true, 1, WordPriority.EXTENDED),
+                WordProgress("everyday", 1, 4, true, 10, WordPriority.EVERYDAY),
+                WordProgress("common", 2, 4, true, 10, WordPriority.COMMON),
+            )
+        val plan = ReminderEngine.plan(words, settings, 100)
+        assertEquals(listOf("extended-overdue", "common"), plan.selected.map { it.id })
+    }
+
+    @Test fun pausedWordsResumeBeforeIntroducingLowerPriorityWords() {
+        val words =
+            listOf(
+                WordProgress("existing", 0, 1, true, 100, WordPriority.EXTENDED),
+                WordProgress("new", 1, priority = WordPriority.COMMON),
+            )
+        val plan = ReminderEngine.plan(words, settings.copy(rotationSize = 1, wordsPerNotification = 1), 100)
+        assertEquals(listOf("existing"), plan.selected.map { it.id })
+        assertFalse(plan.progress[1].introduced)
+    }
 }
