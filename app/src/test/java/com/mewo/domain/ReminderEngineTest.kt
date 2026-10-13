@@ -39,11 +39,11 @@ class ReminderEngineTest {
         }
     }
 
-    @Test fun graduatesWordAndIntroducesReplacement() {
+    @Test fun twelfthAppearanceGraduatesWordAndIntroducesReplacement() {
         val first =
             dictionary().mapIndexed { i, word ->
                 if (i == 0) {
-                    word.copy(introduced = true, shownCount = 3)
+                    word.copy(introduced = true, shownCount = 11)
                 } else if (i == 1) {
                     word.copy(introduced = true)
                 } else {
@@ -51,6 +51,7 @@ class ReminderEngineTest {
                 }
             }
         val graduate = ReminderEngine.recordShown(first[0], settings, 100)
+        assertEquals(12, graduate.shownCount)
         val updated = first.toMutableList().also { it[0] = graduate }
         val plan = ReminderEngine.plan(updated, settings, 101)
         assertTrue(plan.progress[2].introduced)
@@ -59,8 +60,46 @@ class ReminderEngineTest {
         assertEquals(2, ReminderEngine.activeIds(plan.progress, 2).size)
     }
 
+    @Test fun firstElevenAppearancesKeepWordInLearningRotation() {
+        val single = settings.copy(rotationSize = 1, wordsPerNotification = 1)
+        var words = ReminderEngine.plan(dictionary(), single, 100).progress
+        for (appearance in 1..11) {
+            val shown = ReminderEngine.recordShown(words[0], single, words[0].nextDueAt)
+            words = words.toMutableList().also { it[0] = shown }
+            val plan = ReminderEngine.plan(words, single, shown.nextDueAt)
+            assertEquals(appearance, shown.shownCount)
+            assertEquals(
+                LearningStatus.LEARNING,
+                ReminderEngine.status(shown, ReminderEngine.activeIds(plan.progress, 1)),
+            )
+            assertEquals(listOf(shown.id), plan.selected.map { it.id })
+            assertEquals(words, plan.progress)
+            assertFalse(plan.progress[1].introduced)
+        }
+    }
+
+    @Test fun existingCountsBelowTwelveResumeLearningWithoutResettingProgress() {
+        val words =
+            dictionary(9).mapIndexed { i, word ->
+                word.copy(introduced = true, shownCount = i + 4, nextDueAt = 1000)
+            }
+        val plan = ReminderEngine.plan(words, settings, 100)
+        val active = ReminderEngine.activeIds(plan.progress, 2)
+        assertEquals(words, plan.progress)
+        assertTrue(plan.selected.isEmpty())
+        assertEquals(setOf("word-0", "word-1"), active)
+        assertEquals(
+            listOf(LearningStatus.LEARNING, LearningStatus.LEARNING),
+            words.take(2).map {
+                ReminderEngine.status(it, active)
+            },
+        )
+        assertTrue(words.subList(2, 8).all { ReminderEngine.status(it, active) == LearningStatus.PAUSED })
+        assertEquals(LearningStatus.REVIEW, ReminderEngine.status(words[8], active))
+    }
+
     @Test fun reviewWordsRemainEligibleAfterDictionaryExhaustion() {
-        val words = dictionary(2).map { it.copy(introduced = true, shownCount = 4) }
+        val words = dictionary(2).map { it.copy(introduced = true, shownCount = 12) }
         val plan = ReminderEngine.plan(words, settings, 100)
         assertEquals(2, plan.selected.size)
         assertEquals(words, plan.progress)
@@ -71,7 +110,7 @@ class ReminderEngineTest {
             dictionary().map {
                 it.copy(
                     introduced = true,
-                    shownCount = 4,
+                    shownCount = 12,
                     nextDueAt =
                         if (it.position ==
                             3
@@ -94,7 +133,7 @@ class ReminderEngineTest {
     }
 
     @Test fun skipsNotYetDueWordsAndNeverReturnsEmptyRemindersAsWords() {
-        val words = dictionary().map { it.copy(introduced = true, shownCount = 4, nextDueAt = 101) }
+        val words = dictionary().map { it.copy(introduced = true, shownCount = 12, nextDueAt = 101) }
         assertTrue(ReminderEngine.plan(words, settings, 100).selected.isEmpty())
     }
 
@@ -179,7 +218,7 @@ class ReminderEngineTest {
             )
         val plan = ReminderEngine.plan(words, settings, 100)
         assertEquals(listOf("common-first", "common-later"), plan.selected.map { it.id })
-        val reviewed = plan.progress.map { if (it.introduced) it.copy(shownCount = 4, nextDueAt = 200) else it }
+        val reviewed = plan.progress.map { if (it.introduced) it.copy(shownCount = 12, nextDueAt = 200) else it }
         val next = ReminderEngine.plan(reviewed, settings, 100)
         assertEquals(listOf("everyday", "extended"), next.selected.map { it.id })
     }
@@ -187,9 +226,9 @@ class ReminderEngineTest {
     @Test fun dueTimePrecedesPriorityAndPriorityBreaksDueTimeTies() {
         val words =
             listOf(
-                WordProgress("extended-overdue", 0, 4, true, 1, WordPriority.EXTENDED),
-                WordProgress("everyday", 1, 4, true, 10, WordPriority.EVERYDAY),
-                WordProgress("common", 2, 4, true, 10, WordPriority.COMMON),
+                WordProgress("extended-overdue", 0, 12, true, 1, WordPriority.EXTENDED),
+                WordProgress("everyday", 1, 12, true, 10, WordPriority.EVERYDAY),
+                WordProgress("common", 2, 12, true, 10, WordPriority.COMMON),
             )
         val plan = ReminderEngine.plan(words, settings, 100)
         assertEquals(listOf("extended-overdue", "common"), plan.selected.map { it.id })

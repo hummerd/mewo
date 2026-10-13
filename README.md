@@ -119,7 +119,7 @@ one learning record; cards and notifications show the feminine form,
 pronunciation, and modification alongside the masculine form. Database upgrades
 and dictionary imports preserve progress, including merged legacy gender forms.
 
-Words leave the learning rotation after four appearances, allowing new words to
+Words leave the learning rotation after twelve appearances, allowing new words to
 enter. Introduced review words continue at increasing intervals, capped at seven
 days. Due words are selected in due-time order, with dictionary order as the tie
 breaker. A delayed worker posts at most one notification and schedules from its

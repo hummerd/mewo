@@ -52,7 +52,7 @@ enum class LearningStatus { NEW, LEARNING, PAUSED, REVIEW }
 
 /** Pure scheduling policy. All times are milliseconds since the Unix epoch. */
 object ReminderEngine {
-    const val REVIEW_THRESHOLD = 4
+    const val REVIEW_THRESHOLD = 12
     private const val MAX_INTERVAL_MS = 7L * 24 * 60 * 60 * 1000
     private val dictionaryOrder = compareBy<WordProgress> { it.priority }.thenBy { it.position }
 
