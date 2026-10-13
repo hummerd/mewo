@@ -1,4 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="24dp" android:height="24dp" android:viewportWidth="24" android:viewportHeight="24">
-    <path android:fillColor="#FFFFFFFF" android:pathData="M3,3h8v16H3zM13,3h8v16h-8zM3,20h18v2H3z" />
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="72"
+    android:viewportHeight="72">
+    <!-- Launcher monochrome artwork without the adaptive icon's safe-zone padding. -->
+    <group android:translateX="-18" android:translateY="-18">
+        <path
+            android:fillColor="@android:color/transparent"
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="2.5"
+            android:strokeLineJoin="round"
+            android:pathData="M54,24C35,24 22,33 22,52C22,65 25,72 34,76C34,80 30,84 30,86C35,87 41,80 47,80C71,80 86,75 86,54C86,34 73,24 54,24Z" />
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M53,75C54,75 55,75 55,73C55,64 59,60 66,58C76,55 78,46 77,37C64,36 50,44 52,58C53,60 54,63 54,65C57,56 63,48 71,44C63,50 58,57 54,66C52,57 51,48 45,45C40,42 34,42 31,43C30,52 35,59 44,60C51,61 53,67 52,73C52,75 52,75 53,75Z" />
+    </group>
 </vector>
