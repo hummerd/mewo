@@ -31,7 +31,7 @@ required.
   and schedule its next review from the actual posting time. Its interval is the
   base notification interval multiplied by 2^(shown count - 1), capped at seven
   days. This measures notification appearances, not whether the user read them.
-- After four appearances a word moves to review, freeing a learning slot for the
+- After twelve appearances a word moves to review, freeing a learning slot for the
   next unseen word. Review words remain eligible alongside learning words. When
   the dictionary is exhausted, continue reviewing introduced words.
 - Reducing rotation size pauses excess learning words in dictionary order without
