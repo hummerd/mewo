@@ -8,39 +8,21 @@ algorithms, design concepts.
 
 ## Reminder algorithm
 
-We select N (N should be configurable, ~10 or so) words from our dictionary and start
-to send notifications for them. First words should appear frequently and then less and
-less frequent, and as frequency falls we introduce new words.
+Notification should always appear based on schedule.
+
+We select N (N should be configurable, ~10 or so) words from our dictionary and
+start to send notifications for them. Selected words should appear frequently
+and with every day less and less frequent (with exponential fade out), and after
+5 days of showing word it should fall into "not ot forget category".
+
+As frequency of current word set falls we introduce new words.
+
+Also we must show words from "not ot forget category" from time to time.
 
 Reminder timing is approximate. The minimum configurable notification interval is
 15 minutes. Android background scheduling may delay notifications beyond the
 configured interval; these delays are acceptable. Exact delivery times are not
 required.
-
-### Selection and progression
-
-- The bundled dictionary contains Hebrew, English meaning, and transliteration.
-- Defaults: 10 rotating words, a 60-minute notification interval, and one word per
-  notification. Rotation size is 1–dictionary size; words per notification is
-  1–rotation size. The notification interval is 15–1440 minutes.
-- Words start in dictionary order. Up to N words are in the learning rotation.
-- Select introduced words whose next review is due, earliest due first, breaking
-  ties by dictionary order. Each notification contains up to the configured count
-  of distinct words. Do not send an empty notification or catch-up bursts.
-- After a successful notification post, increment each included word's shown count
-  and schedule its next review from the actual posting time. Its interval is the
-  base notification interval multiplied by 2^(shown count - 1), capped at seven
-  days. This measures notification appearances, not whether the user read them.
-- After twelve appearances a word moves to review, freeing a learning slot for the
-  next unseen word. Review words remain eligible alongside learning words. When
-  the dictionary is exhausted, continue reviewing introduced words.
-- Reducing rotation size pauses excess learning words in dictionary order without
-  resetting their progress; increasing it resumes paused words before new words.
-- Setting changes preserve progress and existing due times. New review intervals
-  use the latest frequency. Changing frequency updates the background schedule.
-- Reminders start enabled. Users can pause/resume reminders. Permission denial,
-  disabled notifications, and paused reminders do not increment shown counts.
-- Persist dictionary progress and settings locally across process death/reboots.
 
 ## Implementation
 
