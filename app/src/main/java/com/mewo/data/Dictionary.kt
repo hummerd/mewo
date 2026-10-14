@@ -41,6 +41,7 @@ data class DictionaryWord(
             shownCount = previous.sumOf { it.shownCount.toLong() }.coerceAtMost(Int.MAX_VALUE.toLong()).toInt(),
             introduced = introduced.isNotEmpty(),
             nextDueAt = introduced.minOfOrNull { it.nextDueAt } ?: 0,
+            firstShownAt = introduced.mapNotNull { it.firstShownAt }.minOrNull(),
         )
     }
 }

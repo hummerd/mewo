@@ -18,6 +18,32 @@ class DictionaryMigrationTest {
     @get:Rule
     val helper = MigrationTestHelper(InstrumentationRegistry.getInstrumentation(), WordDatabase::class.java)
 
+    @Test fun dailyLearningMigrationPreservesCountsAndExistingReviewStatus() {
+        val name = "daily-learning-migration-test"
+        helper.createDatabase(name, 2).use { old ->
+            old.execSQL(
+                "INSERT INTO words (id, position, hebrew, english, transliteration, " +
+                    "shownCount, introduced, nextDueAt) VALUES ('learning',0,'שלום','Hello','shalom',8,1,1234)",
+            )
+            old.execSQL(
+                "INSERT INTO words (id, position, hebrew, english, transliteration, " +
+                    "shownCount, introduced, nextDueAt) VALUES ('review',1,'כן','Yes','ken',13,1,5678)",
+            )
+        }
+        helper.runMigrationsAndValidate(name, 3, true).use { migrated ->
+            migrated.query("SELECT shownCount, nextDueAt, firstShownAt FROM words ORDER BY position").use { rows ->
+                assertTrue(rows.moveToFirst())
+                assertEquals(8, rows.getInt(0))
+                assertEquals(1234L, rows.getLong(1))
+                assertTrue(rows.isNull(2))
+                assertTrue(rows.moveToNext())
+                assertEquals(13, rows.getInt(0))
+                assertEquals(5678L, rows.getLong(1))
+                assertEquals(0L, rows.getLong(2))
+            }
+        }
+    }
+
     @Test fun migrationAndDictionaryUpgradeRetainAndMergeLegacyProgress() =
         runBlocking {
             val name = "dictionary-migration-test"

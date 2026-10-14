@@ -11,6 +11,8 @@ import androidx.room.PrimaryKey
 import androidx.room.Query
 import androidx.room.RoomDatabase
 import androidx.room.Update
+import androidx.room.migration.AutoMigrationSpec
+import androidx.sqlite.db.SupportSQLiteDatabase
 import com.mewo.domain.WordPriority
 import com.mewo.domain.WordProgress
 import kotlinx.coroutines.flow.Flow
@@ -29,8 +31,9 @@ data class WordEntity(
     val feminineHebrew: String? = null,
     val feminineTransliteration: String? = null,
     val feminineModification: String? = null,
+    val firstShownAt: Long? = null,
 ) {
-    fun progress() = WordProgress(id, position, shownCount, introduced, nextDueAt, priority)
+    fun progress() = WordProgress(id, position, shownCount, introduced, nextDueAt, priority, firstShownAt)
 
     fun feminineDescription(): String? = feminineHebrew?.let { "Feminine: \u200f$it\u200e ($feminineModification)" }
 
@@ -39,6 +42,7 @@ data class WordEntity(
             shownCount = progress.shownCount,
             introduced = progress.introduced,
             nextDueAt = progress.nextDueAt,
+            firstShownAt = progress.firstShownAt,
         )
 }
 
@@ -62,10 +66,20 @@ interface WordDao {
 
 @Database(
     entities = [WordEntity::class],
-    version = 2,
+    version = 3,
     exportSchema = true,
-    autoMigrations = [AutoMigration(from = 1, to = 2)],
+    autoMigrations = [
+        AutoMigration(from = 1, to = 2),
+        AutoMigration(from = 2, to = 3, spec = DailyLearningMigration::class),
+    ],
 )
 abstract class WordDatabase : RoomDatabase() {
     abstract fun words(): WordDao
+}
+
+/** Older versions did not record introduction dates. Keep review words and start learners on their next post. */
+class DailyLearningMigration : AutoMigrationSpec {
+    override fun onPostMigrate(db: SupportSQLiteDatabase) {
+        db.execSQL("UPDATE words SET firstShownAt = 0 WHERE introduced = 1 AND shownCount >= 12")
+    }
 }

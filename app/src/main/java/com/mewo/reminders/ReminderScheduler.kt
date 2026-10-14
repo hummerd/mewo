@@ -14,7 +14,10 @@ class ReminderScheduler(
 ) {
     private val workManager = WorkManager.getInstance(context)
 
-    suspend fun apply(settings: ReminderSettings) {
+    suspend fun apply(
+        settings: ReminderSettings,
+        reschedule: Boolean = true,
+    ) {
         if (!settings.enabled) {
             workManager.cancelUniqueWork(workName).await()
             return
@@ -25,6 +28,11 @@ class ReminderScheduler(
                 .setNextScheduleTimeOverride(
                     settings.schedule.nextAllowedAt(System.currentTimeMillis() + settings.intervalMinutes * 60_000L),
                 ).build()
-        workManager.enqueueUniquePeriodicWork(workName, ExistingPeriodicWorkPolicy.UPDATE, request).await()
+        workManager
+            .enqueueUniquePeriodicWork(
+                workName,
+                if (reschedule) ExistingPeriodicWorkPolicy.UPDATE else ExistingPeriodicWorkPolicy.KEEP,
+                request,
+            ).await()
     }
 }

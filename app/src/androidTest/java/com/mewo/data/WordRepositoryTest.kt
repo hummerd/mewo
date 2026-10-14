@@ -69,12 +69,9 @@ class WordRepositoryTest {
             assertTrue(saved.drop(2).all { it.shownCount == 0 && !it.introduced })
             repository.initialize()
             assertEquals(saved, database.words().getAll())
-            assertFalse(
-                repository.remind(settings, 101) {
-                    fail("No words are due")
-                    true
-                },
-            )
+            assertTrue(repository.remind(settings, 101) { true })
+            val repeated = database.words().getAll()
+            assertTrue(repeated.take(2).all { it.shownCount == 2 && it.firstShownAt == 100L })
         }
 
     @Test fun pausedRemindersNeverPublishOrMutateProgress() =

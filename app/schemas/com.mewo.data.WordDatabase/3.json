@@ -1,0 +1,100 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 3,
+    "identityHash": "6b95567de760a87383fa66a61af8549f",
+    "entities": [
+      {
+        "tableName": "words",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `position` INTEGER NOT NULL, `hebrew` TEXT NOT NULL, `english` TEXT NOT NULL, `transliteration` TEXT NOT NULL, `shownCount` INTEGER NOT NULL, `introduced` INTEGER NOT NULL, `nextDueAt` INTEGER NOT NULL, `priority` INTEGER NOT NULL DEFAULT 100, `feminineHebrew` TEXT, `feminineTransliteration` TEXT, `feminineModification` TEXT, `firstShownAt` INTEGER, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "position",
+            "columnName": "position",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hebrew",
+            "columnName": "hebrew",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "english",
+            "columnName": "english",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "transliteration",
+            "columnName": "transliteration",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "shownCount",
+            "columnName": "shownCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "introduced",
+            "columnName": "introduced",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nextDueAt",
+            "columnName": "nextDueAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "priority",
+            "columnName": "priority",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "100"
+          },
+          {
+            "fieldPath": "feminineHebrew",
+            "columnName": "feminineHebrew",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "feminineTransliteration",
+            "columnName": "feminineTransliteration",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "feminineModification",
+            "columnName": "feminineModification",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "firstShownAt",
+            "columnName": "firstShownAt",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '6b95567de760a87383fa66a61af8549f')"
+    ]
+  }
+}

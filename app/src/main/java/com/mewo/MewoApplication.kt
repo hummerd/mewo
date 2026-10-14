@@ -31,9 +31,13 @@ class MewoApplication : Application() {
         notifications.createChannel()
         applicationScope.launch {
             try {
+                var first = true
                 settings.settings
                     .distinctUntilChangedBy { Triple(it.enabled, it.intervalMinutes, it.schedule) }
-                    .collect { scheduler.apply(it) }
+                    .collect {
+                        scheduler.apply(it, reschedule = !first)
+                        first = false
+                    }
             } catch (error: CancellationException) {
                 throw error
             } catch (error: Exception) {

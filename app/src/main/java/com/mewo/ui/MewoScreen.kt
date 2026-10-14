@@ -175,7 +175,7 @@ private fun WordCard(
                         LearningStatus.NEW -> "New"
                         LearningStatus.LEARNING -> "Learning"
                         LearningStatus.PAUSED -> "Paused"
-                        LearningStatus.REVIEW -> "Review"
+                        LearningStatus.REVIEW -> "Not to forget"
                     },
                     color = MaterialTheme.colorScheme.primary,
                     style = MaterialTheme.typography.labelLarge,
@@ -224,7 +224,7 @@ private fun SettingsScreen(
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
         RemindersSwitch(enabled, !saving) { enabled = it }
-        NumberSetting("Words in rotation", rotation, "1–${state.words.size}", !saving) {
+        NumberSetting("Starting words in rotation", rotation, "1–${state.words.size}", !saving) {
             rotation = it
             error = null
         }
@@ -333,7 +333,8 @@ private fun SettingsHelp(
     )
     Text(
         "Delivery times are approximate and Android may delay reminders. " +
-            "Review intervals grow as words appear; new words gradually enter your rotation.",
+            "Learning frequency halves each day. New words fill the freed capacity; after five days, " +
+            "words move to occasional review. Reminders continue at your chosen interval.",
         color = MaterialTheme.colorScheme.onSurfaceVariant,
     )
     Text(

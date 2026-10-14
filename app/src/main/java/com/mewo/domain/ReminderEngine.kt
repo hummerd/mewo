@@ -1,6 +1,8 @@
 package com.mewo.domain
 
+import java.time.Instant
 import java.time.ZoneId
+import java.time.temporal.ChronoUnit
 
 /** Values validated both at the UI boundary and before background execution. */
 data class ReminderSettings(
@@ -34,6 +36,7 @@ data class WordProgress(
     val introduced: Boolean = false,
     val nextDueAt: Long = 0,
     val priority: Int = WordPriority.COMMON,
+    val firstShownAt: Long? = null,
 )
 
 object WordPriority {
@@ -52,28 +55,58 @@ enum class LearningStatus { NEW, LEARNING, PAUSED, REVIEW }
 
 /** Pure scheduling policy. All times are milliseconds since the Unix epoch. */
 object ReminderEngine {
-    const val REVIEW_THRESHOLD = 12
-    private const val MAX_INTERVAL_MS = 7L * 24 * 60 * 60 * 1000
+    const val LEARNING_DAYS = 5
+    private const val FRESH_WEIGHT = 16
+    private const val REVIEW_INTERVAL_MS = 7L * 24 * 60 * 60 * 1000
     private val dictionaryOrder = compareBy<WordProgress> { it.priority }.thenBy { it.position }
 
+    private fun age(
+        word: WordProgress,
+        now: Long,
+        zone: ZoneId,
+    ): Int =
+        word.firstShownAt?.let {
+            ChronoUnit.DAYS
+                .between(
+                    Instant.ofEpochMilli(it).atZone(zone).toLocalDate(),
+                    Instant.ofEpochMilli(now).atZone(zone).toLocalDate(),
+                ).coerceIn(0, LEARNING_DAYS.toLong())
+                .toInt()
+        } ?: 0
+
+    private fun weight(
+        word: WordProgress,
+        now: Long,
+        zone: ZoneId,
+    ): Int = FRESH_WEIGHT shr age(word, now, zone).coerceAtMost(LEARNING_DAYS - 1)
+
+    /** N fresh-word equivalents; older words free capacity as their frequency halves each day. */
     fun activeIds(
         words: List<WordProgress>,
         rotationSize: Int,
-    ): Set<String> =
-        words
-            .filter { it.introduced && it.shownCount < REVIEW_THRESHOLD }
+        now: Long = System.currentTimeMillis(),
+        zone: ZoneId = ZoneId.systemDefault(),
+    ): Set<String> {
+        var remaining = rotationSize * FRESH_WEIGHT
+        return words
+            .filter { it.introduced && age(it, now, zone) < LEARNING_DAYS }
             .sortedWith(dictionaryOrder)
-            .take(rotationSize)
-            .map { it.id }
+            .filter {
+                val cost = weight(it, now, zone)
+                (cost <= remaining).also { fits -> if (fits) remaining -= cost }
+            }.map { it.id }
             .toSet()
+    }
 
     fun status(
         word: WordProgress,
         activeIds: Set<String>,
+        now: Long = System.currentTimeMillis(),
+        zone: ZoneId = ZoneId.systemDefault(),
     ): LearningStatus =
         when {
             !word.introduced -> LearningStatus.NEW
-            word.shownCount >= REVIEW_THRESHOLD -> LearningStatus.REVIEW
+            age(word, now, zone) >= LEARNING_DAYS -> LearningStatus.REVIEW
             word.id in activeIds -> LearningStatus.LEARNING
             else -> LearningStatus.PAUSED
         }
@@ -86,7 +119,9 @@ object ReminderEngine {
     ): ReminderPlan {
         settings.validate(words.size)
         if (!settings.enabled || !settings.schedule.allows(now, zone)) return ReminderPlan(words, emptyList())
-        val missing = settings.rotationSize - activeIds(words, settings.rotationSize).size
+        val active = activeIds(words, settings.rotationSize, now, zone)
+        val used = words.filter { it.id in active }.sumOf { weight(it, now, zone) }
+        val missing = (settings.rotationSize * FRESH_WEIGHT - used) / FRESH_WEIGHT
         val newIds =
             words
                 .filter { !it.introduced }
@@ -98,25 +133,32 @@ object ReminderEngine {
             words.map {
                 if (it.id in newIds) it.copy(introduced = true, nextDueAt = now) else it
             }
-        val active = activeIds(progress, settings.rotationSize)
-        val selected =
+        val eligibleIds = activeIds(progress, settings.rotationSize, now, zone)
+        val eligible =
             progress
                 .filter {
-                    it.introduced && (it.id in active || it.shownCount >= REVIEW_THRESHOLD) && it.nextDueAt <= now
+                    it.id in eligibleIds || (it.introduced && age(it, now, zone) >= LEARNING_DAYS)
                 }.sortedWith(compareBy<WordProgress> { it.nextDueAt }.then(dictionaryOrder))
-                .take(settings.wordsPerNotification)
-        return ReminderPlan(progress, selected)
+        // Due words lead, but every allowed check has a full, distinct-word reminder even in a quiet rotation.
+        return ReminderPlan(progress, eligible.take(settings.wordsPerNotification))
     }
 
     fun recordShown(
         word: WordProgress,
         settings: ReminderSettings,
         now: Long,
+        zone: ZoneId = ZoneId.systemDefault(),
     ): WordProgress {
         require(word.introduced)
+        val started = word.copy(firstShownAt = word.firstShownAt ?: now)
         val count = if (word.shownCount == Int.MAX_VALUE) Int.MAX_VALUE else word.shownCount + 1
-        val multiplier = 1L shl (count - 1).coerceIn(0, 20)
-        val interval = (settings.intervalMinutes * 60_000L * multiplier).coerceAtMost(MAX_INTERVAL_MS)
-        return word.copy(shownCount = count, nextDueAt = now + interval)
+        val interval =
+            if (age(started, now, zone) >= LEARNING_DAYS) {
+                REVIEW_INTERVAL_MS
+            } else {
+                settings.intervalMinutes * 60_000L * settings.rotationSize / settings.wordsPerNotification *
+                    (1L shl age(started, now, zone))
+            }
+        return started.copy(shownCount = count, nextDueAt = now + interval)
     }
 }

@@ -55,6 +55,16 @@ class ReminderSchedulerTest {
             assertTrue(next.nextScheduleTimeMillis <= updated.schedule.nextAllowedAt(after))
         }
 
+    @Test fun processStartupKeepsTheExistingDeadline() =
+        runBlocking {
+            scheduler.apply(settings)
+            val before = workManager.getWorkInfosForUniqueWork(name).get().single()
+            scheduler.apply(settings, reschedule = false)
+            val after = workManager.getWorkInfosForUniqueWork(name).get().single()
+            assertEquals(before.id, after.id)
+            assertEquals(before.nextScheduleTimeMillis, after.nextScheduleTimeMillis)
+        }
+
     @Test fun pausingCancelsTheScheduledWork() =
         runBlocking {
             scheduler.apply(settings)
