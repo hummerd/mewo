@@ -37,10 +37,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.unit.dp
+import com.mewo.R
 import com.mewo.data.WordEntity
 import com.mewo.domain.LearningStatus
 import com.mewo.domain.ReminderEngine
@@ -55,6 +57,7 @@ fun MewoScreen(
     onNotificationSound: () -> Unit,
     onSave: (ReminderSettings, (String?) -> Unit) -> Unit,
     onRetry: () -> Unit,
+    onAbout: () -> Unit,
 ) {
     var settingsOpen by rememberSaveable { mutableStateOf(false) }
     BackHandler(settingsOpen) { settingsOpen = false }
@@ -66,6 +69,7 @@ fun MewoScreen(
                     if (settingsOpen) TextButton(onClick = { settingsOpen = false }) { Text("Back") }
                 },
                 actions = {
+                    TextButton(onClick = onAbout) { Text(stringResource(R.string.about_app)) }
                     if (!settingsOpen && !state.loading && state.error == null) {
                         TextButton(onClick = { settingsOpen = true }) { Text("Settings") }
                     }

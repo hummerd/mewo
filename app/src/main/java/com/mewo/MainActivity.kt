@@ -77,17 +77,20 @@ class MainActivity : ComponentActivity() {
                         }
                     },
                     onSave = model::save,
-                    onNotificationSound = {
-                        startActivity(
-                            Intent(Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS)
-                                .putExtra(Settings.EXTRA_APP_PACKAGE, packageName)
-                                .putExtra(Settings.EXTRA_CHANNEL_ID, ReminderNotifications.CHANNEL_ID),
-                        )
-                    },
+                    onNotificationSound = ::openNotificationSoundSettings,
                     onRetry = model::load,
+                    onAbout = { startActivity(Intent(this, AboutActivity::class.java)) },
                 )
             }
         }
+    }
+
+    private fun openNotificationSoundSettings() {
+        startActivity(
+            Intent(Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS)
+                .putExtra(Settings.EXTRA_APP_PACKAGE, packageName)
+                .putExtra(Settings.EXTRA_CHANNEL_ID, ReminderNotifications.CHANNEL_ID),
+        )
     }
 
     private fun openNotificationSettings() {

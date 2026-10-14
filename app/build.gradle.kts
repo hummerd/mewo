@@ -1,3 +1,5 @@
+import java.time.Instant
+
 plugins {
     id("org.jlleitschuh.gradle.ktlint")
     id("com.android.application")
@@ -17,7 +19,10 @@ android {
         versionName = "1.3"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-    buildFeatures { compose = true }
+    buildFeatures {
+        compose = true
+        buildConfig = true
+    }
     sourceSets {
         getByName("androidTest").assets.srcDir("$projectDir/schemas")
         getByName("test").resources.srcDir("src/main/assets")
@@ -30,6 +35,32 @@ android {
         release {
             isMinifyEnabled = false
         }
+    }
+}
+
+abstract class GenerateBuildInfo : DefaultTask() {
+    @get:OutputDirectory
+    abstract val outputDirectory: DirectoryProperty
+
+    @TaskAction
+    fun generate() {
+        val values = outputDirectory.dir("values").get().asFile
+        values.mkdirs()
+        values.resolve("build_info.xml").writeText(
+            "<resources><string name=\"build_timestamp\" translatable=\"false\">${Instant.now()}</string></resources>",
+        )
+    }
+}
+
+androidComponents {
+    onVariants { variant ->
+        val taskName = "generate${variant.name.replaceFirstChar { it.uppercase() }}BuildInfo"
+        val buildInfo =
+            tasks.register<GenerateBuildInfo>(taskName) {
+                outputDirectory.set(layout.buildDirectory.dir("generated/buildInfo/${variant.name}"))
+                outputs.upToDateWhen { false }
+            }
+        variant.sources.res?.addGeneratedSourceDirectory(buildInfo, GenerateBuildInfo::outputDirectory)
     }
 }
 

@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">MEWO</string>
+    <string name="about_app">About</string>
+    <string name="about_back">Back</string>
+    <string name="about_name">MEmorizing WOrds</string>
+    <string name="about_tagline">Small reminders.\nGrowing vocabulary.</string>
+    <string name="about_description">A little Hebrew, throughout your day. Learn words and phrases with gentle reminders that help them take root.</string>
+    <string name="about_details">APP DETAILS</string>
+    <string name="about_version">Version</string>
+    <string name="about_version_value">%1$s · build %2$d</string>
+    <string name="about_built">Built on</string>
+    <string name="about_offline">Made for everyday learning</string>
+    <string name="about_offline_description">Your words, progress, and reminders live on your device. Learning works offline.</string>
+    <string name="about_footer">One word at a time.</string>
     <string name="reminder_channel">Hebrew word reminders</string>
     <string name="reminder_channel_description">Practice Hebrew words throughout the day</string>
     <string name="reminder_title">Time for a little Hebrew</string>
