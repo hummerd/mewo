@@ -37,6 +37,7 @@ data class WordProgress(
     val nextDueAt: Long = 0,
     val priority: Int = WordPriority.COMMON,
     val firstShownAt: Long? = null,
+    val known: Boolean = false,
 )
 
 object WordPriority {
@@ -51,7 +52,7 @@ data class ReminderPlan(
     val selected: List<WordProgress>,
 )
 
-enum class LearningStatus { NEW, LEARNING, PAUSED, REVIEW }
+enum class LearningStatus { NEW, LEARNING, PAUSED, REVIEW, KNOWN }
 
 /** Pure scheduling policy. All times are milliseconds since the Unix epoch. */
 object ReminderEngine {
@@ -89,7 +90,7 @@ object ReminderEngine {
     ): Set<String> {
         var remaining = rotationSize * FRESH_WEIGHT
         return words
-            .filter { it.introduced && age(it, now, zone) < LEARNING_DAYS }
+            .filter { !it.known && it.introduced && age(it, now, zone) < LEARNING_DAYS }
             .sortedWith(dictionaryOrder)
             .filter {
                 val cost = weight(it, now, zone)
@@ -105,6 +106,7 @@ object ReminderEngine {
         zone: ZoneId = ZoneId.systemDefault(),
     ): LearningStatus =
         when {
+            word.known -> LearningStatus.KNOWN
             !word.introduced -> LearningStatus.NEW
             age(word, now, zone) >= LEARNING_DAYS -> LearningStatus.REVIEW
             word.id in activeIds -> LearningStatus.LEARNING
@@ -124,7 +126,7 @@ object ReminderEngine {
         val missing = (settings.rotationSize * FRESH_WEIGHT - used) / FRESH_WEIGHT
         val newIds =
             words
-                .filter { !it.introduced }
+                .filter { !it.known && !it.introduced }
                 .sortedWith(dictionaryOrder)
                 .take(missing)
                 .map { it.id }
@@ -137,7 +139,7 @@ object ReminderEngine {
         val eligible =
             progress
                 .filter {
-                    it.id in eligibleIds || (it.introduced && age(it, now, zone) >= LEARNING_DAYS)
+                    !it.known && (it.id in eligibleIds || (it.introduced && age(it, now, zone) >= LEARNING_DAYS))
                 }.sortedWith(compareBy<WordProgress> { it.nextDueAt }.then(dictionaryOrder))
         // Due words lead, but every allowed check has a full, distinct-word reminder even in a quiet rotation.
         return ReminderPlan(progress, eligible.take(settings.wordsPerNotification))

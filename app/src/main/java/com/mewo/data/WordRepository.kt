@@ -30,6 +30,10 @@ class WordRepository(
             }
         }
 
+    suspend fun markKnown(id: String) = database.words().markKnown(id)
+
+    suspend fun resetProgress(id: String) = database.words().resetProgress(id)
+
     /** Record appearances only if the notification publisher reports success. */
     suspend fun remind(
         settings: ReminderSettings,

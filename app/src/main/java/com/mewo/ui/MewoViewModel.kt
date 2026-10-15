@@ -53,6 +53,23 @@ class MewoViewModel(
         }
     }
 
+    fun updateWord(
+        id: String,
+        markKnown: Boolean,
+        onResult: (String?) -> Unit,
+    ) {
+        viewModelScope.launch {
+            try {
+                if (markKnown) repository.markKnown(id) else repository.resetProgress(id)
+                onResult(null)
+            } catch (error: CancellationException) {
+                throw error
+            } catch (_: Exception) {
+                onResult("Could not update the word. Please retry.")
+            }
+        }
+    }
+
     fun save(
         settings: ReminderSettings,
         onResult: (String?) -> Unit,

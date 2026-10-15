@@ -32,6 +32,28 @@ class ReminderEngineTest {
         now: Long = start,
     ) = ReminderEngine.plan(words, settings, now, utc)
 
+    @Test fun knownWordsAreExcludedFromEveryLearningStage() {
+        val words =
+            dictionary().mapIndexed { index, word ->
+                when (index) {
+                    0 -> word.copy(known = true)
+                    1 -> word.copy(known = true, introduced = true, firstShownAt = start)
+                    2 -> word.copy(known = true, introduced = true, firstShownAt = start - 6 * day)
+                    else -> word
+                }
+            }
+        val next = plan(words)
+        assertEquals(listOf("word-3", "word-4"), next.selected.map { it.id })
+        assertTrue(next.progress.take(3).all { it == words[it.position] })
+        assertTrue(ReminderEngine.activeIds(words, 2, start, utc).isEmpty())
+        words.take(3).forEach {
+            assertEquals(LearningStatus.KNOWN, ReminderEngine.status(it, emptySet(), start, utc))
+        }
+        val allKnown = words.map { it.copy(known = true) }
+        assertTrue(plan(allKnown).selected.isEmpty())
+        assertEquals(allKnown, plan(allKnown).progress)
+    }
+
     @Test fun startsWithConfiguredRotationInDictionaryOrder() {
         val plan = plan(dictionary())
         assertEquals(listOf("word-0", "word-1"), plan.selected.map { it.id })

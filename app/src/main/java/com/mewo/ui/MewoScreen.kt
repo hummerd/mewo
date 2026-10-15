@@ -58,6 +58,7 @@ fun MewoScreen(
     onSave: (ReminderSettings, (String?) -> Unit) -> Unit,
     onRetry: () -> Unit,
     onAbout: () -> Unit,
+    onUpdateWord: (String, Boolean, (String?) -> Unit) -> Unit,
 ) {
     var settingsOpen by rememberSaveable { mutableStateOf(false) }
     BackHandler(settingsOpen) { settingsOpen = false }
@@ -92,7 +93,14 @@ fun MewoScreen(
                     settingsOpen =
                         false
                 }
-            else -> WordList(state, notificationsAllowed, onEnableNotifications, Modifier.padding(padding))
+            else ->
+                WordList(
+                    state,
+                    notificationsAllowed,
+                    onEnableNotifications,
+                    Modifier.padding(padding),
+                    onUpdateWord,
+                )
         }
     }
 }
@@ -103,7 +111,12 @@ private fun WordList(
     notificationsAllowed: Boolean,
     onEnableNotifications: () -> Unit,
     modifier: Modifier,
+    onUpdateWord: (String, Boolean, (String?) -> Unit) -> Unit,
 ) {
+    var selectedId by rememberSaveable { mutableStateOf<String?>(null) }
+    state.words.find { it.id == selectedId }?.let { word ->
+        WordControlsDialog(word, onUpdateWord) { selectedId = null }
+    }
     val progress = state.words.map { it.progress() }
     val activeIds = ReminderEngine.activeIds(progress, state.settings.rotationSize)
     LazyColumn(
@@ -138,11 +151,16 @@ private fun WordList(
                 }
             }
         }
-        item { Text("Your dictionary", style = MaterialTheme.typography.titleMedium) }
+        item {
+            Text("Your dictionary", style = MaterialTheme.typography.titleMedium)
+            Text("Tap a word to reset its counter or mark it as known.", style = MaterialTheme.typography.bodySmall)
+        }
         items(
             state.words,
             key = { it.id },
-        ) { word -> WordCard(word, ReminderEngine.status(word.progress(), activeIds)) }
+        ) { word ->
+            WordCard(word, ReminderEngine.status(word.progress(), activeIds)) { selectedId = word.id }
+        }
         item {
             Text(
                 "Appearances count notifications posted, even if you have not read them.",
@@ -156,8 +174,9 @@ private fun WordList(
 private fun WordCard(
     word: WordEntity,
     status: LearningStatus,
+    onClick: () -> Unit,
 ) {
-    OutlinedCard(Modifier.fillMaxWidth()) {
+    OutlinedCard(onClick = onClick, modifier = Modifier.fillMaxWidth()) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
             Text(
                 word.hebrew,
@@ -180,6 +199,7 @@ private fun WordCard(
                         LearningStatus.LEARNING -> "Learning"
                         LearningStatus.PAUSED -> "Paused"
                         LearningStatus.REVIEW -> "Not to forget"
+                        LearningStatus.KNOWN -> "Known"
                     },
                     color = MaterialTheme.colorScheme.primary,
                     style = MaterialTheme.typography.labelLarge,

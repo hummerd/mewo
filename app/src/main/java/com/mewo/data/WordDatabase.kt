@@ -32,8 +32,9 @@ data class WordEntity(
     val feminineTransliteration: String? = null,
     val feminineModification: String? = null,
     val firstShownAt: Long? = null,
+    @ColumnInfo(defaultValue = "0") val known: Boolean = false,
 ) {
-    fun progress() = WordProgress(id, position, shownCount, introduced, nextDueAt, priority, firstShownAt)
+    fun progress() = WordProgress(id, position, shownCount, introduced, nextDueAt, priority, firstShownAt, known)
 
     fun feminineDescription(): String? = feminineHebrew?.let { "Feminine: \u200f$it\u200e ($feminineModification)" }
 
@@ -60,17 +61,26 @@ interface WordDao {
     @Update
     suspend fun update(words: List<WordEntity>)
 
+    @Query("UPDATE words SET known = 1 WHERE id = :id")
+    suspend fun markKnown(id: String)
+
+    @Query(
+        "UPDATE words SET known = 0, shownCount = 0, introduced = 1, nextDueAt = 0, firstShownAt = NULL WHERE id = :id",
+    )
+    suspend fun resetProgress(id: String)
+
     @Query("DELETE FROM words WHERE id IN (:ids)")
     suspend fun deleteMerged(ids: List<String>)
 }
 
 @Database(
     entities = [WordEntity::class],
-    version = 3,
+    version = 4,
     exportSchema = true,
     autoMigrations = [
         AutoMigration(from = 1, to = 2),
         AutoMigration(from = 2, to = 3, spec = DailyLearningMigration::class),
+        AutoMigration(from = 3, to = 4),
     ],
 )
 abstract class WordDatabase : RoomDatabase() {

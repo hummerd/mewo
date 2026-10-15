@@ -45,6 +45,69 @@ class WordRepositoryTest {
         database.close()
     }
 
+    @Test fun knownWordsStayExcludedAfterReimportAndResetReturnsThemToLearning() =
+        runBlocking {
+            repository.initialize()
+            assertTrue(repository.remind(settings, 100) { true })
+            val original = database.words().getAll().first()
+            repository.markKnown(original.id)
+            repository.initialize()
+            val known = database.words().getAll().first()
+            assertEquals(original.copy(known = true), known)
+            assertTrue(
+                repository.remind(settings, 200) { selected ->
+                    assertTrue(selected.none { it.id == original.id })
+                    true
+                },
+            )
+            repository.resetProgress(original.id)
+            repository.initialize()
+            val reset = database.words().getAll().first()
+            assertEquals(original.copy(shownCount = 0, nextDueAt = 0, firstShownAt = null), reset)
+            assertTrue(
+                repository.remind(settings, 300) { selected ->
+                    assertTrue(selected.any { it.id == original.id })
+                    true
+                },
+            )
+            val shown = database.words().getAll().first()
+            assertEquals(1, shown.shownCount)
+            assertEquals(300L, shown.firstShownAt)
+            assertFalse(shown.known)
+        }
+
+    @Test fun resettingReviewWordClearsItsAgeAndDelayWithoutChangingOtherWords() =
+        runBlocking {
+            repository.initialize()
+            val before = database.words().getAll()
+            val review =
+                before.first().copy(
+                    shownCount = 40,
+                    introduced = true,
+                    firstShownAt = 1,
+                    nextDueAt = Long.MAX_VALUE,
+                )
+            database.words().update(listOf(review))
+            repository.resetProgress(review.id)
+            val after = database.words().getAll()
+            assertEquals(before.drop(1), after.drop(1))
+            assertEquals(before.first().copy(introduced = true), after.first())
+            assertTrue(
+                repository.remind(settings, 1_000_000_000) { selected ->
+                    assertTrue(selected.any { it.id == review.id })
+                    true
+                },
+            )
+            assertEquals(
+                1_000_000_000L,
+                database
+                    .words()
+                    .getAll()
+                    .first()
+                    .firstShownAt,
+            )
+        }
+
     @Test fun unsuccessfulPostLeavesAllProgressUntouched() =
         runBlocking {
             repository.initialize()

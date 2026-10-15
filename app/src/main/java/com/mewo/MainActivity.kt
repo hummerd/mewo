@@ -77,6 +77,7 @@ class MainActivity : ComponentActivity() {
                         }
                     },
                     onSave = model::save,
+                    onUpdateWord = model::updateWord,
                     onNotificationSound = ::openNotificationSoundSettings,
                     onRetry = model::load,
                     onAbout = { startActivity(Intent(this, AboutActivity::class.java)) },

@@ -18,6 +18,26 @@ class DictionaryMigrationTest {
     @get:Rule
     val helper = MigrationTestHelper(InstrumentationRegistry.getInstrumentation(), WordDatabase::class.java)
 
+    @Test fun knownStatusMigrationPreservesExistingProgress() {
+        val name = "known-status-migration-test"
+        helper.createDatabase(name, 3).use { old ->
+            old.execSQL(
+                "INSERT INTO words (id, position, hebrew, english, transliteration, " +
+                    "shownCount, introduced, nextDueAt, firstShownAt) " +
+                    "VALUES ('shalom',0,'שלום','Hello','shalom',8,1,1234,100)",
+            )
+        }
+        helper.runMigrationsAndValidate(name, 4, true).use { migrated ->
+            migrated.query("SELECT shownCount, nextDueAt, firstShownAt, known FROM words").use { row ->
+                assertTrue(row.moveToFirst())
+                assertEquals(8, row.getInt(0))
+                assertEquals(1234L, row.getLong(1))
+                assertEquals(100L, row.getLong(2))
+                assertEquals(0, row.getInt(3))
+            }
+        }
+    }
+
     @Test fun dailyLearningMigrationPreservesCountsAndExistingReviewStatus() {
         val name = "daily-learning-migration-test"
         helper.createDatabase(name, 2).use { old ->
