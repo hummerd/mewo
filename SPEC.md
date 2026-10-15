@@ -24,6 +24,11 @@ Reminder timing is approximate. The minimum configurable notification interval i
 configured interval; these delays are acceptable. Exact delivery times are not
 required.
 
+User should have ability to mark word as known to exclude it from notifications.
+
+User should have ability to reset displayed-counter for word to return it back to
+rotation.
+
 ## Implementation
 
 Native Android app using Kotlin, Jetpack Compose/Material 3, ViewModel and Flow,
